@@ -1,15 +1,46 @@
 *{
   margin: 0;
   padding: 0;
-
 }
 
+/* landing page */
+
+/* full screen background image */
 #landing{
   background: url(/assets/images/landing-stars.jpg) no-repeat center center fixed;
   background-size: cover;
 
 }
 
-.start{
-  height: 100vh;
+
+/* background image for links to learn more*/
+#explore {
+  background-image: url(/assets/images/landing-explorer.jpg);
+  background-size: cover;
+  border-radius: 20%;
+  padding: 20px;
+  margin: 10px;
+ 
 }
+/* background image for links to game*/
+#playgame {
+  background-image: url(/assets/images/landing-ufo.png);
+  background-size: cover;
+  border-radius: 20%;
+  padding: 20px;
+  margin: 10px;
+ 
+
+}
+/* to set height of options for user on landing page to approx 1/3 */
+.start{
+  height: 30vh;
+  border:bisque 5px solid;
+}
+
+div{
+  color: yellow;
+  font-size: large;
+}
+
+
