@@ -65,31 +65,42 @@ On the strategy plane, I did research looking at basic games, quizzes and inform
 Colours and interesting inforFor my site, I listed out the opportunities/problems and how each of these might be addressed.
 And for the scope plane, I planned out the content and functional requirements.
 
-[strategy and scope tables](readme-assets/strategy%20and%20scope.pdf)
+[strategy and scope tables](readme-assets/strategy-scope-plan.pdf)
+
 ### Structure of the website
 
-The structure of the site is designed so that on landing on the site, the user can easily go straight 
+The structure of the site is designed so that on landing on the site, the user can easily go straight
 to the game or if they wish, can go to the learn more page, where they can view images/facts about Space and also contact the site owner. Easy to use nav bar to be included on game page and learn more page, from which the user can access the game, view the gallery images and contact the site owner.
 
+[Structure Plan](readme-assets/structure-plane-plan.pdf)
+
 ### Wireframes
+
 [Wireframe Mobile](readme-assets/spacegame-wireframe-mobile.pdf)
 [Wireframe Tablet](readme-assets/spacegame-wireframe-tablet.pdf)
 [Wireframe Desktop](readme-assets/spacegame-wireframe-desktop.pddf)
 These were built using balsamiq.
+
 ### Surface
-I plan to use bright colours to make a fun visual site, with fonts that are easy to read but visually look fun.
+
+[Surface Plan](readme-assets/surface-plane-plan.pdf)
+
 #### Colors
+
 I plan to use bright colours to make a fun visual site.
+
 - fee440
 - 8ef9f3
 - 00f5d4
 - 395c6b
 - d33f49
+
 #### Typography
 
 I plan to use Exo2 and Poppins fonts.
 
 #### Images
+
 I plan to use landing page full background image, with buttons over-laid, an image for the game area with a planet type icon for each point in the game.
 There will also be a success image for when user finishes the game and a number of images for the lern more carousel.
 
@@ -102,18 +113,30 @@ The site consists of
 **_Website has the following features_**
 
 ### Landing Page
+
 containing the following:
 
 - Button to select game play
 - Button to go to learn more page
 - Instructions for game play, which will be a pop up on smaller screens
 
-### Game
+### Navigation Menu
 
-- navigation menu containing links to gallery carousel and contact page
+- Contains links to Game page, Learn More Page, which contains the gallery carousel and to the contact form, collpasible icon on smaller screens.
+
+### Game Page
+
+- navigation menu
 - game play area
 - Question and answer area
 - success pop up
+
+### Learn More Page
+
+Contains two sections:
+
+- Gallery Carousel, which will contain images and related information
+- contact form, where the user can ask a question or send a fact/other information they want to share.
 
 ### Future Features
 
