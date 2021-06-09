@@ -77,12 +77,21 @@ to the game or if they wish, can go to the learn more page, where they can view 
 [Wireframe Desktop](readme-assets/spacegame-wireframe-desktop.pddf)
 These were built using balsamiq.
 ### Surface
-
+I plan to use bright colours to make a fun visual site, with fonts that are easy to read but visually look fun.
 #### Colors
-
+I plan to use bright colours to make a fun visual site.
+- fee440
+- 8ef9f3
+- 00f5d4
+- 395c6b
+- d33f49
 #### Typography
 
+I plan to use Exo2 and Poppins fonts.
+
 #### Images
+I plan to use landing page full background image, with buttons over-laid, an image for the game area with a planet type icon for each point in the game.
+There will also be a success image for when user finishes the game and a number of images for the lern more carousel.
 
 [Back to table of contents](#table-of-contents)
 
@@ -91,6 +100,20 @@ These were built using balsamiq.
 The site consists of
 
 **_Website has the following features_**
+
+### Landing Page
+containing the following:
+
+- Button to select game play
+- Button to go to learn more page
+- Instructions for game play, which will be a pop up on smaller screens
+
+### Game
+
+- navigation menu containing links to gallery carousel and contact page
+- game play area
+- Question and answer area
+- success pop up
 
 ### Future Features
 
