@@ -32,12 +32,14 @@
  
 
 }
-/* to set height of options for user on landing page to approx 1/3 */
+/* to set height of options for user on landing page to approx 1/3 
+temporary border set*/
 .start{
   height: 30vh;
   border:bisque 5px solid;
 }
 
+/* temporary styling */
 div{
   color: yellow;
   font-size: large;
