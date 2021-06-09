@@ -1,8 +1,15 @@
-body {
-  /* Location of the image for page */
-  background: url(/assets/images/landing-globe.jpg) no-repeat center center fixed;
-  background-size: cover;
- 
+*{
+  margin: 0;
+  padding: 0;
 
 }
-  
+
+#landing{
+  background: url(/assets/images/landing-stars.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+}
+
+.start{
+  height: 100vh;
+}
