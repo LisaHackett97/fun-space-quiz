@@ -40,9 +40,29 @@ temporary border set*/
 }
 
 /* temporary styling */
-div{
+div, p{
   color: yellow;
   font-size: large;
 }
 
 
+form {
+  height: 30vh;
+  border: 5px solid red;
+}
+
+
+
+
+.carousel-item img{
+  width: 300px;
+  height: 300px;
+  
+}
+
+
+/* .carousel-item {
+  width: 300px;
+  height: 300px;
+  
+} */
