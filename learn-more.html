@@ -75,6 +75,54 @@
         </div>
     </div>
 
+    <form action="#.html" class="col-sm-8 col-md-6 offset-md-0">
+        <fieldset id="field-set">
+<legend>
+ Ask us anything:
+</legend>
+
+<!--required details section on form-->
+<label for="name" class="details-labels">Name</label>
+<input type="text" name="name" id="name" required aria-required="true" placeholder="Name">
+<br>
+<label for="email" class="details-labels">Your email</label>
+<input type="email" name="email" id="email" required aria-required="true"
+ placeholder="email address">
+<br>
+<label for="contact-number" class="details-labels">Contact number</label>
+<!--Contact number restricted to numeric characters, no spaces-->
+<input type="tel" pattern="[0-9]*" title="Contact number must have no spaces eg, 0861234567" name="contact-number" id="contact-number" required aria-required="true"
+ placeholder="Phone Number" >
+
+<br>
+
+<!--reason for contact section-->
+<h5>Options</h5>
+<!--booked option is pre-checked-->
+<input id="booking" name="contact-reason" value="booking" type="radio" aria-checked="true"
+ checked>
+<label for="booking" class="reason align-items-center">##</label>
+<br>
+<input id="assessment" name="contact-reason" value="assessment" type="radio">
+<label for="assessment" class="reason">##</label>
+<br>
+<input id="query" name="contact-reason" value="query" type="radio">
+<label for="query" class="reason">##</label>
+<br>
+<input id="other" name="contact-reason" value="other" type="radio">
+<label for="other" class="reason">Other</label>
+<div></div>
+
+<br>
+<!--text are for user to add more information. Closing textarea tag needs to be on same code line so placeholder text shows-->
+<textarea placeholder="Send us your question or tell us what you know!!"
+ aria-label="textarea for additional information"></textarea>
+<button class="btn form-button" type="submit" id="form-button">Send Form
+</button>
+</fieldset>
+</form>
+
+
 
 
 
