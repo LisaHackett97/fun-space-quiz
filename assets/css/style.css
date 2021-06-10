@@ -60,27 +60,39 @@ form {
   
 } */
 
+/* margin-left of 10% required to align items and override effect of the b/s class */
+.carousel-item{
+  width:85%;
+  margin-left:10%;
+}
+
+/* 
+styling img elements scaled class to align and scale on all devices 
+These are held within figure elements on the carousel
+*/
 img.scaled {  
   height:50vh;
-  width:85%; 
-  text-align: center;
+  width:90%; 
+  justify-content: center;
+  margin:5px;  
 }
 
-figcaption {
-  width:85%;
+/* styling figure elements with scaled class to align and scale on all devices */
+figure.scaled {    
+  width:90%;   
+  margin:5px;
   text-align: center;
+  
 }
 
-.carousel-control-next {
+
+/* styling carousel controls to align with imgs */
+.carousel-control-next, .carousel-control-prev {
   width: 20px;
   height: 50vh;
   background-color: rgb(56, 20, 90);
-}
-.carousel-control-prev {
-  width: 20px;
-  color: blueviolet;
-  margin-right: 50px;
-  padding-right: 100px;
+  margin:5px;
+  text-align: bottom;
 }
 
 
