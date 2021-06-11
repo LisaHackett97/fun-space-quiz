@@ -101,6 +101,7 @@ nav {
   background-color: var(--heading-color);
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
+  color: var(--decoration1);
 }
 
 
