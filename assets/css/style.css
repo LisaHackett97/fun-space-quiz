@@ -96,8 +96,17 @@ form {
 }
 
 
+/* Nav Bar Styling */
+nav {
+  background-color: var(--heading-color);
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+}
+
 
 /* Learn More Page */
+
+
 
 /* margin-left of 10% required to align items and override effect of the b/s class */
 .carousel-item {
@@ -133,4 +142,10 @@ figure.scaled {
   background-color: var(--decoration1);
   margin: 5px;
   text-align: bottom;
+}
+
+footer {
+  color: #395c6b;
+  border: 2px solid #fee440;
+  background:#8ef9f3;
 }
