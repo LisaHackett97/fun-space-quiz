@@ -166,6 +166,14 @@ Contains two sections:
 
 ### Issues during development
 
+I used the bootstrap documentation code for the carousel.
+I wanted text related to the image to appear under it but using the code exactly as it was in the documentation, did not give the user view on all screens as I wanted,
+I tried a few different code snippets I found researching the topic but after trying a few different versions, I decided use the original bootstrap code
+ but modify it. I decided to enclose the images with the figure tag and to use the figcaption tag for the text details.
+ Img, figure and carousel controls were required to be styled to ensure text appeared beneath img, and ctrls to left/right, without overlap, and also appearing as expected on diff screen sizes.
+
+The fieldset was overflowing on the contact form and appearing on top of the footer.
+
 [Back to table of contents](#table-of-contents)
 
 ### Bugs
