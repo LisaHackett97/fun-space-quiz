@@ -9,6 +9,8 @@ font-family: 'Poppins', sans-serif;
   --main-text-color: #395c6b;
   --heading-color: #d33f49;
   --decoration1: #fee440;
+  --decoration2: #8ef9f3;
+  --decoration3: #00f5d4;
 }
 
 /* other colours to use
@@ -27,7 +29,7 @@ div,
 p {
   color: var(--main-text-color);
   font-family: 'Poppins', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /* landing page */
@@ -103,6 +105,22 @@ nav {
   font-weight: 600;
   color: var(--decoration1);
 }
+
+.nav-link {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+  color: var(--decoration3);
+}
+
+.nav-link.active {
+  border: 2px solid var(--decoration3);
+  border-radius: 100%;
+}
+
+.nav-link:hover {
+  color: #fee440;
+}
+
 
 
 /* Learn More Page */
