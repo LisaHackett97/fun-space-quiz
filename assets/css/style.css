@@ -171,7 +171,7 @@ legend {
 
 /*--to set border colour and visibility of fieldset box on form--*/
 #field-set {
-  border: solid thin var(--heading-color);
+  border: 2px solid var(--heading-color);
   border-radius: 2%;
   padding: 5px;
   margin: 0;
@@ -200,33 +200,15 @@ textarea {
   margin-left: 5px;
 }
 
-/*--contact form reason selection text--*/
-.reason {
-  color: var(--main-text-color);
-  padding-left: 10px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-}
-
-/*--Reason for contact heading within form--*/
-fieldset h5 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin: 5px;
-  color: var(--main-text-color);
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 600;
-}
-input[type="radio"] {
-  margin-left: 5px;
-}
 
 /*stylng of button on form--*/
 #form-button {
   border-radius: 10%;
-  background-color: var(--decoration3);
+  background-color: var(--heading-color);
   margin-left: 5px;
   color: var(--decoration1);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 /*--End of form Section--*/
