@@ -235,6 +235,28 @@ input[type="radio"] {
 
 footer {
   color: #395c6b;
-  border: 2px solid #fee440;
   background:#8ef9f3;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+footer p {
+  font-size: 1rem;;
+}
+.social-links {
+  display: flex;
+  
+  padding-top: 10px;
+ 
+}
+
+.social-links a {
+  font-size: 3rem;
+ padding:5px;
+  color: var(--heading-color);
+  border-radius: 100%;
+}
+
+.social-links a:hover {
+  background-color: var(--main-text-color);
 }
