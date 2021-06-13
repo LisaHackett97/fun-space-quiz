@@ -223,7 +223,10 @@ footer {
 }
 
 footer p {
-  font-size: 1rem;;
+  font-size: 1rem;
+  padding-top: 25px;
+  font-weight: 500;             
+  
 }
 .social-links {
   display: flex;
