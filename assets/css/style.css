@@ -89,15 +89,6 @@ div.scaled {
 
 
 
-/* temp form styling */
-form {
-  height: 50vh;
-  border: 5px solid red;
-  padding: 25px;
-  margin: 25px;
-}
-
-
 /* Nav Bar Styling */
 nav {
   background-color: var(--heading-color);
@@ -162,6 +153,85 @@ figure.scaled {
   margin: 5px;
   text-align: bottom;
 }
+
+/* --Section to style Form-- */
+form {
+  display: inline-block;
+  padding: 15px;
+}
+
+legend {
+  width: auto;
+  margin-left: 20px;
+  font-size: 25px;
+  color: var(--decoration1);
+  font-family: "Exo 2", serif;
+  font-weight: 600;
+}
+
+/*--to set border colour and visibility of fieldset box on form--*/
+#field-set {
+  border: solid thin var(--heading-color);
+  border-radius: 2%;
+  padding: 5px;
+  margin: 0;
+}
+
+/*--contact form input boxes--*/
+textarea,
+#name,
+#email,
+#contact-number {
+  font: 0.8em;
+  min-width: 95%;
+  margin-left: 5px;
+}
+
+textarea {
+  height: 10rem;
+}
+
+.details-labels {
+  color: var(--main-text-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 1px;
+  margin-left: 5px;
+}
+
+/*--contact form reason selection text--*/
+.reason {
+  color: var(--main-text-color);
+  padding-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+/*--Reason for contact heading within form--*/
+fieldset h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
+  color: var(--main-text-color);
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 600;
+}
+input[type="radio"] {
+  margin-left: 5px;
+}
+
+/*stylng of button on form--*/
+#form-button {
+  border-radius: 10%;
+  background-color: var(--decoration3);
+  margin-left: 5px;
+  color: var(--decoration1);
+}
+
+/*--End of form Section--*/
+
+
 
 footer {
   color: #395c6b;
