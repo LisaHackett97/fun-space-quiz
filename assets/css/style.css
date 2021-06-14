@@ -27,6 +27,15 @@ p {
   font-size: 20px;
 }
 
+/* 
+learn more background. 
+Use root element and then color pciker to get a lighter shade
+ */
+#learn {
+  background-color: #b61d2709;
+  ;
+}
+
 /* chnage landing pg links when hovered */
 a:hover .start-pg, a:focus .start-pg{
    color: var(--heading-color);
@@ -153,7 +162,15 @@ nav {
 
 /* Learn More Page */
 
+/* .carouselSection, .contentSection{
+ vertical-align: top;
+ display: inline-block;
+} */
 
+/* .contactSection{
+  vertical-align: top;
+  position: absolute;
+ } */
 
 /* margin-left of 10% required to align items and override effect of the b/s class */
 .carousel-item {
@@ -180,6 +197,11 @@ figure.scaled {
 
 }
 
+figcaption{
+  margin-bottom: 15px;
+  height: 150px;
+}
+
 
 /* styling carousel controls to align with imgs */
 .carousel-control-next,
@@ -191,6 +213,31 @@ figure.scaled {
   text-align: bottom;
 }
 
+
+/* position indicator to bottom */
+ol.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  right: 0;     
+ }
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+   height: 10px;
+  margin: 5px;
+  border:0;  
+  
+}
+
+ol.carousel-indicators li.active {
+  background:var(--main-text-color);
+}
+
+ol.carousel-indicators li {
+  background:var(--decoration1);
+}
 /* --Section to style Form-- */
 form {
   display: inline-block;

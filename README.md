@@ -174,6 +174,10 @@ I tried a few different code snippets I found researching the topic but after tr
 
 The fieldset was overflowing on the contact form and appearing on top of the footer.
 
+Form is moving up and down on page, depending on the text content of the figcaptions. Height needed to be set to the figcaption element
+
+Carousel indicator overlapping with figcaption elements. Solved by positioing ol and li items to bottom of their container element and styling the items.
+
 [Back to table of contents](#table-of-contents)
 
 ### Bugs

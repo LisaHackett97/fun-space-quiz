@@ -14,10 +14,10 @@
     <title>Fun Space Quiz</title>
 </head>
 
-<body>
+<body id="learn">
     <header>
         <nav class="navbar navbar-expand-lg">
-            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fa fa-bars navbar-style my-icon"></i></span>
@@ -39,14 +39,11 @@
  modified with figure and figcaption tags
  to show text aligned below imgs -->
 
-    <div class="container">
+    <div class="container carouselSection">
+        <div class="row justify-content-center">
+            <div class="col-10">
         <div id="carouselCaptions" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselCaptions" data-slide-to="2"></li>
-            </ol>
-
+            
             <div class="carousel-inner">
 
                 <div class="carousel-item active">
@@ -155,8 +152,11 @@
                     </figure>
                 </div>
 
-            </div>
+                
+                
 
+            </div>
+            
             <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -166,10 +166,29 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+
+            <ol class="carousel-indicators">
+                <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselCaptions" data-slide-to="2"></li>
+                <li data-target="#carouselCaptions" data-slide-to="3"></li>
+                <li data-target="#carouselCaptions" data-slide-to="4"></li>
+                <li data-target="#carouselCaptions" data-slide-to="5"></li>
+                <li data-target="#carouselCaptions" data-slide-to="6"></li>
+                <li data-target="#carouselCaptions" data-slide-to="7"></li>
+                <li data-target="#carouselCaptions" data-slide-to="8"></li>
+                <li data-target="#carouselCaptions" data-slide-to="9"></li>
+                <li data-target="#carouselCaptions" data-slide-to="10"></li>
+            </ol>
         </div>
     </div>
-    <!--contact form-->
-    <div class="container contact-section" id="ask-question">
+    </div> 
+    <!-- end of carousel row -->
+    </div>
+    <!-- end of carousel container -->
+
+        <!--contact form-->
+    <div class="container contactSection" id="ask-question">
         <div class="row justify-content-center">
             <form action="#.html" class="col-sm-8 col-md-6 offset-md-0">
                 <fieldset id="field-set">
