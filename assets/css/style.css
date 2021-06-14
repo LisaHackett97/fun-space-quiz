@@ -162,15 +162,6 @@ nav {
 
 /* Learn More Page */
 
-/* .carouselSection, .contentSection{
- vertical-align: top;
- display: inline-block;
-} */
-
-/* .contactSection{
-  vertical-align: top;
-  position: absolute;
- } */
 
 /* margin-left of 10% required to align items and override effect of the b/s class */
 .carousel-item {
@@ -199,7 +190,7 @@ figure.scaled {
 
 figcaption{
   margin-bottom: 15px;
-  height: 150px;
+  height: 140px;
 }
 
 
@@ -329,3 +320,15 @@ footer p {
 .social-links a:hover {
   background-color: var(--main-text-color);
 }
+
+/* @media screen and (max-width: 1024px) {
+ figcaption {
+    font-size: 18px;
+    }
+} */
+
+@media screen and (max-width: 992px) {
+  figcaption {
+     font-size: 16px;      
+   }
+ }
