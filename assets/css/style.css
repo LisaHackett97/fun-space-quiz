@@ -168,16 +168,19 @@ header {
 }
 
 .nav-link.active {
-  border-bottom: 2px solid var(--decoration3);
-
-}
+  /* border-bottom: 2px solid var(--decoration3); */
+  text-decoration: underline;
+  text-decoration-color: var(--decoration2);
+  font-weight: 700;
+  color: var(--decoration2);
+ }
 
 .nav-link:hover {
   color: var(--decoration1);
 }
 
 #main-section{
-  margin-top: 100px;
+  margin-top: 75px;
 }
 
 /*--styling of burger icon for smaller screens--*/
