@@ -154,16 +154,22 @@ div.scaled {
 
 /* Nav Bar Styling */
 
+header {
+  background-color: var(--heading-color)
+}
+
+/*-- Style nav position nav links for smaller screens, collapsed menu--*/
 .nav-link {
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
   color: var(--decoration3);
+  display: flex;
+  justify-content: flex-end;
 }
 
 .nav-link.active {
-  border-bottom: 3px solid var(--decoration3);
-  border-bottom-left-radius: 10%;
-  border-bottom-right-radius: 10%;
+  border-bottom: 2px solid var(--decoration3);
+
 }
 
 .nav-link:hover {
@@ -181,11 +187,12 @@ div.scaled {
 
 .fa.fa-bars {
   font-size: 2.6rem;
+  color: var(--decoration3);
 }
 
+/* Credit: solution to my issue with navbar and content z-indez was found on https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059 */
 #nav {
-    z-index: 9999;
-    
+  z-index: 9999;
 }
 
 /* Learn More Page */

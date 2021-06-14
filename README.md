@@ -198,7 +198,8 @@ When seting the bg colour to the root decoration1, it looked like a different sh
 ## Deployment
 
 ## Credits
-
+z-index
+Credit: solution to my issue with navbar and content z-indez was found on https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059
 ### Media
 
 #### Images Used
