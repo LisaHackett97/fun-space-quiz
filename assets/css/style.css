@@ -13,7 +13,6 @@ font-family: 'Poppins', sans-serif;
   --decoration3: #00f5d4;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -32,37 +31,13 @@ h1 {
   font-family: 'Exo 2', sans-serif;
   font-size: 45px;
   font-weight: 600;
-  margin:10px;
+  margin: 10px;
   text-align: center;
-  padding:20px;
+  padding: 20px;
 
 }
 
-/* 
-learn more background. 
-Use root element and then color pciker to get a lighter shade
- */
-#learn {
-  background-color: #b61d2709;
-  
-}
 
-/* header{
-  background-color: #d33f49;
-  opacity: .2;
-  
-} */
-
-/*-- change landing pg links when hovered --*/
-a:hover .start-pg, a:focus .start-pg{
-   color: var(--heading-color);
- 
-}
-
-/*-- remove underline when over over anchor elements on landing page --*/
-.landing-pg:hover a {
-  text-decoration: none;
-}
 
 /* landing page */
 
@@ -87,7 +62,7 @@ div.scaled {
   background-size: contain;
   padding: 20px;
   margin: 20px;
- 
+
 }
 
 /* background image for link to game*/
@@ -106,12 +81,12 @@ div.scaled {
   height: 30vh;
 }
 
-.start-instructions{
+.start-instructions {
   height: 15vh;
-  padding:20px;
-  margin:20px;
-  
- 
+  padding: 20px;
+  margin: 20px;
+
+
 }
 
 /* styling of text on landing page */
@@ -120,26 +95,40 @@ div.scaled {
   font-weight: 600;
 }
 
+/*-- change landing pg links when hovered --*/
+a:hover .start-pg,
+a:focus .start-pg {
+  color: var(--heading-color);
+
+}
+
+/*-- remove underline when over over anchor elements on landing page --*/
+.landing-pg:hover a, .landing-pg:focus a {
+  text-decoration: none;
+}
+
 
 
 /* Styling the Instructions modal */
-#instructions{
-  color: var(--decoration1);  
+#instructions {
+  color: var(--decoration1);
   border: 2px solid var(--heading-color);
   border-radius: 50%;
-    font-weight: 600;
-    font-size: 20px;
-    padding: 15px;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 15px;
 }
 
 #instructions:hover {
   color: var(--heading-color);
 }
 
-.modal-header, .modal-footer{
+.modal-header,
+.modal-footer {
   border: none;
 }
-.modal-content{
+
+.modal-content {
   background-color: var(--decoration2);
   font-size: 1rem;
 }
@@ -150,16 +139,6 @@ div.scaled {
   font-weight: 600;
   border: 2px solid #d33f49;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Nav Bar Styling */
 
@@ -182,15 +161,15 @@ header {
   text-decoration-color: var(--decoration2);
   font-weight: 700;
   color: var(--decoration2);
- }
+}
 
 .nav-link:hover {
   color: var(--decoration1);
-  
+
 }
 
-/* add spacing above Main container, so that ther eis visible space with navbar */
-#main-section{
+/* add spacing above Main container, so that there is visible space with navbar */
+#main-section {
   margin-top: 75px;
 }
 
@@ -211,7 +190,14 @@ header {
 
 /* Learn More Page */
 
+/*--
+set background colour for full page 
+Use root element and then color picker to get a lighter shade --*/
+#learn {
+  background-color: #b61d2709
+}
 
+/*-- carousel styling --*/
 /* margin-left of 10% required to align items and override effect of the b/s class */
 .carousel-item {
   width: 85%;
@@ -237,7 +223,7 @@ figure.scaled {
 
 }
 
-figcaption{
+figcaption {
   margin-bottom: 15px;
   height: 140px;
 }
@@ -260,25 +246,28 @@ ol.carousel-indicators {
   bottom: 0;
   margin: 0;
   left: 0;
-  right: 0;     
- }
+  right: 0;
+}
 
 ol.carousel-indicators li,
 ol.carousel-indicators li.active {
-   height: 10px;
+  height: 10px;
   margin: 5px;
-  border:0; 
-  border-radius: 20%; 
-  
+  border: 0;
+  border-radius: 20%;
+
 }
 
 ol.carousel-indicators li.active {
-  background:var(--main-text-color);
+  background: var(--main-text-color);
 }
 
 ol.carousel-indicators li {
-  background:var(--decoration1);
+  background: var(--decoration1);
 }
+
+/*-- end of carousel styling --*/
+
 /* --Section to style Form-- */
 form {
   display: inline-block;
@@ -310,7 +299,7 @@ textarea,
   font: 0.7em;
   min-width: 90%;
   margin-left: 5px;
- }
+}
 
 textarea {
   height: 10rem;
@@ -325,8 +314,9 @@ textarea {
   margin-bottom: 1px;
   margin-left: 5px;
 }
+
 /*-- set font size for placeholder text on form --*/
-input{
+input {
   font-size: 16px;
 
 }
@@ -343,31 +333,26 @@ input{
 
 /*--End of form Section--*/
 
-
-
 footer {
   color: #395c6b;
-  background:#8ef9f3;
+  background: #8ef9f3;
   font-family: 'Poppins', sans-serif;
-  
 }
 
 footer p {
   font-size: 1rem;
   padding-top: 25px;
-  font-weight: 500;             
-  
+  font-weight: 500;
 }
+
 .social-links {
   display: flex;
-  
   padding-top: 10px;
- 
 }
 
 .social-links a {
   font-size: 3rem;
- padding:5px;
+  padding: 5px;
   color: var(--heading-color);
   border-radius: 100%;
 }
@@ -376,21 +361,20 @@ footer p {
   background-color: var(--main-text-color);
 }
 
-/* @media screen and (max-width: 1024px) {
- figcaption {
-    font-size: 18px;
-    }
-} */
+/*-- end of footer section --*/
+/*-- end of learn more page styling --*/
 
+
+/*-- media query to show carousel text in a smaller size:- captions and heading --*/
 @media screen and (max-width: 992px) {
   figcaption {
-     font-size: 15px; 
-     height:160px;     
-   }
+    font-size: 15px;
+    height: 160px;
+  }
 
-   h1 {
-        font-size: 35px;
-    padding:15px;
+  h1 {
+    font-size: 35px;
+    padding: 15px;
 
   }
- }
+}

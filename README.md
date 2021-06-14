@@ -172,13 +172,13 @@ I tried a few different code snippets I found researching the topic but after tr
  but modify it. I decided to enclose the images with the figure tag and to use the figcaption tag for the text details.
  Img, figure and carousel controls were required to be styled to ensure text appeared beneath img, and ctrls to left/right, without overlap, and also appearing as expected on diff screen sizes.
 
-The fieldset was overflowing on the contact form and appearing on top of the footer.
+The fieldset was overflowing on the contact form and appearing on top of the footer. Resolved once styling applied to container and the element itself.
 
 Form is moving up and down on page, depending on the text content of the figcaptions. Height needed to be set to the figcaption element
 
 Carousel indicator overlapping with figcaption elements. Solved by positioing ol and li items to bottom of their container element and styling the items.
 
-Once nav bar was fixed, main content of page was scolling on top of the navbar. Found a solution to set the z-index (code credit in credits section). 
+Once nav bar was fixed, main content of page was scolling on top of the navbar. Found a solution to set the z-index (code credit in credits section).
 When seting the bg colour to the root decoration1, it looked like a different shade to other yellows on the page. Tried setting opacity but then scrolled content was visible behind the navbar. Decided to swap bg and text colours. BG color change to the red chosen color and test to the blue --decoration3 color.
 
 Form input boxes overflow fieldset on xs screen size. Reduced size of font on input boxes to resolve
@@ -200,8 +200,10 @@ Form input boxes overflow fieldset on xs screen size. Reduced size of font on in
 ## Deployment
 
 ## Credits
+
 z-index
 Credit: solution to my issue with navbar and content z-indez was found on https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059
+
 ### Media
 
 #### Images Used
