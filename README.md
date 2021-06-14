@@ -181,6 +181,8 @@ Carousel indicator overlapping with figcaption elements. Solved by positioing ol
 Once nav bar was fixed, main content of page was scolling on top of the navbar. Found a solution to set the z-index (code credit in credits section). 
 When seting the bg colour to the root decoration1, it looked like a different shade to other yellows on the page. Tried setting opacity but then scrolled content was visible behind the navbar. Decided to swap bg and text colours. BG color change to the red chosen color and test to the blue --decoration3 color.
 
+Form input boxes overflow fieldset on xs screen size. Reduced size of font on input boxes to resolve
+
 [Back to table of contents](#table-of-contents)
 
 ### Bugs
