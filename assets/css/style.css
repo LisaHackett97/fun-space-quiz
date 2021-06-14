@@ -148,21 +148,22 @@ div.scaled {
 
 /* Nav Bar Styling */
 nav {
-  background-color: var(--heading-color);
+  /* background-color: var(--heading-color); */
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
-  color: var(--decoration1);
+  color: var(--heading-color);
 }
 
 .nav-link {
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
-  color: var(--decoration3);
+  color: var(--heading-color);
 }
 
 .nav-link.active {
-  border: 2px solid var(--decoration3);
-  border-radius: 100%;
+  border-bottom: 4px solid var(--decoration3);
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
 }
 
 .nav-link:hover {
@@ -251,7 +252,7 @@ legend {
   width: auto;
   margin-left: 20px;
   font-size: 25px;
-  color: var(--decoration1);
+  color: var(--heading-color);
   font-family: "Exo 2", serif;
   font-weight: 600;
 }
