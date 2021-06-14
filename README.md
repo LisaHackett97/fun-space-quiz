@@ -199,6 +199,43 @@ Form input boxes overflow fieldset on xs screen size. Reduced size of font on in
 
 ## Deployment
 
+The project was deployed to GitHub pages using the following steps:
+
+1. Log into GitHub and select the repo.
+2. Go to settings
+3. Select Pages from vertical menu on left
+4. On Source, select Master Branch and click save.
+5. Website is now live and the URL will be displayed. [Link to live site](https://lisahackett97.github.io/fun-space-quiz/)
+6. When updates are commited and pushed to GitHub, live site will be updated.
+
+To download and run locally, follow the below steps:
+
+1. Log into GitHub and select the repository, fun-space-quiz
+2. Select Code
+3. Click Download Zip
+4. Once files have downloaded, you can extract and useclone-project.png locally.
+
+Select this file for screenshot [Run Locally]
+
+To Clone, follow the below steps:
+
+1. Log into GitHub and select the repository, fun-space-quiz
+2. Select Code
+3. Click https and copy the link
+4. Open git bash
+5. Change the working directory to where you want the cloned directory
+6. Use command git clone and the copied URL
+7. Press ente
+
+Select this file for screenshot [Clone repo]
+
+Forking the repository:
+
+1. Log into GitHub and select the repository, MS1-Dog-Daycare
+2. Select Fork on top right hand corner.
+3. A copy should be created in your github profile and pull requests submitted.
+
+GitHub docs link [Forking a repository](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/cloning-and-forking-repositories-from-github-desktop#forking-a-repository/)
 ## Credits
 
 z-index
