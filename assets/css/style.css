@@ -365,6 +365,34 @@ footer p {
 /*-- end of learn more page styling --*/
 
 
+/* game page */
+
+/* canvas styling */
+#gamecanvas{
+  height:85%;
+  width: 95%x;
+ border: 2px solid red;
+  padding: 20px;
+  margin: 20px;
+}
+.game-area{
+  background-image: url(/assets/images/game-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right:20px;
+  height:45vh;
+  
+
+}
+
+.questions, .score {
+  height:20vh;
+  margin:25px;
+  padding: 25px;
+  border: 2px solid var(--decoration3);
+}
+
 /*-- media query to show carousel text in a smaller size:- captions and heading --*/
 @media screen and (max-width: 992px) {
   figcaption {

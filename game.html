@@ -1,63 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="Description" content="outer space game, with image section to learn more facts about space and planets"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Fun Space Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="outer space game, with image section to learn more facts about space and planets" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Fun Space Quiz</title>
 </head>
+
 <body>
 
-    <header class="fixed-top">
-        <nav class="navbar navbar-expand-lg">
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"><i class="fa fa-bars navbar-style my-icon"></i></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="learn-more.html">Learn about space! </a>
-                <a class="nav-link" href="learn-more.html#ask-question">ask us anything</a>
-               
-              </div>
-            </div>
-          </nav>
-    </header>
+  <header class="container-fluid fixed-top">
+    <nav class="navbar navbar-expand-lg">
 
-    <!-- Update with bootstrap classes/containers -->
-    <div class="game-area">
-        This the game area. Visual progress and image
+      <!-- offset collapse button to appear on right side of screen -->
+      <button class="navbar-toggler col-2 offset-10" type="button" data-toggle="collapse"
+        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-bars navbar-style my-icon"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span< /a>
+              <a class="nav-link" href="learn-more.html">Learn about space!</a>
+              <a class="nav-link" href="learn-more.html#ask-question">ask us anything</a>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Update with bootstrap classes/containers -->
+  <div class="container" id="main-section">
+    <div class="row gamerow">
+      <div class="game-area col-12">
+        <!-- This the game area. Visual progress and image -->
+        <canvas id="gamecanvas" class="col-12"></canvas>
+      </div>
     </div>
-    <div class="question-area">
+
+    <div class="row questions">
+      <div class="question-area col-12">
         This is where the questions and answers will be
+      </div>
     </div>
-    <div class="score">This is where score will be shown
-            </div>
+
+    <div class="row score">
+      <div class="col-12">This is where score will be shown
+      </div>
+    </div>
+  </div>
+  <!--end of game container-->
 
 
-            <footer>
-                Footer details here
-            </footer>
-    
-         
-
-  
-     
- 
+  <footer>
+    <div class="container">
+      <div class="row align-items-center">
 
 
+        <!--you-tube links-->
+        <div class="col-md-8 offset-md-2 text-center social-links">
+          <p>Want to see some cool videos? Check out our YouTube channel
+          </p>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i><span
+              class="sr-only">(you-tube link)</span></a>
+
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
 
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
