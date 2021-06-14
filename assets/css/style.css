@@ -53,9 +53,15 @@ Use root element and then color pciker to get a lighter shade
   
 } */
 
-/* chnage landing pg links when hovered */
+/*-- change landing pg links when hovered --*/
 a:hover .start-pg, a:focus .start-pg{
    color: var(--heading-color);
+ 
+}
+
+/*-- remove underline when over over anchor elements on landing page --*/
+.landing-pg:hover a {
+  text-decoration: none;
 }
 
 /* landing page */
@@ -72,7 +78,6 @@ div.scaled {
   background: url(/assets/images/landing-stars.jpg) no-repeat center center fixed #395c6b;
   background-size: cover;
 }
-
 
 /* background image for link to learn more*/
 #explore {
@@ -127,6 +132,10 @@ div.scaled {
     padding: 15px;
 }
 
+#instructions:hover {
+  color: var(--heading-color);
+}
+
 .modal-header, .modal-footer{
   border: none;
 }
@@ -177,6 +186,7 @@ header {
 
 .nav-link:hover {
   color: var(--decoration1);
+  
 }
 
 /* add spacing above Main container, so that ther eis visible space with navbar */
