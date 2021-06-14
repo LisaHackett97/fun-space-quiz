@@ -178,6 +178,9 @@ Form is moving up and down on page, depending on the text content of the figcapt
 
 Carousel indicator overlapping with figcaption elements. Solved by positioing ol and li items to bottom of their container element and styling the items.
 
+Once nav bar was fixed, main content of page was scolling on top of the navbar. Found a solution to set the z-index (code credit in credits section). 
+When seting the bg colour to the root decoration1, it looked like a different shade to other yellows on the page. Tried setting opacity but then scrolled content was visible behind the navbar. Decided to swap bg and text colours. BG color change to the red chosen color and test to the blue --decoration3 color.
+
 [Back to table of contents](#table-of-contents)
 
 ### Bugs

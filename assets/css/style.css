@@ -34,7 +34,7 @@ h1 {
   font-weight: 600;
   margin:10px;
   text-align: center;
-    padding:20px;
+  padding:20px;
 
 }
 
@@ -44,8 +44,14 @@ Use root element and then color pciker to get a lighter shade
  */
 #learn {
   background-color: #b61d2709;
-  ;
+  
 }
+
+/* header{
+  background-color: #d33f49;
+  opacity: .2;
+  
+} */
 
 /* chnage landing pg links when hovered */
 a:hover .start-pg, a:focus .start-pg{
@@ -147,30 +153,40 @@ div.scaled {
 
 
 /* Nav Bar Styling */
-nav {
-  /* background-color: var(--heading-color); */
-  font-family: 'Exo 2', sans-serif;
-  font-weight: 600;
-  color: var(--heading-color);
-}
 
 .nav-link {
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
-  color: var(--heading-color);
+  color: var(--decoration3);
 }
 
 .nav-link.active {
-  border-bottom: 4px solid var(--decoration3);
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
+  border-bottom: 3px solid var(--decoration3);
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
 }
 
 .nav-link:hover {
-  color: #fee440;
+  color: var(--decoration1);
 }
 
+#main-section{
+  margin-top: 100px;
+}
 
+/*--styling of burger icon for smaller screens--*/
+.navbar-toggler-icon {
+  display: inline;
+}
+
+.fa.fa-bars {
+  font-size: 2.6rem;
+}
+
+#nav {
+    z-index: 9999;
+    
+}
 
 /* Learn More Page */
 
