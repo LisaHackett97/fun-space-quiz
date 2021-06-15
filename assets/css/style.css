@@ -391,6 +391,12 @@ footer p {
   border: 2px dotted var(--heading-color);
 }
 
+.questionScores {
+  border: 2px dotted var(--decoration1);
+  margin-top: 15px;
+
+}
+
 /* .questions,
  .score {
   height:20vh;
