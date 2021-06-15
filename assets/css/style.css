@@ -386,12 +386,34 @@ footer p {
 
 }
 
-.questions, .score {
+/* temp styling onm question and answer area */
+.question-area{
+  border: 2px dotted var(--heading-color);
+}
+
+/* .questions,
+ .score {
   height:20vh;
   margin:25px;
   padding: 25px;
   border: 2px solid var(--decoration3);
+} */
+
+/* style answer buttons */
+.answerButton {
+  border: 1px solid var(--decoration3);
+  color: var(--main-text-color);
+  max-height: 100%;
 }
+
+
+
+.r1, .r2 {
+  border: 2px solid var(--decoration1);
+}
+
+
+ 
 
 /*-- media query to show carousel text in a smaller size:- captions and heading --*/
 @media screen and (max-width: 992px) {

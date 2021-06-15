@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span< /a>
+          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span</a>
               <a class="nav-link" href="learn-more.html">Learn about space!</a>
               <a class="nav-link" href="learn-more.html#ask-question">ask us anything</a>
 
@@ -37,20 +37,35 @@
 
   <!-- Update with bootstrap classes/containers -->
   <div class="container" id="main-section">
-    <div class="row gamerow">
+    <div class="row">
       <div class="game-area col-12">
         <!-- This the game area. Visual progress and image -->
         <canvas id="gamecanvas" class="col-12"></canvas>
       </div>
     </div>
 
-    <div class="row questions">
+    <div class="row">
       <div class="question-area col-12">
-        This is where the questions and answers will be
+        <div id="question">Question</div>
+
+        <div id="answers col-12">
+          <button class="btn answerButton col-10" type="button" id="answer1">Answer 1
+          </button>
+
+          <button class="btn answerButton col-10" type="button" id="answer2">Answer 2
+          </button>
+
+          <button class="btn answerButton col-10" type="button" id="answer3">Answer 3
+          </button>
+
+          <button class="btn answerButton col-10" type="button" id="answer4">Answer 4
+          </button>
+
+        </div>
       </div>
     </div>
 
-    <div class="row score">
+    <div class="row">
       <div class="col-12">
         <p class="questionScores">Right answers <span id="score">0</span></p>
         This is where score will be shown
@@ -73,8 +88,9 @@
       </div>
 
     </div>
-  </footer>
 
+    
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
