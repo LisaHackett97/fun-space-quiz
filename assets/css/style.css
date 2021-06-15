@@ -50,13 +50,13 @@ div.scaled {
 
 /* full screen background image with fallback colour*/
 #landing {
-  background: url(/assets/images/landing-stars.jpg) no-repeat center center fixed #395c6b;
+  background: url("/assets/images/landing-stars.jpg") no-repeat center center fixed #395c6b;
   background-size: cover;
 }
 
 /* background image for link to learn more*/
 #explore {
-  background-image: url(./assets/images/landing-astronaut.png);
+  background-image: url("/assets/images/landing-astronaut.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -67,7 +67,7 @@ div.scaled {
 
 /* background image for link to game*/
 #playgame {
-  background-image: url(./assets/images/landing-rocket.png);
+  background-image: url("/assets/images/landing-rocket.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -376,7 +376,7 @@ footer p {
   margin: 20px;
 }
 .game-area{
-  background-image: url(/assets/images/game-bg.jpg);
+  background-image: url("/assets/images/game-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
