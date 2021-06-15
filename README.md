@@ -187,6 +187,8 @@ Form input boxes overflow fieldset on xs screen size. Reduced size of font on in
 
 ### Bugs
 
+Images did not initially display on the deployed site. For the carousel images, I needed to remove the / before the file path and for the bg images on game and landing pages, I need to change the relative path to "../images" instead of "/assets/images". These changes resolved the issue on the live site.
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
@@ -236,10 +238,11 @@ Forking the repository:
 3. A copy should be created in your github profile and pull requests submitted.
 
 GitHub docs link [Forking a repository](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/cloning-and-forking-repositories-from-github-desktop#forking-a-repository/)
+
 ## Credits
 
 z-index
-Credit: solution to my issue with navbar and content z-indez was found on https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059
+Credit: solution to my issue with navbar and content z-indez was found on [Freecodecamp.org](https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059)
 
 ### Media
 
