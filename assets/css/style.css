@@ -56,7 +56,7 @@ div.scaled {
 
 /* background image for link to learn more*/
 #explore {
-  background-image: url(/assets/images/landing-astronaut.png);
+  background-image: url(./assets/images/landing-astronaut.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -67,7 +67,7 @@ div.scaled {
 
 /* background image for link to game*/
 #playgame {
-  background-image: url(/assets/images/landing-rocket.png);
+  background-image: url(./assets/images/landing-rocket.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
