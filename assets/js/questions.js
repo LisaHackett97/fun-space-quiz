@@ -1,4 +1,5 @@
-let questions = [{
+let quizData = [
+    {
         question: "Which is the first planet in the solar system from the sun?",
         answers: {
             a: "Venus",
