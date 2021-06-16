@@ -55,10 +55,10 @@ function nextQ() {
 
 // help with using the fisher-yates method
 // https://www.tutorialspoint.com/
+// https://bost.ocks.org/mike/shuffle/
 
 function shuffleQuestion() {
 
-// let i = quizArr.length, count, temp;
 var x = quizArr.length, temp, i;
 
 while (x) {
@@ -67,13 +67,7 @@ while (x) {
    quizArr[x] = quizArr[i];
    quizArr[i] = temp;
 }
-// while(--i > 0){
-//   count = Math.floor(Math.random() * (i + 1));
-//   temp = quizArr[count];
 
-//   quizArr[count] = quizArr[i];
-//   quizArr[i] = temp;
-// }
 }
 
 
