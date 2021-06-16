@@ -14,13 +14,16 @@ const answer4 = document.getElementById("answer4");
 const score = document.getElementById("score");
 const answerButtons = document.getElementById('answers');
 const answered = [];
+// let answer = document.getElementsByClassName("answerButton");
+// let choice;
 let currentQuestion = 0;
 let availableQ = [];
 let quizArr = quizData;
+const q = quizData[currentQuestion];
 
 
 
-// to add event listeners for click and keydown.
+// TO DO: to add event listeners for click and keydown.
 
 // run the game. Shuffle fn called first so user doesn't see same q each time game is refreshed
 function runGame() {
@@ -70,11 +73,23 @@ function nextQ() {
 }
 
 
+// Not running correctly
+function checkAnswer() {
+for(var i=0; i <answer.length; i++) {};
+  if (answer[i].checked){
+    choice = answer[i].value;
+  } {confirm("woohoo")}
+}
 
+// if (choice == q.correctAnswer) {
+//   confirm("woohoo")
+// }
 
-
-function checkAnswer() {};
-
+// if(answer == quizArr[currentQuestion].correctAnswer){
+//   alert("You got it right");
+// } else {
+//   confirm("you got it wrong, try again?");
+// }
 
 
 function moveInGame() {};
