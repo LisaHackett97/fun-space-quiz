@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     showQuestion();
 });
@@ -37,6 +38,13 @@ function showQuestion() {
 function nextQ(){
     // when button clicked, add 1 to currentQuestion variable and run showQuestion fn
 }
+
+// nextQ.onclick = ()=> {
+//     if(currentQuestion < lastQuestion) {
+//         currentQuestion++;
+//         showQuestion(currentQuestion);
+//     }
+// }
 
             function runGame() {}
 
