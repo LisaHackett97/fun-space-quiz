@@ -9,7 +9,7 @@ const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
 // const reTry = document.getElementById("reTry");
-const nextQ = document.getElementById("nextQ");
+// const nextQ = document.getElementById("nextQ");
 const score = document.getElementById("score");
 const answerButtons = document.getElementById('answers')
 
@@ -20,7 +20,7 @@ const answerButtons = document.getElementById('answers')
 
 const lastQuestion = quizData.length - 1;
 
-let currentQuestion = 1;
+let currentQuestion = 0;
 // for (let i=0; i < quizData.length; i++){
 //     currentQuestion += 1;
 // }
@@ -35,16 +35,14 @@ function showQuestion() {
         answer4.innerHTML = q.answers.d;
 }
 
+// adding event listener to next q button, to iterate currentq number and show next Q
+document.getElementById("nextQ").addEventListener("click", nextQ);
 function nextQ(){
-    // when button clicked, add 1 to currentQuestion variable and run showQuestion fn
+    ++currentQuestion;
+showQuestion();
 }
 
-// nextQ.onclick = ()=> {
-//     if(currentQuestion < lastQuestion) {
-//         currentQuestion++;
-//         showQuestion(currentQuestion);
-//     }
-// }
+
 
             function runGame() {}
 
@@ -56,4 +54,6 @@ function nextQ(){
 
             function reTry() {};
 
-            function incrementScore() {};
+            function incrementScore() {};{
+               
+            }
