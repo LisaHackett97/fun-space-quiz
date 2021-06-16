@@ -11,7 +11,7 @@ let quizData = [
     },
 
     {
-        question: "Which is the first planet in the solar system from the sun?",
+        question: "We can't see the surface of Venus from space in visible light. Why?",
         answers: {
             a: "It doesn't have one",
             b: "None of these",

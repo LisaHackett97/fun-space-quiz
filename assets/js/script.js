@@ -1,44 +1,65 @@
-document.addEventListener("DOMContentLoaded", function() { 
-    displayFirstQ();
-    displayFirstAnswerChoice();
+document.addEventListener("DOMContentLoaded", function () {
+    showQuestion();
 });
 
-// $("question").text("update question");
-// console.log("#question")
+const newQuestion = document.getElementById("question");
+const answer1 = document.getElementById("answer1");
+const answer2 = document.getElementById("answer2");
+const answer3 = document.getElementById("answer3");
+const answer4 = document.getElementById("answer4");
+// const reTry = document.getElementById("reTry");
+// const nextQ = document.getElementById("nextQ");
+const score = document.getElementById("score");
+const answerButtons = document.getElementById('answers')
+
 
 // event listeners for click amd keydown.
 
+// document.getElementById("question").innerHTML = quizData[0].question;
+
+// const lastQuestion = quizData.length - 1;
+
+let currentQuestion = 0;
 
 
-function runGame() { 
+function showQuestion() {
+    let q = quizData[currentQuestion];
+
+    if(currentQuestion <= quizData.length-1){    
+    newQuestion.innerHTML = q.question;
+    answer1.innerHTML = q.answers.a;
+    answer2.innerHTML = q.answers.b;
+    answer3.innerHTML = q.answers.c;
+    answer4.innerHTML = q.answers.d;
 }
 
-// show the first quesion on load
-function displayFirstQ() {
-    document.getElementById("question").innerHTML = quizData[0].question;
+    else {
+        //Show the end screen
+        confirm("No more questions. Click ok to continue");
+      
+    }
+}
+
+// adding event listener to next q button, to iterate current q number and show next Q
+document.getElementById("nextQ").addEventListener("click", nextQ);
+
+function nextQ() {
+    currentQuestion++;
+    showQuestion();
 }
 
 
 
+function runGame() {}
 
-// show the first set of answers //
-function displayFirstAnswerChoice() { 
-    document.getElementById("answer1").innerHTML = quizData[0].answers.a;
-    document.getElementById("answer2").innerHTML = quizData[0].answers.b;
-    document.getElementById("answer3").innerHTML = quizData[0].answers.c;
-    document.getElementById("answer4").innerHTML = quizData[0].answers.d;
+function checkAnswer() {};
+
+
+
+function moveInGame() {};
+
+function reTry() {};
+
+function incrementScore() {}; {
+
 }
-
-
-
-
-function checkAnswer() { };
-
-function newQuestion(){ };
-
-function moveInGame() { };
-
-function reTry() { };
-
-function incrementScore() { };
-
