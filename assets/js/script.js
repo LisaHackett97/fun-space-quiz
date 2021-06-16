@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     showQuestion();
 });
@@ -18,42 +17,49 @@ const answerButtons = document.getElementById('answers')
 
 // document.getElementById("question").innerHTML = quizData[0].question;
 
-const lastQuestion = quizData.length - 1;
+// const lastQuestion = quizData.length - 1;
 
 let currentQuestion = 0;
-// for (let i=0; i < quizData.length; i++){
-//     currentQuestion += 1;
-// }
+
 
 function showQuestion() {
     let q = quizData[currentQuestion];
 
+    if(currentQuestion <= quizData.length-1){    
     newQuestion.innerHTML = q.question;
-        answer1.innerHTML = q.answers.a;
-        answer2.innerHTML = q.answers.b;
-        answer3.innerHTML = q.answers.c;
-        answer4.innerHTML = q.answers.d;
+    answer1.innerHTML = q.answers.a;
+    answer2.innerHTML = q.answers.b;
+    answer3.innerHTML = q.answers.c;
+    answer4.innerHTML = q.answers.d;
 }
 
-// adding event listener to next q button, to iterate currentq number and show next Q
+    else {
+        //Show the end screen
+        confirm("No more questions. Click ok to continue");
+      
+    }
+}
+
+// adding event listener to next q button, to iterate current q number and show next Q
 document.getElementById("nextQ").addEventListener("click", nextQ);
-function nextQ(){
-    ++currentQuestion;
-showQuestion();
+
+function nextQ() {
+    currentQuestion++;
+    showQuestion();
 }
 
 
 
-            function runGame() {}
+function runGame() {}
 
-            function checkAnswer() {};
+function checkAnswer() {};
 
 
 
-            function moveInGame() {};
+function moveInGame() {};
 
-            function reTry() {};
+function reTry() {};
 
-            function incrementScore() {};{
-               
-            }
+function incrementScore() {}; {
+
+}
