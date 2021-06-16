@@ -30,6 +30,28 @@ let quizData = [
             d: " Mimas"
         },
         correctAnswer: 'a'
+    },
+
+    {
+        question: "Between which two planets is the asteroid belt found?",
+        answers: {
+            a: "Mars and Jupiter ",
+            b: "Neptune and Pluto",
+            c: " Saturn and Uranus",
+            d: " All of these"
+        },
+        correctAnswer: 'a'
+    },
+
+    {
+        question: "Neptune was the first planet to be found by which method?",
+        answers: {
+            a: "telescope ",
+            b: "all of these",
+            c: "the naked eye",
+            d: " mathematical prediction"
+        },
+        correctAnswer: 'd'
     }
 
 ];
