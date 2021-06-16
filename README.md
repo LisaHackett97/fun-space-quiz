@@ -183,6 +183,9 @@ When seting the bg colour to the root decoration1, it looked like a different sh
 
 Form input boxes overflow fieldset on xs screen size. Reduced size of font on input boxes to resolve
 
+When setting up the shuffle questions function, I tried to find a number of ways to do this, including sorting the quiz array. couldn't get anything to work.
+When I was researching I came across the fisher yates algorithim method. I wouldn't get it to work but needed to spend more time understaning it.
+Understood and set it up but was getting an issue in the console, where it was telling me .length on the array name wasn't defined. To resolve, I set a new array varaible and passed it in the quiz variable, as quiz variable held in another js file.
 [Back to table of contents](#table-of-contents)
 
 ### Bugs
@@ -243,6 +246,8 @@ GitHub docs link [Forking a repository](https://docs.github.com/en/desktop/contr
 
 z-index
 Credit: solution to my issue with navbar and content z-indez was found on [Freecodecamp.org](https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059)
+
+add credit in re fisher yates code
 
 ### Media
 
