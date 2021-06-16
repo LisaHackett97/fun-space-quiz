@@ -1,11 +1,8 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
-  showQuestion();
-  shuffleQuestion();
-  // runGame();
-  
+  runGame();
+
 });
+// set variables needed
 
 const newQuestion = document.getElementById("question");
 const answer1 = document.getElementById("answer1");
@@ -23,24 +20,43 @@ let quizArr = quizData;
 
 
 
-// to add event listeners for click amd keydown.
+// to add event listeners for click and keydown.
+
+// run the game. Shuffle fn called first so user doesn't see same q each time game is refreshed
+function runGame() {
+  shuffleQuestion();
+  showQuestion();
+}
 
 // show a question 
 function showQuestion() {
   const q = quizData[currentQuestion];
-  
-// if the current question number, less than lenght of array, show a question
-  if(currentQuestion <= quizData.length-1){    
-  newQuestion.innerHTML = q.question;
-  answer1.innerHTML = q.answers.a;
-  answer2.innerHTML = q.answers.b;
-  answer3.innerHTML = q.answers.c;
-  answer4.innerHTML = q.answers.d;
+  // if the current question number, less than length of array, show a question
+  if (currentQuestion <= quizData.length - 1) {
+    newQuestion.innerHTML = q.question;
+    answer1.innerHTML = q.answers.a;
+    answer2.innerHTML = q.answers.b;
+    answer3.innerHTML = q.answers.c;
+    answer4.innerHTML = q.answers.d;
+  } else {
+    //Show the end screen
+    confirm("No more questions. Click ok to continue");
+  }
 }
-  else {
-      //Show the end screen
-      confirm("No more questions. Click ok to continue");
-        }
+
+// help with using the fisher-yates method
+// https://www.tutorialspoint.com/
+// https://bost.ocks.org/mike/shuffle/
+
+function shuffleQuestion() {
+  var x = quizArr.length,
+    temp, i;
+  while (x) {
+    i = Math.floor(Math.random() * x--);
+    temp = quizArr[x];
+    quizArr[x] = quizArr[i];
+    quizArr[i] = temp;
+  }
 }
 
 // adding event listener to next q button, to iterate current q number and show next Q
@@ -53,32 +69,9 @@ function nextQ() {
   showQuestion();
 }
 
-// help with using the fisher-yates method
-// https://www.tutorialspoint.com/
-// https://bost.ocks.org/mike/shuffle/
-
-function shuffleQuestion() {
-
-var x = quizArr.length, temp, i;
-
-while (x) {
-   i = Math.floor(Math.random() * x--);
-   temp = quizArr[x];
-   quizArr[x] = quizArr[i];
-   quizArr[i] = temp;
-}
-
-}
 
 
 
-
-// function runGame() {
-//   shuffle = quizData.sort(() => Math.random( -.5));
-//   currentQuestion = 0;
-//   nextQ();
-  
-// }
 
 function checkAnswer() {};
 
