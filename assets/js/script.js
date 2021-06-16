@@ -1,6 +1,10 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    showQuestion();
-    shuffleQuestion();
+  showQuestion();
+  shuffleQuestion();
+  // runGame();
+  
 });
 
 const newQuestion = document.getElementById("question");
@@ -13,49 +17,68 @@ const answer4 = document.getElementById("answer4");
 const score = document.getElementById("score");
 const answerButtons = document.getElementById('answers');
 const answered = [];
-
-
-// event listeners for click amd keydown.
-
-// document.getElementById("question").innerHTML = quizData[0].question;
-
-// const lastQuestion = quizData.length - 1;
-
 let currentQuestion = 0;
+let availableQ = [];
+let quizArr = quizData;
 
+
+
+// to add event listeners for click amd keydown.
+
+// show a question 
 function showQuestion() {
-    let q = quizData[currentQuestion];
-
-    if(currentQuestion <= quizData.length-1){    
-    newQuestion.innerHTML = q.question;
-    answer1.innerHTML = q.answers.a;
-    answer2.innerHTML = q.answers.b;
-    answer3.innerHTML = q.answers.c;
-    answer4.innerHTML = q.answers.d;
+  const q = quizData[currentQuestion];
+  
+// if the current question number, less than lenght of array, show a question
+  if(currentQuestion <= quizData.length-1){    
+  newQuestion.innerHTML = q.question;
+  answer1.innerHTML = q.answers.a;
+  answer2.innerHTML = q.answers.b;
+  answer3.innerHTML = q.answers.c;
+  answer4.innerHTML = q.answers.d;
 }
-    else {
-        //Show the end screen
-        confirm("No more questions. Click ok to continue");
-          }
+  else {
+      //Show the end screen
+      confirm("No more questions. Click ok to continue");
+        }
 }
 
 // adding event listener to next q button, to iterate current q number and show next Q
 document.getElementById("nextQ").addEventListener("click", nextQ);
 
+// iterate +1 to the current question variable, then run the show question function
+// will show next question in the array QuizData
 function nextQ() {
-    currentQuestion++;
-    showQuestion();
+  currentQuestion++;
+  showQuestion();
 }
+
+// help with using the fisher-yates method
+// https://www.tutorialspoint.com/
+// https://bost.ocks.org/mike/shuffle/
 
 function shuffleQuestion() {
-//Function to change order of array to display questions
+
+var x = quizArr.length, temp, i;
+
+while (x) {
+   i = Math.floor(Math.random() * x--);
+   temp = quizArr[x];
+   quizArr[x] = quizArr[i];
+   quizArr[i] = temp;
+}
 
 }
 
 
 
 
-function runGame() {}
+// function runGame() {
+//   shuffle = quizData.sort(() => Math.random( -.5));
+//   currentQuestion = 0;
+//   nextQ();
+  
+// }
 
 function checkAnswer() {};
 
