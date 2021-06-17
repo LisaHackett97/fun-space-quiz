@@ -383,27 +383,14 @@ footer p {
 canvas {
   width: 400px;
    height:500px;
-   background-image: url("../images/game-bg.jpg");
+   background-image: url("../images/game-bg-stars.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
    
 }
-#gamecanvas{
-  /* height:85%;
-  width: 95%x; */
- border: 2px solid red;
-  padding: 0;
-  margin: 20px;
-}
-/* .game-area{
-  background-image: url("../images/game-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  margin-right:20px;
-  height:45vh;
-} */
+
+
 
 #question {
   margin-top: 5px;
@@ -505,5 +492,12 @@ background-color: #395c6b1c;
 @media screen and (max-width: 576px) {
   #question, .answerButton{
     font-size: 15px;
+  }
+
+  canvas {
+    width: 400px;
+     height:200px;
+  
+     
   }
 }
