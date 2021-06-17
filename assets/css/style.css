@@ -337,6 +337,7 @@ footer {
   color: #395c6b;
   background: #8ef9f3;
   font-family: 'Poppins', sans-serif;
+
 }
 
 footer p {
@@ -396,8 +397,11 @@ footer p {
 }
 
 .questionScores {
-  border: 2px dotted var(--decoration1);
+  /* border: 2px dotted var(--decoration1); */
   margin-top: 15px;
+  font-weight: 800;
+ font-style: italic;
+ padding-left: 10px;
 
 }
 
