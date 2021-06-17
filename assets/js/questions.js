@@ -7,13 +7,13 @@ let quizData = [
             c: "Jupiter",
             d: "Mercury"
         },
-        correctAnswer: 'd'
+        correctAnswer: "Mercury"
     },
 
     {
         question: "We can't see the surface of Venus from space in visible light. Why?",
         answers: {
-            a: "It doesn't have one",
+            a: "It doesn't have a surface",
             b: "None of these",
             c: "The light from the sun reflects directly on the surface",
             d: "Venus is covered with a thick layer of clouds"
@@ -29,7 +29,7 @@ let quizData = [
             c: "Rhea",
             d: " Mimas"
         },
-        correctAnswer: 'a'
+        correctAnswer: "Titan "
     },
 
     {
@@ -40,7 +40,7 @@ let quizData = [
             c: " Saturn and Uranus",
             d: " All of these"
         },
-        correctAnswer: 'a'
+        correctAnswer: "Mars and Jupiter "
     },
 
     {
@@ -49,9 +49,9 @@ let quizData = [
             a: "telescope ",
             b: "all of these",
             c: "the naked eye",
-            d: " mathematical prediction"
+            d: "Mathematical prediction"
         },
-        correctAnswer: 'd'
+        correctAnswer: "Mathematical prediction"
     }
 
 ];
