@@ -128,37 +128,36 @@ function incrementScore() {
 
 // canvas code to test
 
-var canvas = document.getElementById('gamecanvas');
-var ctx = canvas.getContext('2d');
+let canvas = document.getElementById('gamecanvas');
+let ctx = canvas.getContext('2d');
 
-
+function drawQuestion1 (){
 ctx.strokeStyle = "#d33f49"; 
 ctx.beginPath();
 ctx.moveTo(0, 0);
-ctx.lineTo(100, 100);
+ctx.lineTo(10, 10);
 ctx.stroke()
+}
 
-//  const canvas = document.querySelector('canvas');
-//  var canvas = document.getElementById("gameCanvas");
- var ctx = canvas.getContext("2d");
- ctx.fillStyle = "#d33f49";
- ctx.fillRect(0, 0, 150, 75);
+function drawQuestion2 (){
+  ctx.strokeStyle = "#fee440"; 
+  ctx.beginPath();
+  ctx.moveTo(10, 10);
+  ctx.lineTo(20, 20);
+  ctx.stroke()
+  }
 
-;
-
-
- 
- //starting pt
-//  ctx.moveTo(90, 90);
-//  // ending pt position
-// ctx.lineTo(12, 53);
-// // to actually draw the line
-// ctx.stroke();
-
-// ctx.fillRect(10, 10, 10, 10);
-
-
+  function scoreCheckDraw (){
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    if (oldScore === 1){
+      drawQuestion1();
+    }
+    else {
+      drawQuestion2();
+      console.log(oldScore);
+    }
+  }
 
 
-// ctx.fillRect(0, 0, 150, 75);
+
 
