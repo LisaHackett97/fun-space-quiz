@@ -14,12 +14,17 @@ const answer4 = document.getElementById("answer4");
 const score = document.getElementById("score");
 const answerButtons = document.getElementById('answers');
 const answered = [];
-// let answer = document.getElementsByClassName("answerButton");
+// const answer;
+let answer = document.getElementsByClassName("answerButton");
+let chosenAnswer;
+// let chosenAnswer = document.getElementsByClassName("answerButton").innerHTML;
 // let choice;
 let currentQuestion = 0;
 let availableQ = [];
 let quizArr = quizData;
 const q = quizData[currentQuestion];
+
+const correctAnswer = quizData.correctAnswer;
 
 
 
@@ -72,30 +77,31 @@ function nextQ() {
   showQuestion();
 }
 
+$('#answers > button').click(function(event) {
+   chosenAnswer = $(this).text();
+   alert(chosenAnswer);
+   event.preventDefault();
+   check();
+});
 
-// Not running correctly
-function checkAnswer() {
-for(var i=0; i <answer.length; i++) {};
-  if (answer[i].checked){
-    choice = answer[i].value;
-  } {confirm("woohoo")}
-}
+// funcrtion not yet accessing the correct answer from the array
+function check(){
+if (chosenAnswer !== q.correctAnswer){
+      alert("woo")
+    }
+    alert("nope");
+    console.log(chosenAnswer);
+    console.log(correctAnswer);
+  }
 
-// if (choice == q.correctAnswer) {
-//   confirm("woohoo")
+
+
+
+
+// function moveInGame() {};
+
+// function reTry() {};
+
+// function incrementScore() {}; {
+
 // }
-
-// if(answer == quizArr[currentQuestion].correctAnswer){
-//   alert("You got it right");
-// } else {
-//   confirm("you got it wrong, try again?");
-// }
-
-
-function moveInGame() {};
-
-function reTry() {};
-
-function incrementScore() {}; {
-
-}
