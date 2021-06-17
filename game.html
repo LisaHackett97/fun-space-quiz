@@ -90,8 +90,8 @@
                  Woohoo, you got it right :)               
                               </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn" data-dismiss="modal">ReTry</button>
-                  <button type="button" class="btn">next q</button>
+                  <!-- <button type="button" class="btn" data-dismiss="modal">ReTry</button> -->
+                  <button type="button" class="btn gameModal" onclick="nextQ();" data-dismiss="modal">Next question</button>
                 </div>
               </div>
             </div>
@@ -109,11 +109,11 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body" id="modalTwxtWrgAnswer">   Sorry you got it wrong!!              
+                <div class="modal-body" id="modalTextWrgAnswer">   Sorry you got it wrong!!  To try again~~ click retry, or go straight to the next q           
                               </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn" data-dismiss="modal">ReTry</button>
-                  <button type="button" class="btn" onclick="nextQ();" data-dismiss="modal">next q</button>
+                  <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
+                  <button type="button" class="btn gameModal" onclick="nextQ();" data-dismiss="modal">next q</button>
                 </div>
               </div>
             </div>
@@ -126,10 +126,11 @@
       </div>
 
       <div class="controls col-12">
-        <button class="btn col-4 offset-1" type="button" id="tryAgain">Try Again
-        </button>
+        <!-- <button class="btn col-4 offset-1" type="button" id="tryAgain">Try Again
+        </button> -->
+        <!-- Try again button not needed as this is covered by the modal -->
 
-        <button class="btn col-4 offset-1" type="button" id="nextQ">Next Q
+        <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
         </button>
 
 

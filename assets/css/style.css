@@ -435,6 +435,21 @@ background-color: #395c6b1c;
   display: none;
 }
 
+/* pop up modal buttons other modal styling set with styling on instructions modal*/
+
+.modal-footer .gameModal {
+  color: #d33f49;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border: 2px solid #d33f49;
+}
+
+.modal-footer .gameModal:hover {
+ background-color: var(--decoration3);
+ font-weight: 700;
+ border-style: none;
+ border-radius:20%;
+}
 
 /*-- media query to show carousel text in a smaller size:- captions and heading --*/
 @media screen and (max-width: 992px) {
