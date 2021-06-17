@@ -37,6 +37,15 @@ h1 {
 
 }
 
+#game-header{ 
+  font-size: 25px;
+
+  /* margin: 5px; */
+  text-align: center;
+  padding: 5px;
+
+}
+
 
 
 /* landing page */
@@ -337,6 +346,7 @@ footer {
   color: #395c6b;
   background: #8ef9f3;
   font-family: 'Poppins', sans-serif;
+  
 
 }
 
