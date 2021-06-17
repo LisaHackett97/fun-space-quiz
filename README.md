@@ -191,6 +191,12 @@ accessing correct answer in the array, tried few diff methods. Needed to set a h
 
 score not incremting, ok now.
 
+notes for js game
+
+ need to create array/container for answered questions
+ need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
+ function to limit number of questions in game
+
 [Back to table of contents](#table-of-contents)
 
 ### Bugs

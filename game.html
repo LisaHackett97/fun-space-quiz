@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span< /a>
+          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span</a>
               <a class="nav-link" href="learn-more.html">Learn about space!</a>
               <a class="nav-link" href="learn-more.html#ask-question">ask us anything</a>
 
@@ -43,8 +43,8 @@
        
       <div class="game-area col-12">
         
-        <!-- This the game area. Visual progress and image -->
-        <canvas id="gamecanvas" class="col-12"></canvas>
+        <!-- This the game area. Visual progress and image/ Text within canvas element is for fallback -->
+        <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">  <p>This is the game area. answer questions from question-area, then canvas to draw a line across the canvas, to show progress</p></canvas>
       </div>
     </div>
 
@@ -53,16 +53,16 @@
         <div id="question">Question</div>
 
         <div id="answers" class="col-12">
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">Answer 1
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">
           </button>
 
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">Possible Answer 2
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">
           </button>
 
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer3">Answer 3
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer3">
           </button>
 
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer4">Answer 4
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer4">
           </button>
 
           <!-- span for holding correct answer to question. hidden on screen -->

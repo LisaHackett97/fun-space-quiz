@@ -126,8 +126,39 @@ function incrementScore() {
  let oldScore = parseInt(document.getElementById('score').innerText);
   document.getElementById('score').innerText = ++oldScore;}
 
- // need to create array/container for answered questions
- // need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
- // function to limit number of questions in game
+// canvas code to test
 
+var canvas = document.getElementById('gamecanvas');
+var ctx = canvas.getContext('2d');
+
+
+ctx.strokeStyle = "#d33f49"; 
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(100, 100);
+ctx.stroke()
+
+//  const canvas = document.querySelector('canvas');
+//  var canvas = document.getElementById("gameCanvas");
+ var ctx = canvas.getContext("2d");
+ ctx.fillStyle = "#d33f49";
+ ctx.fillRect(0, 0, 150, 75);
+
+;
+
+
+ 
+ //starting pt
+//  ctx.moveTo(90, 90);
+//  // ending pt position
+// ctx.lineTo(12, 53);
+// // to actually draw the line
+// ctx.stroke();
+
+// ctx.fillRect(10, 10, 10, 10);
+
+
+
+
+// ctx.fillRect(0, 0, 150, 75);
 

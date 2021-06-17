@@ -379,21 +379,31 @@ footer p {
 /* game page */
 
 /* canvas styling */
+
+canvas {
+  width: 400px;
+   height:500px;
+   background-image: url("../images/game-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+   
+}
 #gamecanvas{
-  height:85%;
-  width: 95%x;
+  /* height:85%;
+  width: 95%x; */
  border: 2px solid red;
-  padding: 20px;
+  padding: 0;
   margin: 20px;
 }
-.game-area{
+/* .game-area{
   background-image: url("../images/game-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-right:20px;
   height:45vh;
-}
+} */
 
 #question {
   margin-top: 5px;
