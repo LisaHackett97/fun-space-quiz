@@ -186,6 +186,17 @@ Form input boxes overflow fieldset on xs screen size. Reduced size of font on in
 When setting up the shuffle questions function, I tried to find a number of ways to do this, including sorting the quiz array. couldn't get anything to work.
 When I was researching I came across the fisher yates algorithim method. I wouldn't get it to work but needed to spend more time understaning it.
 Understood and set it up but was getting an issue in the console, where it was telling me .length on the array name wasn't defined. To resolve, I set a new array varaible and passed it in the quiz variable, as quiz variable held in another js file.
+
+accessing correct answer in the array, tried few diff methods. Needed to set a hidden span, and change format of correct answer in the array
+
+score not incremting, ok now.
+
+notes for js game
+
+ need to create array/container for answered questions
+ need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
+ function to limit number of questions in game
+
 [Back to table of contents](#table-of-contents)
 
 ### Bugs

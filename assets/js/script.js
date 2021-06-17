@@ -12,7 +12,7 @@ const answer4 = document.getElementById("answer4");
 const correctAnswer = document.getElementById("correctAnswer");
 // const reTry = document.getElementById("reTry");
 // const nextQ = document.getElementById("nextQ");
-const score = document.getElementById("score");
+// let score = document.getElementById("score");
 const answerButtons = document.getElementById('answers');
 const answered = [];
 // const answer;
@@ -92,12 +92,24 @@ $('#answers > button').click(function(event) {
 // check if answer chose matches text set for the correct answer
 function check(){
 if (chosenAnswer == correctAnswer.innerText) {
-  
-  alert("You got it right");
+
+  openAnswerModal();
+  incrementScore();
  
 } else {
-alert(":( wrg")}
+// alert(":( wrg")
+wrongAnswerModal();}
+}
 
+//to Open modal when correct Answer selected
+function openAnswerModal (){
+  $('#answerModal').modal('show');
+}
+
+
+//to Open modal when incorrect Answer selected
+function wrongAnswerModal (){
+  $('#wrongAnswer').modal('show');
 }
 
 
@@ -108,6 +120,44 @@ alert(":( wrg")}
 
 // function reTry() {};
 
-// function incrementScore() {}; {
 
-// }
+// show total number of questions answered correctly for current set 
+function incrementScore() { 
+ let oldScore = parseInt(document.getElementById('score').innerText);
+  document.getElementById('score').innerText = ++oldScore;}
+
+// canvas code to test
+
+let canvas = document.getElementById('gamecanvas');
+let ctx = canvas.getContext('2d');
+
+function drawQuestion1 (){
+ctx.strokeStyle = "#d33f49"; 
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(10, 10);
+ctx.stroke()
+}
+
+function drawQuestion2 (){
+  ctx.strokeStyle = "#fee440"; 
+  ctx.beginPath();
+  ctx.moveTo(10, 10);
+  ctx.lineTo(20, 20);
+  ctx.stroke()
+  }
+
+  function scoreCheckDraw (){
+    let oldScore = parseInt(document.getElementById('score').innerText);
+    if (oldScore === 1){
+      drawQuestion1();
+    }
+    else {
+      drawQuestion2();
+      console.log(oldScore);
+    }
+  }
+
+
+
+

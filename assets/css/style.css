@@ -37,6 +37,15 @@ h1 {
 
 }
 
+#game-header{ 
+  font-size: 25px;
+
+  /* margin: 5px; */
+  text-align: center;
+  padding: 5px;
+
+}
+
 
 
 /* landing page */
@@ -337,6 +346,8 @@ footer {
   color: #395c6b;
   background: #8ef9f3;
   font-family: 'Poppins', sans-serif;
+  
+
 }
 
 footer p {
@@ -368,25 +379,36 @@ footer p {
 /* game page */
 
 /* canvas styling */
+
+canvas {
+  width: 400px;
+   height:500px;
+   background-image: url("../images/game-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+   
+}
 #gamecanvas{
-  height:85%;
-  width: 95%x;
+  /* height:85%;
+  width: 95%x; */
  border: 2px solid red;
-  padding: 20px;
+  padding: 0;
   margin: 20px;
 }
-.game-area{
+/* .game-area{
   background-image: url("../images/game-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-right:20px;
   height:45vh;
-}
+} */
 
 #question {
   margin-top: 5px;
   text-align: center;
+  font-weight: 600;
 }
 
 /* temp styling on question and answer area */
@@ -395,8 +417,11 @@ footer p {
 }
 
 .questionScores {
-  border: 2px dotted var(--decoration1);
+  /* border: 2px dotted var(--decoration1); */
   margin-top: 15px;
+  font-weight: 800;
+ font-style: italic;
+ padding-left: 10px;
 
 }
 
@@ -405,7 +430,8 @@ footer p {
   border: 1px solid var(--decoration3);
   color: var(--main-text-color);
   max-height: 100%;    
-  margin-top: 10px;
+  margin-top: 5px;
+background-color: #395c6b1c;
 }
 
 .answerButton:hover {
@@ -433,6 +459,21 @@ footer p {
   display: none;
 }
 
+/* pop up modal buttons other modal styling set with styling on instructions modal*/
+
+.modal-footer .gameModal {
+  color: #d33f49;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  border: 2px solid #d33f49;
+}
+
+.modal-footer .gameModal:hover {
+ background-color: var(--decoration3);
+ font-weight: 700;
+ border-style: none;
+ border-radius:20%;
+}
 
 /*-- media query to show carousel text in a smaller size:- captions and heading --*/
 @media screen and (max-width: 992px) {
@@ -445,6 +486,19 @@ footer p {
     font-size: 35px;
     padding: 15px;
 
+  }
+
+    
+  footer p {
+   font-size: 14px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+   
+  }
+  
+  .social-links {
+    /* display: flex; */
+    padding-top: 5px;
   }
 }
 /* media query to reduce size of question text on xs screens */

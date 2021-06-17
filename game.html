@@ -35,12 +35,16 @@
     </nav>
   </header>
 
+ 
   <!-- Update with bootstrap classes/containers -->
   <div class="container" id="main-section">
     <div class="row">
+      <h1 id="game-header" class=col-12>Travel through space</h1>
+       
       <div class="game-area col-12">
-        <!-- This the game area. Visual progress and image -->
-        <canvas id="gamecanvas" class="col-12"></canvas>
+        
+        <!-- This the game area. Visual progress and image/ Text within canvas element is for fallback -->
+        <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">  <p>This is the game area. answer questions from question-area, then canvas to draw a line across the canvas, to show progress</p></canvas>
       </div>
     </div>
 
@@ -48,44 +52,109 @@
       <div class="question-area col-md-12">
         <div id="question">Question</div>
 
-        <div id="answers"  class="col-12">
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">Answer 1
-          </button>
-        
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">Possible Answer 2
+        <div id="answers" class="col-12">
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">
           </button>
 
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer3">Answer 3
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">
           </button>
 
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer4">Answer 4
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer3">
+          </button>
+
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer4">
           </button>
 
           <!-- span for holding correct answer to question. hidden on screen -->
           <span id="correctAnswer"></span>
 
+
+         
+<!-- Button trigger modal -->
+<button type="button" class="btn" data-toggle="modal" data-target="#answerModal" id="answerBox">
+  
+</button>
+<button type="button" class="btn" data-toggle="modal" data-target="#wrongAnswer" id="answerBox">
+  
+</button>
+
+          <!-- This is pop up when a question answered -->
+          <!-- Modal code structure taken from bootstrap docs-->
+          <div class="modal fade" id="answerModal" tabindex="-1" role="dialog"
+            aria-labelledby="answerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="answerModalLabel">Result</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modalTextAnswer">  
+                 Woohoo, you got it right :)               
+                              </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn" data-dismiss="modal">ReTry</button> -->
+                  <button type="button" class="btn gameModal" onclick="nextQ();" data-dismiss="modal">Next question</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- This is pop up when a question answered Incorrectly -->
+          <!-- Modal code structure taken from bootstrap docs-->
+          <div class="modal fade" id="wrongAnswer" tabindex="-1" role="dialog"
+            aria-labelledby="answerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="answerModalLabel">Result</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modalTextWrgAnswer">   Sorry you got it wrong!!  To try again~~ click retry, or go straight to the next q           
+                              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
+                  <button type="button" class="btn gameModal" onclick="nextQ();" data-dismiss="modal">next q</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- End of answered question modal -->
+
+
         </div>
-      
-        <div class="controls col-12">
-          <button class="btn col-4 offset-1" type="button" id="tryAgain">Try Again
-          </button>
 
-          <button class="btn col-4 offset-1"  type="button" id="nextQ">Next Q
-          </button>
-
-
-        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-12">
-        <p class="questionScores">Score<span id="score">0</span></p>
+      <div class="controls col-12">
+        <!-- <button class="btn col-4 offset-1" type="button" id="tryAgain">Try Again
+        </button> -->
+        <!-- Try again button not needed as this is covered by the modal -->
+
+        <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
+        </button>
+
+        <button class="btn col-4 offset-4" type="button" id="testDraw" onclick="scoreCheckDraw();">temp button to test draw fn
+        </button>
         
+
+
       </div>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-12">
+      <p class="questionScores">Number of right answers :  <span id="score">0</span></p>
+
+    </div>
+  </div>
+  </div>
   <!--end of game container-->
+
 
 
   <footer>
@@ -102,7 +171,7 @@
 
     </div>
 
-    
+
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
