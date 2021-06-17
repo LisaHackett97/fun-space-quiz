@@ -387,6 +387,7 @@ footer p {
 #question {
   margin-top: 5px;
   text-align: center;
+  font-weight: 600;
 }
 
 /* temp styling on question and answer area */
@@ -405,7 +406,8 @@ footer p {
   border: 1px solid var(--decoration3);
   color: var(--main-text-color);
   max-height: 100%;    
-  margin-top: 10px;
+  margin-top: 5px;
+background-color: #395c6b1c;
 }
 
 .answerButton:hover {
@@ -445,6 +447,19 @@ footer p {
     font-size: 35px;
     padding: 15px;
 
+  }
+
+    
+  footer p {
+   font-size: 14px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+   
+  }
+  
+  .social-links {
+    /* display: flex; */
+    padding-top: 5px;
   }
 }
 /* media query to reduce size of question text on xs screens */
