@@ -12,7 +12,7 @@ const answer4 = document.getElementById("answer4");
 const correctAnswer = document.getElementById("correctAnswer");
 // const reTry = document.getElementById("reTry");
 // const nextQ = document.getElementById("nextQ");
-const score = document.getElementById("score");
+// let score = document.getElementById("score");
 const answerButtons = document.getElementById('answers');
 const answered = [];
 // const answer;
@@ -92,12 +92,24 @@ $('#answers > button').click(function(event) {
 // check if answer chose matches text set for the correct answer
 function check(){
 if (chosenAnswer == correctAnswer.innerText) {
-  
-  alert("You got it right");
+
+  openAnswerModal();
+  incrementScore();
  
 } else {
-alert(":( wrg")}
+// alert(":( wrg")
+wrongAnswerModal();}
+}
 
+//to Open modal when correct Answer selected
+function openAnswerModal (){
+  $('#answerModal').modal('show');
+}
+
+
+//to Open modal when incorrect Answer selected
+function wrongAnswerModal (){
+  $('#wrongAnswer').modal('show');
 }
 
 
@@ -108,6 +120,14 @@ alert(":( wrg")}
 
 // function reTry() {};
 
-// function incrementScore() {}; {
 
-// }
+// show total number of questions answered correctly for current set 
+function incrementScore() { 
+ let oldScore = parseInt(document.getElementById('score').innerText);
+  document.getElementById('score').innerText = ++oldScore;}
+
+ // need to create array/container for answered questions
+ // need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
+ // function to limit number of questions in game
+
+

@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span</a>
+          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span< /a>
               <a class="nav-link" href="learn-more.html">Learn about space!</a>
               <a class="nav-link" href="learn-more.html#ask-question">ask us anything</a>
 
@@ -48,10 +48,10 @@
       <div class="question-area col-md-12">
         <div id="question">Question</div>
 
-        <div id="answers"  class="col-12">
+        <div id="answers" class="col-12">
           <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">Answer 1
           </button>
-        
+
           <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">Possible Answer 2
           </button>
 
@@ -64,26 +64,85 @@
           <!-- span for holding correct answer to question. hidden on screen -->
           <span id="correctAnswer"></span>
 
+
+         
+<!-- Button trigger modal -->
+<button type="button" class="btn" data-toggle="modal" data-target="#answerModal" id="answerBox">
+  
+</button>
+<button type="button" class="btn" data-toggle="modal" data-target="#wrongAnswer" id="answerBox">
+  
+</button>
+
+          <!-- This is pop up when a question answered -->
+          <!-- Modal code structure taken from bootstrap docs-->
+          <div class="modal fade" id="answerModal" tabindex="-1" role="dialog"
+            aria-labelledby="answerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="answerModalLabel">Result</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modalTextAnswer">  
+                 Woohoo, you got it right :)               
+                              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-dismiss="modal">ReTry</button>
+                  <button type="button" class="btn">next q</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- This is pop up when a question answered Incorrectly -->
+          <!-- Modal code structure taken from bootstrap docs-->
+          <div class="modal fade" id="wrongAnswer" tabindex="-1" role="dialog"
+            aria-labelledby="answerModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="answerModalLabel">Result</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modalTwxtWrgAnswer">   Sorry you got it wrong!!              
+                              </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-dismiss="modal">ReTry</button>
+                  <button type="button" class="btn" onclick="nextQ();" data-dismiss="modal">next q</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- End of answered question modal -->
+
+
         </div>
-      
-        <div class="controls col-12">
-          <button class="btn col-4 offset-1" type="button" id="tryAgain">Try Again
-          </button>
 
-          <button class="btn col-4 offset-1"  type="button" id="nextQ">Next Q
-          </button>
+      </div>
+
+      <div class="controls col-12">
+        <button class="btn col-4 offset-1" type="button" id="tryAgain">Try Again
+        </button>
+
+        <button class="btn col-4 offset-1" type="button" id="nextQ">Next Q
+        </button>
 
 
-        </div>
       </div>
     </div>
+  </div>
 
-    <div class="row">
-      <div class="col-12">
-        <p class="questionScores">Score<span id="score">0</span></p>
-        
-      </div>
+  <div class="row">
+    <div class="col-12">
+      <p class="questionScores">Score: <span id="score">0</span></p>
+
     </div>
+  </div>
   </div>
   <!--end of game container-->
 
@@ -102,7 +161,7 @@
 
     </div>
 
-    
+
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
