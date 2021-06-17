@@ -9,6 +9,7 @@ const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
+const correctAnswer = document.getElementById("correctAnswer");
 // const reTry = document.getElementById("reTry");
 // const nextQ = document.getElementById("nextQ");
 const score = document.getElementById("score");
@@ -24,7 +25,7 @@ let availableQ = [];
 let quizArr = quizData;
 const q = quizData[currentQuestion];
 
-const correctAnswer = quizData.correctAnswer;
+// let correctAnswer = q.correctAnswer;
 
 
 
@@ -46,6 +47,9 @@ function showQuestion() {
     answer2.innerHTML = q.answers.b;
     answer3.innerHTML = q.answers.c;
     answer4.innerHTML = q.answers.d;
+    correctAnswer.innerHTML = q.correctAnswer;
+
+   
   } else {
     //Show the end screen
     confirm("No more questions. Click ok to continue");
@@ -77,22 +81,24 @@ function nextQ() {
   showQuestion();
 }
 
+// when buttons within the div #answers clicked, set chosenAnswer to text of the button and run check fn
 $('#answers > button').click(function(event) {
    chosenAnswer = $(this).text();
-   alert(chosenAnswer);
    event.preventDefault();
    check();
+  
 });
 
-// funcrtion not yet accessing the correct answer from the array
+// check if answer chose matches text set for the correct answer
 function check(){
-if (chosenAnswer !== q.correctAnswer){
-      alert("woo")
-    }
-    alert("nope");
-    console.log(chosenAnswer);
-    console.log(correctAnswer);
-  }
+if (chosenAnswer == correctAnswer.innerText) {
+  
+  alert("You got it right");
+ 
+} else {
+alert(":( wrg")}
+
+}
 
 
 

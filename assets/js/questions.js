@@ -18,7 +18,7 @@ let quizData = [
             c: "The light from the sun reflects directly on the surface",
             d: "Venus is covered with a thick layer of clouds"
         },
-        correctAnswer: 'd'
+        correctAnswer: "Venus is covered with a thick layer of clouds"
     },
 
     {
