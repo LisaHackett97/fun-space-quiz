@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span< /a>
+          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span</a>
               <a class="nav-link" href="learn-more.html">Learn about space!</a>
               <a class="nav-link" href="learn-more.html#ask-question">Ask us anything</a>
 
@@ -38,10 +38,7 @@
   <!-- Update with bootstrap classes/containers -->
   <div class="container" id="main-section">
     <div class="row">
-      <h1 id="game-header" class=col-12>Fly your rocket home</h1>
-      <button onclick="tempDrawLinePath();">Temp btn</button>
-      <button id="resetBtn">temp reset</button>
-
+      <h1 id="game-header" class=col-12>Fly your rocket home</h1>        
       <div class="game-area col-12">
         <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
         <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">
@@ -97,6 +94,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn gameModal" id="qfocus" onclick="nextQ();" data-dismiss="modal">Next
                     question</button>
+                    <button type="button" class="btn gameModal" id="resetBtnA" data-dismiss="modal">New Game</button>
                 </div>
               </div>
             </div>
@@ -120,6 +118,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
                   <button type="button" class="btn gameModal" id="wrgAnsFocus" data-dismiss="modal">next q</button>
+                  <button type="button" class="btn gameModal" id="resetBtnB" data-dismiss="modal">New Game</button>
                 </div>
               </div>
             </div>
@@ -129,14 +128,11 @@
       </div>
 
       <div class="controls col-12">
-        <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
+        
+        <button class="btn col-4 offset-4"  type="button" id="nextQ">New Q
         </button>
-      </div>
-    </div>
-  </div>
-  <!-- end of main section-->
 
-  <!-- div to show number of questions user has answered correctly -->
+        <!-- div to show number of questions user has answered correctly -->
   <div class="row">
     <div class="col-12">
       <p class="questionScores">You need 5 correct Answers to get back to Earth. <br> You have: <span
@@ -144,6 +140,16 @@
     </div>
   </div>
   </div>
+
+  <button class="btn col-4 offset-4" type="button" id="resetBtn">New Game</button>
+        
+        </div>
+        
+    </div>
+  </div>
+  <!-- end of main section-->
+
+  
   <!--end of game-->
 
   <footer>

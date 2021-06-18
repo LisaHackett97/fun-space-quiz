@@ -4,18 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-// code on how to set focus to nextq button on modal, found on stackoverflow
-$("#answerModal").on('shown.bs.modal', function (event) {
-  $("#qfocus").focus().css("background-color", "#676d703f");
-});
-
-$("#wrongAnswer").on('shown.bs.modal', function (event) {
-  $("#wrgAnsFocus").focus().css("background-color", "#676d703f");
-});
-
-
-
 // set variables needed
 
 const newQuestion = document.getElementById("question");
@@ -29,10 +17,18 @@ const answered = [];
 let answer = document.getElementsByClassName("answerButton");
 let chosenAnswer;
 let currentQuestion = 0;
-let availableQ = [];
+// let availableQ = [];
 let quizArr = quizData;
 const q = quizData[currentQuestion];
 
+// code on how to set focus to nextq button on modal, found on stackoverflow
+$("#answerModal").on('shown.bs.modal', function (event) {
+  $("#qfocus").focus().css("background-color", "#676d703f");
+});
+
+$("#wrongAnswer").on('shown.bs.modal', function (event) {
+  $("#wrgAnsFocus").focus().css("background-color", "#676d703f");
+});
 
 // run the game. Shuffle fn called first so user doesn't see same q each time game is refreshed
 function runGame() {
@@ -134,7 +130,7 @@ let ctx = canvas.getContext('2d');
 const rocketImg = new Image();
 rocketImg.src = "../assets/images/game-rocket.png";
 
-// image to show complete points in game
+// image to show progress in game
 const completeImg = new Image();
 completeImg.src = "../assets/images/game-rocket-done.png";
 
@@ -145,7 +141,7 @@ moonImage.onload = function () {
   ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);
 };
 
-// set image  for Game Over
+// set image  for last position in game
 const earthImage = new Image();
 earthImage.src = "../assets/images/game-earth.png";
 
@@ -213,10 +209,33 @@ function scoreCheckDraw() {
   }
 }
 
-
-document.getElementById("resetBtn").addEventListener("click", function() {
-  // runGame();
-  document.getElementById("score").innerText = 0;
+// reset the quiz and game and canvas when right answer modal open
+document.getElementById("resetBtnA").addEventListener("click", function() {
+   document.getElementById("score").innerText = 0;
   showQuestion();
   currentQuestion = 0;
+  // clear canvas and re-draw moon start img
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
+});
+
+
+// reset the quiz and game and canvas when wrong answer modal open
+document.getElementById("resetBtnB").addEventListener("click", function() {
+  document.getElementById("score").innerText = 0;
+ showQuestion();
+ currentQuestion = 0;
+ // clear canvas and re-draw moon start img
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+ ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
+});
+
+// reset the quiz and game and canvas when wrong answer modal open
+document.getElementById("resetBtn").addEventListener("click", function() {
+  document.getElementById("score").innerText = 0;
+ showQuestion();
+ currentQuestion = 0;
+ // clear canvas and re-draw moon start img
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+ ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
 });
