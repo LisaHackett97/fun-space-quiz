@@ -39,7 +39,7 @@
   <div class="container" id="main-section">
     <div class="row">
       <!-- hide heading on small screens so more of game is visible to user-->
-      <h1 id="game-header" class="col-12 d-none d-md-block">Fly your rocket home</h1>        
+      <h1 id="game-header" class="col-12 d-none d-md-block">Fly your rocket home</h1>
       <div class="game-area col-12">
         <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
         <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">
@@ -95,7 +95,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn gameModal" id="qfocus" onclick="nextQ();" data-dismiss="modal">Next
                     question</button>
-                    <button type="button" class="btn gameModal" id="resetBtnA" data-dismiss="modal">New Game</button>
+                  <button type="button" class="btn gameModal" id="resetBtnA" data-dismiss="modal">New Game</button>
                 </div>
               </div>
             </div>
@@ -118,7 +118,8 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
-                  <button type="button" class="btn gameModal" id="wrgAnsFocus" onclick="nextQ();" data-dismiss="modal">next q</button>
+                  <button type="button" class="btn gameModal" id="wrgAnsFocus" onclick="nextQ();"
+                    data-dismiss="modal">next q</button>
                   <button type="button" class="btn gameModal" id="resetBtnB" data-dismiss="modal">New Game</button>
                 </div>
               </div>
@@ -128,30 +129,39 @@
         </div>
       </div>
 
-      <div class="controls col-12">
-        
-        <button class="btn col-4 offset-4"  type="button" id="nextQ">New Q
+    </div>
+    <!-- end of row -->
+
+<div class="row controls">
+     
+        <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
         </button>
 
         <!-- div to show number of questions user has answered correctly -->
-  <div class="row">
-    <div class="col-12 text-center">
-      <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span
-          id="score">0</span></p>
-    </div>
-  </div>
-  </div>
+         <div class="col-12 text-center">
+            <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span id="score">0</span></p>
+          </div>
+       
+      <button class="btn col-4 offset-4" type="button" id="resetBtn">New Game</button>
 
-  <button class="btn col-4 offset-4" type="button" id="resetBtn">New Game</button>
-        
-        </div>
-        
     </div>
+    <!-- end of row for ctrls-->
+
+  </div>
   </div>
   <!-- end of main section-->
 
-  
+
   <!--end of game-->
+
+  <!-- container to add spacing on pg for lg screens, to push down the footer on the viewport-->
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-12 d-none d-lg-block spacing-row"></div>
+  </div>
+</div> -->
+
+
 
   <footer>
     <div class="container">

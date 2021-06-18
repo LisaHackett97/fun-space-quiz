@@ -212,6 +212,9 @@ fixed: If user gets first question wrong, get game over message as score is stil
 
 set up reset btns, set d-hide modal triggers but then wrg answer next w doesn't work. needed on click to be added to button with id of wrgAnsFocus. fixed.
 
+footer floating up on lg screens per dev tools
+Added empty div, and set height, which keeps footer down but may need to increase game area size for leg scrrens
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
