@@ -26,7 +26,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span</a>
+          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span< /a>
               <a class="nav-link" href="learn-more.html">Learn about space!</a>
               <a class="nav-link" href="learn-more.html#ask-question">Ask us anything</a>
 
@@ -35,28 +35,34 @@
     </nav>
   </header>
 
- 
+
   <!-- Update with bootstrap classes/containers -->
   <div class="container" id="main-section">
     <div class="row">
-      <h1 id="game-header" class=col-12>Fly your rocket home</h1>   
-     <button onclick="tempDrawLinePath();">Temp btn</button>
-       
+      <h1 id="game-header" class=col-12>Fly your rocket home</h1>
+      <button onclick="tempDrawLinePath();">Temp btn</button>
+
       <div class="game-area col-12">
-        
-        <!-- This the game area. Visual progress and image/ Text within canvas element is for fallback -->
-        <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">  <p>This is the game area. answer questions from question-area, then canvas to draw a line across the canvas, to show progress</p></canvas>
+
+        <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
+        <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">
+          <p>This is the game area. answer questions from question-area to progress in the game. Canvas shows a space
+            background with moon and planet earth, and space rocket icon to move across the canvas,
+            to show progress</p>
+        </canvas>
       </div>
     </div>
 
     <div class="row">
       <div class="question-area col-md-12">
+        <!-- div for current question -->
         <div id="question">Question</div>
-
+        <!-- div to display 4 possible answers -->
         <div id="answers" class="col-12">
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1"
+            onkeypress="nextQ();">
           </button>
-          
+
           <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">
           </button>
 
@@ -70,32 +76,29 @@
           <span id="correctAnswer"></span>
 
 
-         
-<!-- Button trigger modal -->
-<button type="button" class="btn" data-toggle="modal" data-target="#answerModal" id="answerBox">
-  
-</button>
-<button type="button" class="btn" data-toggle="modal" data-target="#wrongAnswer" id="answerBox">
-  
-</button>
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn" data-toggle="modal" data-target="#answerModal"></button>
+          <button type="button" class="btn" data-toggle="modal" data-target="#wrongAnswer"></button>
 
           <!-- This is pop up when a question answered -->
           <!-- Modal code structure taken from bootstrap docs-->
-          <div class="modal fade" id="answerModal" tabindex="-1" role="dialog"
-            aria-labelledby="answerModalLabel" aria-hidden="true">
+          <div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                 
+
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body" id="modalTextAnswer">  
-                 Woohoo, you got it right :)               
-                              </div>
+                <div class="modal-body" id="modalTextAnswer">
+                  Woohoo, you got it right :)
+                </div>
                 <div class="modal-footer">
-                                 <button type="button" class="btn gameModal" id="qfocus" onclick="nextQ();" onkeypress="nextQ();" data-dismiss="modal">Next question</button>
+                  <button type="button" class="btn gameModal" id="qfocus" onclick="nextQ();" data-dismiss="modal">Next
+                    question</button>
                 </div>
               </div>
             </div>
@@ -103,56 +106,52 @@
 
           <!-- This is pop up when a question answered Incorrectly -->
           <!-- Modal code structure taken from bootstrap docs-->
-          <div class="modal fade" id="wrongAnswer" tabindex="-1" role="dialog"
-            aria-labelledby="answerModalLabel" aria-hidden="true">
+          <div class="modal fade" id="wrongAnswer" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                 
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div class="modal-body" id="modalTextWrgAnswer">   Sorry you got it wrong!!  To try again~~ click retry, or go straight to the next q           
-                              </div>
+                <div class="modal-body" id="modalTextWrgAnswer"> Sorry you got it wrong!! <br> To try again ~~ <br>
+                  click ReTry, or
+                  go straight to the next q
+                </div>
                 <div class="modal-footer">
                   <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
-                  <button type="button" class="btn gameModal" id="wrgAnsFocus" onclick="nextQ();" data-dismiss="modal">next q</button>
+                  <button type="button" class="btn gameModal" id="wrgAnsFocus" data-dismiss="modal">next q</button>
                 </div>
               </div>
             </div>
           </div>
-<!-- End of answered question modal -->
+          <!-- End of answered question modal -->
         </div>
       </div>
 
       <div class="controls col-12">
-        <!-- <button class="btn col-4 offset-1" type="button" id="tryAgain">Try Again
-        </button> -->
-        <!-- Try again button not needed as this is covered by the modal -->
-
         <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
-        </button>         
-
+        </button>
       </div>
     </div>
   </div>
+  <!-- end of main section-->
 
+  <!-- div to show number of questions user has answered correctly -->
   <div class="row">
     <div class="col-12">
-      <p class="questionScores">Number of right answers :  <span id="score">0</span></p>
-
+      <p class="questionScores">You need 5 correct Answers to get back to Earth. <br> You have: <span
+          id="score">0</span></p>
     </div>
   </div>
   </div>
-  <!--end of game container-->
-
-
+  <!--end of game-->
 
   <footer>
     <div class="container">
       <div class="row align-items-center">
-        <!--you-tube links-->
+        <!--you-tube link-->
         <div class="col-md-8 offset-md-2 text-center social-links">
           <p>Want to see some cool videos? Check out our YouTube channel
           </p>
@@ -160,10 +159,7 @@
               class="sr-only">(you-tube link)</span></a>
         </div>
       </div>
-
     </div>
-
-
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>

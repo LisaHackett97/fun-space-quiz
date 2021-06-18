@@ -75,6 +75,7 @@ function shuffleQuestion() {
 // adding event listener to next q button, to iterate current q number and show next Q
 document.getElementById("nextQ").addEventListener("click", nextQ);
 document.getElementById("nextQ").addEventListener("key", nextQ);
+// document.getElementById("re-try").addEventListener("key", "");
 
 // iterate +1 to the current question variable, then run the show question function
 // will show next question in the array QuizData
@@ -104,8 +105,7 @@ function check() {
     openAnswerModal();
     incrementScore();
   } else {
-    // alert(":( wrg")
-    wrongAnswerModal();
+      wrongAnswerModal();
   }
 }
 
