@@ -49,7 +49,7 @@ function showQuestion() {
     answer4.innerHTML = q.answers.d;
     correctAnswer.innerHTML = q.correctAnswer;
 
-   
+
   } else {
     //Show the end screen
     confirm("No more questions. Click ok to continue");
@@ -84,33 +84,34 @@ function nextQ() {
 }
 
 // when buttons within the div #answers clicked, set chosenAnswer to text of the button and run check fn
-$('#answers > button').click(function(event) {
-   chosenAnswer = $(this).text();
-   event.preventDefault();
-   check();
-  
+$('#answers > button').click(function (event) {
+  chosenAnswer = $(this).text();
+  event.preventDefault();
+  check();
+
 });
 
 // check if answer chose matches text set for the correct answer
-function check(){
-if (chosenAnswer == correctAnswer.innerText) {
+function check() {
+  if (chosenAnswer == correctAnswer.innerText) {
 
-  openAnswerModal();
-  incrementScore();
- 
-} else {
-// alert(":( wrg")
-wrongAnswerModal();}
+    openAnswerModal();
+    incrementScore();
+
+  } else {
+    // alert(":( wrg")
+    wrongAnswerModal();
+  }
 }
 
 //to Open modal when correct Answer selected
-function openAnswerModal (){
+function openAnswerModal() {
   $('#answerModal').modal('show');
 }
 
 
 //to Open modal when incorrect Answer selected
-function wrongAnswerModal (){
+function wrongAnswerModal() {
   $('#wrongAnswer').modal('show');
 }
 
@@ -124,109 +125,114 @@ function wrongAnswerModal (){
 
 
 // show total number of questions answered correctly for current set 
-function incrementScore() { 
- let oldScore = parseInt(document.getElementById('score').innerText);
-  document.getElementById('score').innerText = ++oldScore;}
+function incrementScore() {
+  let oldScore = parseInt(document.getElementById('score').innerText);
+  document.getElementById('score').innerText = ++oldScore;
+}
 
 // canvas code
 
 let canvas = document.getElementById('gamecanvas');
 let ctx = canvas.getContext('2d');
 
+// rocket img to use as mover in game
+const rocketImg = new Image();
+rocketImg.src = "../assets/images/game-rocket.png";
+// rocketImg.onload = function () {
+//   ctx.drawImage(rocketImg, 50, 100, rocketImg.width / 2.5, rocketImg.height / 2.5);
+// };
 // moon img appearing bottom left, use as starting point
-const moonImage=new Image();
-moonImage.src="../assets/images/game-logo-moon.png";
-moonImage.onload = function (){
-  ctx.drawImage(moonImage,-380, -20);
+const moonImage = new Image();
+moonImage.src = "../assets/images/game-logo-moon.png";
+moonImage.onload = function () {
+  ctx.drawImage(moonImage, -380, -20);
 };
 
 
+
 // set with temp red color
-function drawQuestion1 (){
-ctx.strokeStyle = "#d33f49"; 
-ctx.lineWidth = 3;
-ctx.linecap = 'rounded';
-ctx.beginPath();
-ctx.moveTo(10, 140);  // starting point
-ctx.lineTo(50, 120);  // end pt of line
-ctx.stroke()
+function drawQuestion1() {
+  // ctx.strokeStyle = "#d33f49";
+  // ctx.lineWidth = 3;
+  // ctx.linecap = 'rounded';
+  // ctx.beginPath();
+  // ctx.moveTo(10, 140); // starting point
+  // ctx.lineTo(50, 120); // end pt of line
+  // ctx.stroke()
+  ctx.drawImage(rocketImg, 35, 115, rocketImg.width / 3.5, rocketImg.height / 3.5);
 }
 
 // set with temp yellow color
-function drawQuestion2 (){
-  ctx.strokeStyle = "#fee440";
-  ctx.lineWidth = 2; 
-  ctx.beginPath();
-  ctx.moveTo(50, 120);
-  ctx.lineTo(110, 90);
-  ctx.stroke()
-  }
+function drawQuestion2() {
+  // ctx.strokeStyle = "#fee440";
+  // ctx.lineWidth = 2;
+  // ctx.beginPath();
+  // ctx.moveTo(50, 120);
+  // ctx.lineTo(110, 90);
+  // ctx.stroke()
+  ctx.drawImage(rocketImg, 80, 85, rocketImg.width / 3.5, rocketImg.height / 3.5);
+}
 
-  function drawQuestion3 (){
-    ctx.strokeStyle = "#00f5d4";
-    ctx.lineWidth = 2; 
-    ctx.beginPath();
-    ctx.moveTo(110, 90);
-    ctx.lineTo(170, 60);
-    ctx.stroke()
-    }
 
-    function drawQuestion4 (){
-      ctx.strokeStyle = "#395c6b";
-      ctx.lineWidth = 2; 
-      ctx.beginPath();
-      ctx.moveTo(170, 60);
-      ctx.lineTo(230, 30);
-      ctx.stroke()
-      }
+function drawQuestion3() {
+  // ctx.strokeStyle = "#00f5d4";
+  // ctx.lineWidth = 2;
+  // ctx.beginPath();
+  // ctx.moveTo(110, 90);
+  // ctx.lineTo(170, 60);
+  // ctx.stroke()
+  ctx.drawImage(rocketImg, 140, 55, rocketImg.width / 3.5, rocketImg.height / 3.5);
+}
 
-      function drawQuestion5 (){
-        ctx.strokeStyle = "#00f5d4";
-        ctx.lineWidth = 2; 
-        ctx.beginPath();
-        ctx.moveTo(230, 30);
-        ctx.lineTo(300, 0);
-        ctx.stroke()
-        }
+function drawQuestion4() {
+  // ctx.strokeStyle = "#395c6b";
+  // ctx.lineWidth = 2;
+  // ctx.beginPath();
+  // ctx.moveTo(170, 60);
+  // ctx.lineTo(230, 30);
+  // ctx.stroke()
+  ctx.drawImage(rocketImg, 187, 30, rocketImg.width / 3.5, rocketImg.height / 3.5);
+}
 
-function tempDrawLinePath(){
-  
+function drawQuestion5() {
+  // ctx.strokeStyle = "#00f5d4";
+  // ctx.lineWidth = 2;
+  // ctx.beginPath();
+  // ctx.moveTo(230, 30);
+  // ctx.lineTo(300, 0);
+  // ctx.stroke()
+  ctx.drawImage(rocketImg, 260, 0, rocketImg.width / 3.5, rocketImg.height / 3.5);
+}
+
+function tempDrawLinePath() {
+
   drawQuestion1();
   drawQuestion2();
   drawQuestion3();
   drawQuestion4();
   drawQuestion5();
-  
+
 }
 
 // draw line on canvas for each score increment
 
-  function scoreCheckDraw (){
-    let oldScore = parseInt(document.getElementById('score').innerText);
-    if (oldScore === 1){
-      drawQuestion1();
-    }
-    else if (oldScore === 2){
-      drawQuestion2();
-      
-    }
-    else if (oldScore === 3){
-      drawQuestion3();
-      
-    }
-    else if (oldScore === 4){
-      drawQuestion4();
-      
-    }
-    else if (oldScore === 5){
-      drawQuestion5();
-      
-    }
-    else {
-      confirm("game over");
-    }
+function scoreCheckDraw() {
+  let oldScore = parseInt(document.getElementById('score').innerText);
+  if (oldScore === 1) {
+    drawQuestion1();
+  } else if (oldScore === 2) {
+    drawQuestion2();
+
+  } else if (oldScore === 3) {
+    drawQuestion3();
+
+  } else if (oldScore === 4) {
+    drawQuestion4();
+
+  } else if (oldScore === 5) {
+    drawQuestion5();
+
+  } else {
+    confirm("game over");
   }
-
-
-
-
+}
