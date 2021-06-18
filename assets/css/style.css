@@ -383,25 +383,17 @@ footer p {
 canvas {
   width: 250px;
    height:350px;
-   background-image: url("../images/game-bg-stars.jpg");
+   background-image: url("../images/game-bg-stars.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
    
 }
 
-
-
-
 #question {
   margin-top: 5px;
   text-align: center;
   font-weight: 600;
-}
-
-/* temp styling on question and answer area */
-.question-area{
-  border: 2px dotted var(--heading-color);
 }
 
 .questionScores {
