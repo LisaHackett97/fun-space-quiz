@@ -38,7 +38,8 @@
   <!-- Update with bootstrap classes/containers -->
   <div class="container" id="main-section">
     <div class="row">
-      <h1 id="game-header" class=col-12>Fly your rocket home</h1>        
+      <!-- hide heading on small screens so more of game is visible to user-->
+      <h1 id="game-header" class="col-12 d-none d-md-block">Fly your rocket home</h1>        
       <div class="game-area col-12">
         <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
         <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">
@@ -73,8 +74,8 @@
 
 
           <!-- Button trigger modal -->
-          <button type="button" class="btn" data-toggle="modal" data-target="#answerModal"></button>
-          <button type="button" class="btn" data-toggle="modal" data-target="#wrongAnswer"></button>
+          <button type="button" class="btn d-none" data-toggle="modal" data-target="#answerModal"></button>
+          <button type="button" class="btn d-none" data-toggle="modal" data-target="#wrongAnswer"></button>
 
           <!-- This is pop up when a question answered -->
           <!-- Modal code structure taken from bootstrap docs-->
@@ -135,7 +136,7 @@
         <!-- div to show number of questions user has answered correctly -->
   <div class="row">
     <div class="col-12">
-      <p class="questionScores">You need 5 correct Answers to get back to Earth. <br> You have: <span
+      <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span
           id="score">0</span></p>
     </div>
   </div>

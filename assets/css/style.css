@@ -174,7 +174,6 @@ header {
 
 .nav-link:hover {
   color: var(--decoration1);
-
 }
 
 /* add spacing above Main container, so that there is visible space with navbar */
@@ -188,7 +187,7 @@ header {
 }
 
 .fa.fa-bars {
-  font-size: 2.6rem;
+  font-size: 2rem;
   color: var(--decoration3);
 }
 
