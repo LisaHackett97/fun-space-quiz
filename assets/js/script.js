@@ -85,8 +85,14 @@ function nextQ() {
   scoreCheckDraw();
 }
 
-// when buttons within the div #answers clicked, set chosenAnswer to text of the button and run check fn
+// when buttons within the div #answers clicked , set chosenAnswer to text of the button and run check fn
 $('#answers > button').click(function (event) {
+  chosenAnswer = $(this).text();
+  event.preventDefault();
+  check();
+});
+// keyPress alternative
+$('#answers > button').keypress(function (event) {
   chosenAnswer = $(this).text();
   event.preventDefault();
   check();
