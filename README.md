@@ -206,7 +206,10 @@ notes for js game
 
 Images did not initially display on the deployed site. For the carousel images, I needed to remove the / before the file path and for the bg images on game and landing pages, I need to change the relative path to "../images" instead of "/assets/images". These changes resolved the issue on the live site.
 
-set fos in doc ready, was telling that wrg ans q was last. reoder, run game after focus
+set focus in doc ready, was telling that wrg ans q was last. reoder, run game after focus
+
+
+Not yet fixed: If user gets first question wrong, get game over message as score is still at 0.
 
 ### Performance and accessibility Testing
 

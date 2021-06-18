@@ -156,9 +156,12 @@ let ctx = canvas.getContext('2d');
 // rocket img to use as mover in game
 const rocketImg = new Image();
 rocketImg.src = "../assets/images/game-rocket.png";
-// rocketImg.onload = function () {
-//   ctx.drawImage(rocketImg, 50, 100, rocketImg.width / 2.5, rocketImg.height / 2.5);
-// };
+
+// image to show complete points in game
+const completeImg = new Image();
+completeImg.src = "../assets/images/game-rocket-done.png";
+
+
 // moon img appearing bottom left, use as starting point
 const moonImage = new Image();
 moonImage.src = "../assets/images/game-moon.png";
@@ -166,31 +169,36 @@ moonImage.onload = function () {
   ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);
 };
 
+// set image  for Game Over
 const earthImage = new Image();
 earthImage.src = "../assets/images/game-earth.png";
 
 
-
+// draw rocket after 1 question answered correctly
 function drawQuestion1() {
   ctx.drawImage(rocketImg, 45, 120, rocketImg.width / 3.5, rocketImg.height / 3.5);
 }
 
+// draw next rocket after x questions answered correctly and overwrite prev img with darkened version
 function drawQuestion2() {
   ctx.drawImage(rocketImg, 100, 87, rocketImg.width / 3.5, rocketImg.height / 3.5);
+  ctx.drawImage(completeImg, 45, 120, completeImg.width / 3.5, completeImg.height / 3.5);
 }
 
 function drawQuestion3() {
   ctx.drawImage(rocketImg, 155, 57, rocketImg.width / 3.5, rocketImg.height / 3.5);
+  ctx.drawImage(completeImg, 100, 87, completeImg.width / 3.5, completeImg.height / 3.5);
 }
 
 function drawQuestion4() {
   ctx.drawImage(rocketImg, 210, 27, rocketImg.width / 3.5, rocketImg.height / 3.5);
+  ctx.drawImage(completeImg, 155, 57, completeImg.width / 3.5, completeImg.height / 3.5);
 }
 
 function drawQuestion5() {
  
   ctx.drawImage(earthImage, 255, -10, earthImage.width / 7, earthImage.height / 7);
-  // ctx.drawImage(rocketImg, 265, 0, rocketImg.width / 3.5, rocketImg.height / 3.5);
+  ctx.drawImage(completeImg, 210, 27, completeImg.width / 3.5, completeImg.height / 3.5);
 }
 
 function tempDrawLinePath() {
@@ -203,7 +211,7 @@ function tempDrawLinePath() {
 
 }
 
-// draw line on canvas for each score increment
+// draw images on canvas for each score increment
 
 function scoreCheckDraw() {
   let oldScore = parseInt(document.getElementById('score').innerText);
@@ -227,5 +235,5 @@ function scoreCheckDraw() {
 }
 
 
-  $(".gameModal").focus();
+  // $(".gameModal").focus();
 
