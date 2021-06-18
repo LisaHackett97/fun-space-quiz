@@ -131,11 +131,10 @@ function incrementScore() {
 let canvas = document.getElementById('gamecanvas');
 let ctx = canvas.getContext('2d');
 
-// moon img appearing bottom right
+// moon img appearing bottom left, use as starting point
 const moonImage=new Image();
 moonImage.src="../assets/images/game-logo-moon.png";
 moonImage.onload = function (){
-
   ctx.drawImage(moonImage,-380, -20);
 };
 
@@ -146,7 +145,7 @@ ctx.strokeStyle = "#d33f49";
 ctx.lineWidth = 3;
 ctx.linecap = 'rounded';
 ctx.beginPath();
-ctx.moveTo(0, 150);  // starting point
+ctx.moveTo(10, 140);  // starting point
 ctx.lineTo(50, 120);  // end pt of line
 ctx.stroke()
 }
