@@ -206,6 +206,8 @@ notes for js game
 
 Images did not initially display on the deployed site. For the carousel images, I needed to remove the / before the file path and for the bg images on game and landing pages, I need to change the relative path to "../images" instead of "/assets/images". These changes resolved the issue on the live site.
 
+set fos in doc ready, was telling that wrg ans q was last. reoder, run game after focus
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
@@ -262,6 +264,8 @@ z-index
 Credit: solution to my issue with navbar and content z-indez was found on [Freecodecamp.org](https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059)
 
 add credit in re fisher yates code
+
+// code on how to set focus to nextq button on modal, found on stackoverflow
 
 ### Media
 

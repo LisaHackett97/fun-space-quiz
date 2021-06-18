@@ -439,7 +439,14 @@ background-color: #395c6b1c;
   display: none;
 }
 
-/* pop up modal buttons other modal styling set with styling on instructions modal*/
+/* modalop up modal buttons other modal styling set with styling on instructions modal*/
+
+#answerModal, #wrongAnswer {
+  width: 100vw;
+  
+}
+
+
 
 .modal-footer .gameModal {
   color: #d33f49;
@@ -454,6 +461,7 @@ background-color: #395c6b1c;
  border-style: none;
  border-radius:20%;
 }
+
 
 /*-- media query to show carousel text in a smaller size:- captions and heading --*/
 @media screen and (max-width: 992px) {

@@ -1,7 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-  runGame();
+  
+ 
+      
+      runGame();
 
-});
+  
+
+  });
+
+
+   // code on how to set focus to nextq button on modal, found on stackoverflow
+   $("#answerModal").on('shown.bs.modal', function(event) {    
+    $("#qfocus").focus().css("background-color","#676d703f");}     
+    );
+   
+    $("#wrongAnswer").on('shown.bs.modal', function(event) {    
+      $("#wrgAnsFocus").focus().css("background-color","#676d703f");}     
+      );
+
+
+
 // set variables needed
 
 const newQuestion = document.getElementById("question");
@@ -207,3 +225,7 @@ function scoreCheckDraw() {
     confirm("game over");
   }
 }
+
+
+  $(".gameModal").focus();
+
