@@ -198,7 +198,7 @@ notes for js game
 
  need to create array/container for answered questions
  need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
- function to limit number of questions in game
+ <!-- function to limit number of questions in game -->
 
 [Back to table of contents](#table-of-contents)
 
@@ -213,7 +213,11 @@ fixed: If user gets first question wrong, get game over message as score is stil
 set up reset btns, set d-hide modal triggers but then wrg answer next w doesn't work. needed on click to be added to button with id of wrgAnsFocus. fixed.
 
 footer floating up on lg screens per dev tools
-Added empty div, and set height, which keeps footer down but may need to increase game area size for leg scrrens
+Added empty div, and set height, which keeps footer down but may need to increase game area size for leg scrrens. had added a media query but then removed it and te4sted live site. Media q and spacin div not needed on live site. dev tools issue
+
+BUT CANVAS DRAW ELEMENTS NOT SHOWING ON LIVE SITE...FILE PATH???
+
+LIVE SITE: NO SPACING ISSUES ON AMI.RESPONSIVE BUT ARE ON TECHSINI.COM???? apple devices???
 
 ### Performance and accessibility Testing
 
