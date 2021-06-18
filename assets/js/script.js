@@ -126,27 +126,77 @@ function incrementScore() {
  let oldScore = parseInt(document.getElementById('score').innerText);
   document.getElementById('score').innerText = ++oldScore;}
 
-// canvas code to test
+// canvas code
 
 let canvas = document.getElementById('gamecanvas');
 let ctx = canvas.getContext('2d');
 
+// moon img appearing bottom right
+const moonImage=new Image();
+moonImage.src="../assets/images/game-logo-moon.png";
+moonImage.onload = function (){
+
+  ctx.drawImage(moonImage,-380, -20);
+};
+
+
+// set with temp red color
 function drawQuestion1 (){
 ctx.strokeStyle = "#d33f49"; 
+ctx.lineWidth = 3;
+ctx.linecap = 'rounded';
 ctx.beginPath();
-ctx.moveTo(0, 0);
-ctx.lineTo(10, 10);
+ctx.moveTo(0, 150);  // starting point
+ctx.lineTo(50, 120);  // end pt of line
 ctx.stroke()
 }
 
+// set with temp yellow color
 function drawQuestion2 (){
-  ctx.strokeStyle = "#fee440"; 
+  ctx.strokeStyle = "#fee440";
+  ctx.lineWidth = 2; 
   ctx.beginPath();
-  ctx.moveTo(10, 10);
-  ctx.lineTo(20, 20);
+  ctx.moveTo(50, 120);
+  ctx.lineTo(110, 90);
   ctx.stroke()
   }
 
+  function drawQuestion3 (){
+    ctx.strokeStyle = "#00f5d4";
+    ctx.lineWidth = 2; 
+    ctx.beginPath();
+    ctx.moveTo(110, 90);
+    ctx.lineTo(170, 60);
+    ctx.stroke()
+    }
+
+    function drawQuestion4 (){
+      ctx.strokeStyle = "#395c6b";
+      ctx.lineWidth = 2; 
+      ctx.beginPath();
+      ctx.moveTo(170, 60);
+      ctx.lineTo(230, 30);
+      ctx.stroke()
+      }
+
+      function drawQuestion5 (){
+        ctx.strokeStyle = "#00f5d4";
+        ctx.lineWidth = 2; 
+        ctx.beginPath();
+        ctx.moveTo(230, 30);
+        ctx.lineTo(300, 0);
+        ctx.stroke()
+        }
+
+function tempDrawLinePath(){
+  
+  drawQuestion1();
+  drawQuestion2();
+  drawQuestion3();
+  drawQuestion4();
+  drawQuestion5();
+  
+}
   function scoreCheckDraw (){
     let oldScore = parseInt(document.getElementById('score').innerText);
     if (oldScore === 1){
