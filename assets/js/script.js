@@ -212,3 +212,11 @@ function scoreCheckDraw() {
     confirm("game over");
   }
 }
+
+
+document.getElementById("resetBtn").addEventListener("click", function() {
+  // runGame();
+  document.getElementById("score").innerText = 0;
+  showQuestion();
+  currentQuestion = 0;
+});

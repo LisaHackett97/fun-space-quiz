@@ -35,15 +35,14 @@
     </nav>
   </header>
 
-
   <!-- Update with bootstrap classes/containers -->
   <div class="container" id="main-section">
     <div class="row">
       <h1 id="game-header" class=col-12>Fly your rocket home</h1>
       <button onclick="tempDrawLinePath();">Temp btn</button>
+      <button id="resetBtn">temp reset</button>
 
       <div class="game-area col-12">
-
         <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
         <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">
           <p>This is the game area. answer questions from question-area to progress in the game. Canvas shows a space
@@ -59,8 +58,7 @@
         <div id="question">Question</div>
         <!-- div to display 4 possible answers -->
         <div id="answers" class="col-12">
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1"
-            onkeypress="nextQ();">
+          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">
           </button>
 
           <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">
