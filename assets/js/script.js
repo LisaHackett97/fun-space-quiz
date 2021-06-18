@@ -131,6 +131,15 @@ function incrementScore() {
 let canvas = document.getElementById('gamecanvas');
 let ctx = canvas.getContext('2d');
 
+// moon img appearing bottom right
+const moonImage=new Image();
+moonImage.src="../assets/images/game-logo-moon.png";
+moonImage.onload = function (){
+
+  ctx.drawImage(moonImage,-380, -20);
+};
+
+
 // set with temp red color
 function drawQuestion1 (){
 ctx.strokeStyle = "#d33f49"; 
@@ -180,11 +189,13 @@ function drawQuestion2 (){
         }
 
 function tempDrawLinePath(){
+  
   drawQuestion1();
   drawQuestion2();
   drawQuestion3();
   drawQuestion4();
   drawQuestion5();
+  
 }
   function scoreCheckDraw (){
     let oldScore = parseInt(document.getElementById('score').innerText);
