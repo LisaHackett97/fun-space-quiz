@@ -171,7 +171,7 @@ function drawQuestion4() {
 
 function drawQuestion5() {
  
-  ctx.drawImage(earthImage, 240, -30, earthImage.width / 4.5, earthImage.height / 4.5);
+  ctx.drawImage(earthImage, 255, -10, earthImage.width / 7, earthImage.height / 7);
   // ctx.drawImage(rocketImg, 265, 0, rocketImg.width / 3.5, rocketImg.height / 3.5);
 }
 
