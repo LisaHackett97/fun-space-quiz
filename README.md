@@ -208,8 +208,7 @@ Images did not initially display on the deployed site. For the carousel images, 
 
 set focus in doc ready, was telling that wrg ans q was last. reoder, run game after focus
 
-
-Not yet fixed: If user gets first question wrong, get game over message as score is still at 0.
+fixed: If user gets first question wrong, get game over message as score is still at 0. added another confition to the if else statement to do nothing when score is 0.
 
 ### Performance and accessibility Testing
 

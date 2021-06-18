@@ -1,22 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
- 
-      
-      runGame();
 
-  
+  runGame();
 
-  });
+});
 
 
-   // code on how to set focus to nextq button on modal, found on stackoverflow
-   $("#answerModal").on('shown.bs.modal', function(event) {    
-    $("#qfocus").focus().css("background-color","#676d703f");}     
-    );
-   
-    $("#wrongAnswer").on('shown.bs.modal', function(event) {    
-      $("#wrgAnsFocus").focus().css("background-color","#676d703f");}     
-      );
+// code on how to set focus to nextq button on modal, found on stackoverflow
+$("#answerModal").on('shown.bs.modal', function (event) {
+  $("#qfocus").focus().css("background-color", "#676d703f");
+});
+
+$("#wrongAnswer").on('shown.bs.modal', function (event) {
+  $("#wrgAnsFocus").focus().css("background-color", "#676d703f");
+});
 
 
 
@@ -28,26 +24,15 @@ const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
 const correctAnswer = document.getElementById("correctAnswer");
-// const reTry = document.getElementById("reTry");
-// const nextQ = document.getElementById("nextQ");
-// let score = document.getElementById("score");
 const answerButtons = document.getElementById('answers');
 const answered = [];
-// const answer;
 let answer = document.getElementsByClassName("answerButton");
 let chosenAnswer;
-// let chosenAnswer = document.getElementsByClassName("answerButton").innerHTML;
-// let choice;
 let currentQuestion = 0;
 let availableQ = [];
 let quizArr = quizData;
 const q = quizData[currentQuestion];
 
-// let correctAnswer = q.correctAnswer;
-
-
-
-// TO DO: to add event listeners for click and keydown.
 
 // run the game. Shuffle fn called first so user doesn't see same q each time game is refreshed
 function runGame() {
@@ -66,8 +51,6 @@ function showQuestion() {
     answer3.innerHTML = q.answers.c;
     answer4.innerHTML = q.answers.d;
     correctAnswer.innerHTML = q.correctAnswer;
-
-
   } else {
     //Show the end screen
     confirm("No more questions. Click ok to continue");
@@ -91,6 +74,7 @@ function shuffleQuestion() {
 
 // adding event listener to next q button, to iterate current q number and show next Q
 document.getElementById("nextQ").addEventListener("click", nextQ);
+document.getElementById("nextQ").addEventListener("key", nextQ);
 
 // iterate +1 to the current question variable, then run the show question function
 // will show next question in the array QuizData
@@ -106,16 +90,13 @@ $('#answers > button').click(function (event) {
   chosenAnswer = $(this).text();
   event.preventDefault();
   check();
-
 });
 
 // check if answer chose matches text set for the correct answer
 function check() {
   if (chosenAnswer == correctAnswer.innerText) {
-
     openAnswerModal();
     incrementScore();
-
   } else {
     // alert(":( wrg")
     wrongAnswerModal();
@@ -127,20 +108,10 @@ function openAnswerModal() {
   $('#answerModal').modal('show');
 }
 
-
 //to Open modal when incorrect Answer selected
 function wrongAnswerModal() {
   $('#wrongAnswer').modal('show');
 }
-
-
-
-
-
-// function moveInGame() {};
-
-// function reTry() {};
-
 
 // show total number of questions answered correctly for current set 
 function incrementScore() {
@@ -160,7 +131,6 @@ rocketImg.src = "../assets/images/game-rocket.png";
 // image to show complete points in game
 const completeImg = new Image();
 completeImg.src = "../assets/images/game-rocket-done.png";
-
 
 // moon img appearing bottom left, use as starting point
 const moonImage = new Image();
@@ -196,7 +166,7 @@ function drawQuestion4() {
 }
 
 function drawQuestion5() {
- 
+
   ctx.drawImage(earthImage, 255, -10, earthImage.width / 7, earthImage.height / 7);
   ctx.drawImage(completeImg, 210, 27, completeImg.width / 3.5, completeImg.height / 3.5);
 }
@@ -210,13 +180,16 @@ function tempDrawLinePath() {
   drawQuestion5();
 
 }
-
 // draw images on canvas for each score increment
 
 function scoreCheckDraw() {
   let oldScore = parseInt(document.getElementById('score').innerText);
-  if (oldScore === 1) {
+  if (oldScore === 0) {
+    // do nothing
+
+  } else if (oldScore === 1) {
     drawQuestion1();
+
   } else if (oldScore === 2) {
     drawQuestion2();
 
@@ -233,7 +206,3 @@ function scoreCheckDraw() {
     confirm("game over");
   }
 }
-
-
-  // $(".gameModal").focus();
-
