@@ -76,9 +76,11 @@ document.getElementById("nextQ").addEventListener("click", nextQ);
 
 // iterate +1 to the current question variable, then run the show question function
 // will show next question in the array QuizData
+// including checkScoreDraw to draw on canvas as score increments
 function nextQ() {
   currentQuestion++;
   showQuestion();
+  scoreCheckDraw();
 }
 
 // when buttons within the div #answers clicked, set chosenAnswer to text of the button and run check fn
@@ -196,14 +198,32 @@ function tempDrawLinePath(){
   drawQuestion5();
   
 }
+
+// draw line on canvas for each score increment
+
   function scoreCheckDraw (){
     let oldScore = parseInt(document.getElementById('score').innerText);
     if (oldScore === 1){
       drawQuestion1();
     }
-    else {
+    else if (oldScore === 2){
       drawQuestion2();
-      console.log(oldScore);
+      
+    }
+    else if (oldScore === 3){
+      drawQuestion3();
+      
+    }
+    else if (oldScore === 4){
+      drawQuestion4();
+      
+    }
+    else if (oldScore === 5){
+      drawQuestion5();
+      
+    }
+    else {
+      confirm("game over");
     }
   }
 
