@@ -191,6 +191,9 @@ accessing correct answer in the array, tried few diff methods. Needed to set a h
 
 score not incremting, ok now.
 
+add canvas element with star bg. add moon draw image and rockets as movers. First used lines to test. update coordiantes on rocket for spacing
+Add earth img
+
 notes for js game
 
  need to create array/container for answered questions

@@ -143,65 +143,36 @@ rocketImg.src = "../assets/images/game-rocket.png";
 // };
 // moon img appearing bottom left, use as starting point
 const moonImage = new Image();
-moonImage.src = "../assets/images/game-logo-moon.png";
+moonImage.src = "../assets/images/game-moon.png";
 moonImage.onload = function () {
-  ctx.drawImage(moonImage, -380, -20);
+  ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);
 };
 
+const earthImage = new Image();
+earthImage.src = "../assets/images/game-earth.png";
 
 
-// set with temp red color
+
 function drawQuestion1() {
-  // ctx.strokeStyle = "#d33f49";
-  // ctx.lineWidth = 3;
-  // ctx.linecap = 'rounded';
-  // ctx.beginPath();
-  // ctx.moveTo(10, 140); // starting point
-  // ctx.lineTo(50, 120); // end pt of line
-  // ctx.stroke()
-  ctx.drawImage(rocketImg, 35, 115, rocketImg.width / 3.5, rocketImg.height / 3.5);
+  ctx.drawImage(rocketImg, 45, 120, rocketImg.width / 3.5, rocketImg.height / 3.5);
 }
 
-// set with temp yellow color
 function drawQuestion2() {
-  // ctx.strokeStyle = "#fee440";
-  // ctx.lineWidth = 2;
-  // ctx.beginPath();
-  // ctx.moveTo(50, 120);
-  // ctx.lineTo(110, 90);
-  // ctx.stroke()
-  ctx.drawImage(rocketImg, 80, 85, rocketImg.width / 3.5, rocketImg.height / 3.5);
+  ctx.drawImage(rocketImg, 100, 87, rocketImg.width / 3.5, rocketImg.height / 3.5);
 }
-
 
 function drawQuestion3() {
-  // ctx.strokeStyle = "#00f5d4";
-  // ctx.lineWidth = 2;
-  // ctx.beginPath();
-  // ctx.moveTo(110, 90);
-  // ctx.lineTo(170, 60);
-  // ctx.stroke()
-  ctx.drawImage(rocketImg, 140, 55, rocketImg.width / 3.5, rocketImg.height / 3.5);
+  ctx.drawImage(rocketImg, 155, 57, rocketImg.width / 3.5, rocketImg.height / 3.5);
 }
 
 function drawQuestion4() {
-  // ctx.strokeStyle = "#395c6b";
-  // ctx.lineWidth = 2;
-  // ctx.beginPath();
-  // ctx.moveTo(170, 60);
-  // ctx.lineTo(230, 30);
-  // ctx.stroke()
-  ctx.drawImage(rocketImg, 187, 30, rocketImg.width / 3.5, rocketImg.height / 3.5);
+  ctx.drawImage(rocketImg, 210, 27, rocketImg.width / 3.5, rocketImg.height / 3.5);
 }
 
 function drawQuestion5() {
-  // ctx.strokeStyle = "#00f5d4";
-  // ctx.lineWidth = 2;
-  // ctx.beginPath();
-  // ctx.moveTo(230, 30);
-  // ctx.lineTo(300, 0);
-  // ctx.stroke()
-  ctx.drawImage(rocketImg, 260, 0, rocketImg.width / 3.5, rocketImg.height / 3.5);
+ 
+  ctx.drawImage(earthImage, 240, -30, earthImage.width / 4.5, earthImage.height / 4.5);
+  // ctx.drawImage(rocketImg, 265, 0, rocketImg.width / 3.5, rocketImg.height / 3.5);
 }
 
 function tempDrawLinePath() {
