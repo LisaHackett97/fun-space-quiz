@@ -210,6 +210,8 @@ set focus in doc ready, was telling that wrg ans q was last. reoder, run game af
 
 fixed: If user gets first question wrong, get game over message as score is still at 0. added another confition to the if else statement to do nothing when score is 0.
 
+set up reset btns, set d-hide modal triggers but then wrg answer next w doesn't work. needed on click to be added to button with id of wrgAnsFocus. fixed.
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing

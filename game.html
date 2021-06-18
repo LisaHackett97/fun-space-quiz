@@ -118,7 +118,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
-                  <button type="button" class="btn gameModal" id="wrgAnsFocus" data-dismiss="modal">next q</button>
+                  <button type="button" class="btn gameModal" id="wrgAnsFocus" onclick="nextQ();" data-dismiss="modal">next q</button>
                   <button type="button" class="btn gameModal" id="resetBtnB" data-dismiss="modal">New Game</button>
                 </div>
               </div>
@@ -135,7 +135,7 @@
 
         <!-- div to show number of questions user has answered correctly -->
   <div class="row">
-    <div class="col-12">
+    <div class="col-12 text-center">
       <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span
           id="score">0</span></p>
     </div>
