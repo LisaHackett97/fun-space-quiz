@@ -508,7 +508,7 @@ background-color: #395c6b1c;
 }
 
 /* media query to let game area take up more of viewport height on larger screens. testing on Ipad pro on dev tools */
-@media screen and (min-width: 1024px) {
+/* @media screen and (min-width: 1024px) {
 
 #main-section {margin-top: 200px;}
 
@@ -526,4 +526,4 @@ background-color: #395c6b1c;
   margin-top: 55px;}
 
 
-}
+} */
