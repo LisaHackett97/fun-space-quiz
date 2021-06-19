@@ -1,29 +1,5 @@
 let contactForm = document.getElementById("contact-form");
 
-
-// form validation 
-
-
-
-contactForm.addEventListener('submit', handleSubmit);
-
-
-
-// code for email validation
-// https://www.w3resource.com/javascript/form/email-validation.php
-
-function ValidateEmail(inputText) {
-    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (inputText.value.match(mailformat)) {
-        alert("Valid email address!");
-        document.form.email.focus();
-        return true;
-    } else {
-        alert("You have entered an invalid email address!");
-        document.form.email.focus();
-        return false;
-    }
-
     function sendMail(contactForm) {
         emailjs.send("service_fhjfpgq", "contactForm", {
                 to_name: "Lisa",
@@ -35,28 +11,30 @@ function ValidateEmail(inputText) {
                 function (response) {
                     // alert("thank you so much for sending us your email")
 
-                    mess1 = 'Press Ok to Continue.';
-                    math = 99;
-                    x = confirm(mess1);
-                    if (x == true) {
-                        alert("You have clicked on Ok Button.");
-                    } else {
-                        alert("You have clicked on Cancel Button.");
-                    }
-
+                   confirm("thank you so much for sending us your email", response)
                 },
                 function (error) {
-                   confirm("We're sorry, your message couldn't be sent at this time")
+                   confirm("We're sorry, your message couldn't be sent at this time", error)
 
                 }
             );
         return false; //to block from loading a new page
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        contact - form.submit();
-    }
+ 
 
 
-}
+// code for email validation
+// https://www.w3resource.com/javascript/form/email-validation.php
+// only alert user if email adress is showing as invalid
+
+function ValidateEmail(inputText) {
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (inputText.value.match(mailformat)) {
+        document.form.email.focus();
+        return true;
+    } else {
+        alert("You have entered an invalid email address!");
+        document.form.email.focus();
+        return false;
+    }}

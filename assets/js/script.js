@@ -20,7 +20,7 @@ let currentQuestion = 0;
 // let availableQ = [];
 let quizArr = quizData;
 const q = quizData[currentQuestion];
-let contactForm = document.getElementById("contact-form");
+
 
 
 // code on how to set focus to nextq button on modal, found on stackoverflow
@@ -227,11 +227,3 @@ document.querySelectorAll('.resetBtn').forEach(item => {
 });
 
 
-// form validation 
-
-function handleSubmit (event){
-  event.preventDefault();
-  contact-form.submit();
-}
-
-contactForm.addEventListener('submit', handleSubmit);

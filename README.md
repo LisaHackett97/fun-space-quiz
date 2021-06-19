@@ -231,6 +231,9 @@ New game, not refreshing first question. needed to reoder function calls in the 
 
 media q for fig captions and carousel indictors on xs smal screens, also hiude h1 heading on small screens
 
+email js and validation causing a 501 error. removed submit fn frrom js file, re-arranged order in email.js, send email fn first. fixed issue
+To check on live site as it was causing a 405 issues there..
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
