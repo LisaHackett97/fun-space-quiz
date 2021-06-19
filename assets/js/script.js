@@ -88,23 +88,30 @@ $('#answers > button').click(function (event) {
   chosenAnswer = $(this).text();
   event.preventDefault();
   check();
+  // endGame();
 });
 // keyPress alternative
 $('#answers > button').keypress(function (event) {
   chosenAnswer = $(this).text();
   event.preventDefault();
   check();
+  // endGame();
 });
 
 // check if answer chose matches text set for the correct answer
 function check() {
   if (chosenAnswer == correctAnswer.innerText ) {
-    openAnswerModal();
+   
     incrementScore();
+    openAnswerModal();
+    
   } else {
       wrongAnswerModal();
   }
 }
+
+
+
 
 //to Open modal when correct Answer selected
 function openAnswerModal() {
@@ -225,7 +232,3 @@ document.querySelectorAll('.resetBtn').forEach(item => {
   });
 });
 
-// Success-End of game modal
-// function success() {
-//   $('#success').modal('show');
-// }

@@ -52,6 +52,30 @@ let quizData = [
             d: "Mathematical prediction"
         },
         correctAnswer: "Mathematical prediction"
+    },
+
+    {
+        question: "Which of these chemical elements is the most abundant in the sun?",
+        answers: {
+            a: "Carbon ",
+            b: "Hydrogen",
+            c: "Oxygen",
+            d: "Nitrogen"
+        },
+        correctAnswer: "Hydrogen"
+    },
+
+    {
+        question: "What is the diameter of the sun?",
+        answers: {
+            a: "About 1.4 million kilometres ",
+            b: "About 2.3 million kilometres",
+            c: "About 1.2 million kilometres",
+            d: "About 3.2 million kilometres"
+        },
+        correctAnswer: "About 1.4 million kilometres"
     }
+
+
 
 ];
