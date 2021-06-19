@@ -128,22 +128,22 @@ let ctx = canvas.getContext('2d');
 
 // rocket img to use as mover in game
 const rocketImg = new Image();
-rocketImg.src = "../assets/images/game-rocket.png";
+rocketImg.src = "assets/images/game-rocket.png";
 
 // image to show progress in game
 const completeImg = new Image();
-completeImg.src = "../assets/images/game-rocket-done.png";
+completeImg.src = "assets/images/game-rocket-done.png";
 
 // moon img appearing bottom left, use as starting point
 const moonImage = new Image();
-moonImage.src = "../assets/images/game-moon.png";
+moonImage.src = "assets/images/game-moon.png";
 moonImage.onload = function () {
   ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);
 };
 
 // set image  for last position in game
 const earthImage = new Image();
-earthImage.src = "../assets/images/game-earth.png";
+earthImage.src = "assets/images/game-earth.png";
 
 
 // draw rocket after 1 question answered correctly
