@@ -223,6 +223,8 @@ favicon and canvas imgs file paths
 
 New game, not refreshing first question. needed to reoder function calls in the reset Javascript fn
 
+media q for fig captions and carousel indictors on xs smal screens, also hiude h1 heading on small screens
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing

@@ -42,8 +42,6 @@ h1 {
 
 #game-header {
   font-size: 25px;
-
-  /* margin: 5px; */
   text-align: center;
   padding: 5px;
 
@@ -137,6 +135,7 @@ a:focus .start-pg {
   border: 2px solid var(--heading-color);
 }
 
+/* applies to modal on game page also */
 .modal-header,
 .modal-footer {
   border: none;
@@ -146,9 +145,8 @@ a:focus .start-pg {
   background-color: var(--decoration2);
   font-size: 1rem;
 }
-
-
 /* modal btn styling done with rule in game pg modal section */
+
 
 /* Nav Bar Styling */
 
@@ -476,25 +474,16 @@ canvas {
 }
 
 
-/*-- media query to show carousel text in a smaller size:- captions and heading --*/
+/*-- media query to increase height of figcation, so no overflow with indicators. and for layout of footer --*/
 @media screen and (max-width: 992px) {
-  figcaption {
-    font-size: 15px;
-    height: 160px;
+  figcaption {    
+    height: 180px;
   }
-
-  h1 {
-    font-size: 35px;
-    padding: 15px;
-
-  }
-
 
   footer p {
     font-size: 14px;
     padding-top: 10px;
     margin-bottom: 5px;
-
   }
 
   .social-links {
@@ -502,7 +491,7 @@ canvas {
   }
 }
 
-/* media query to reduce size of question text on xs screens */
+/* media query to reduce size of question text and adjust canvas on xs screens */
 @media screen and (max-width: 576px) {
 
   #question,
@@ -520,4 +509,22 @@ canvas {
     height: 200px;
 
   }
+
+  figcaption {
+    font-size: 14px;
+    height: 220px;
+  }
+  header {
+    height: 50px;
+  }
+
+  #main-section {
+    margin-top: 50px;
+  }
+
+/* Hide the indicators on xs small screens */
+  ol.carousel-indicators {
+   display:none
+  }
+
 }
