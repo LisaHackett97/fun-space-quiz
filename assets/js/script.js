@@ -23,17 +23,13 @@ const q = quizData[currentQuestion];
 
 // code on how to set focus to nextq button on modal, found on stackoverflow
 $("#answerModal").on('shown.bs.modal', function (event) {
-  $("#qfocus").focus().css("color","white");
+  $("#qfocus").focus().css("text-decoration","underline");
 });
 
 $("#wrongAnswer").on('shown.bs.modal', function (event) {
  
-  $("#wrgAnsFocus").focus().css("color","white");
+  $("#wrgAnsFocus").focus().css("text-decoration","underline");
 });
-
-
-
-
 
 // run the game. Shuffle fn called first so user doesn't see same q each time game is refreshed
 function runGame() {

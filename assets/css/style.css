@@ -125,8 +125,8 @@ a:focus .start-pg {
 /* Styling the Instructions modal */
 #instructions {
   color: var(--decoration1);
-  border: 2px solid var(--heading-color);
-  border-radius: 50%;
+  border: 2px solid var(--decoration1);
+  border-radius: 40%;
   font-weight: 600;
   font-size: 20px;
   padding: 15px;
@@ -134,6 +134,7 @@ a:focus .start-pg {
 
 #instructions:hover {
   color: var(--heading-color);
+  border: 2px solid var(--heading-color);
 }
 
 .modal-header,
@@ -146,12 +147,8 @@ a:focus .start-pg {
   font-size: 1rem;
 }
 
-.modal-footer .btn {
-  color: #d33f49;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  border: 2px solid #d33f49;
-}
+
+/* modal btn styling done with rule in game pg modal section */
 
 /* Nav Bar Styling */
 
@@ -169,7 +166,6 @@ header {
 }
 
 .nav-link.active {
-  /* border-bottom: 2px solid var(--decoration3); */
   text-decoration: underline;
   text-decoration-color: var(--decoration2);
   font-weight: 700;
@@ -452,7 +448,7 @@ canvas {
   display: none;
 }
 
-/* modalop up modal buttons other modal styling set with styling on instructions modal*/
+/* modalop up modal buttons game page. Other modal styling set with styling on instructions modal*/
 
 #answerModal,
 #wrongAnswer {
@@ -460,7 +456,8 @@ canvas {
 
 }
 
-.modal-footer .gameModal {
+/*  styling code for all modal footer btns across the site */
+.modal-footer .btn {
   color: var(--decoration1);
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -468,9 +465,9 @@ canvas {
   background-color: var(--main-text-color);
 
 }
+/* hover code for all modal footer btns across the site */
 
-
-.modal-footer .gameModal:hover {
+ .modal-footer .btn:hover {
   color: var(--main-text-color);
   background-color: var(--decoration1);
   font-weight: 700;
