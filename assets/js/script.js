@@ -20,6 +20,8 @@ let currentQuestion = 0;
 // let availableQ = [];
 let quizArr = quizData;
 const q = quizData[currentQuestion];
+let contactForm = document.getElementById("contact-form");
+
 
 // code on how to set focus to nextq button on modal, found on stackoverflow
 $("#answerModal").on('shown.bs.modal', function (event) {
@@ -182,15 +184,6 @@ function drawQuestion5() {
   ctx.drawImage(completeImg, 210, 27, completeImg.width / 3.5, completeImg.height / 3.5);
 }
 
-function tempDrawLinePath() {
-
-  drawQuestion1();
-  drawQuestion2();
-  drawQuestion3();
-  drawQuestion4();
-  drawQuestion5();
-
-}
 // draw images on canvas for each score increment
 
 function scoreCheckDraw() {
@@ -233,3 +226,12 @@ document.querySelectorAll('.resetBtn').forEach(item => {
   });
 });
 
+
+// form validation 
+
+function handleSubmit (event){
+  event.preventDefault();
+  contact-form.submit();
+}
+
+contactForm.addEventListener('submit', handleSubmit);
