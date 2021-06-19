@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span</a>
+          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span< /a>
               <a class="nav-link" href="learn-more.html">Learn about space!</a>
               <a class="nav-link" href="learn-more.html#ask-question">Ask us anything</a>
 
@@ -96,7 +96,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn gameModal" id="qfocus" onclick="nextQ();" data-dismiss="modal">Next
                     question</button>
-                  <button type="button" class="btn gameModal" id="resetBtnA" data-dismiss="modal">New Game</button>
+                  <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">New Game</button>
                 </div>
               </div>
             </div>
@@ -121,7 +121,7 @@
                   <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
                   <button type="button" class="btn gameModal" id="wrgAnsFocus" onclick="nextQ();"
                     data-dismiss="modal">next q</button>
-                  <button type="button" class="btn gameModal" id="resetBtnB" data-dismiss="modal">New Game</button>
+                  <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">New Game</button>
                 </div>
               </div>
             </div>
@@ -133,17 +133,39 @@
     </div>
     <!-- end of row -->
 
-<div class="row controls">
-     
-        <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
-        </button>
+    <div class="row controls">
 
-        <!-- div to show number of questions user has answered correctly -->
-         <div class="col-12 text-center">
-            <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span id="score">0</span></p>
+      <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
+      </button>
+
+      <!-- div to show number of questions user has answered correctly -->
+      <div class="col-12 text-center">
+        <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span id="score">0</span></p>
+      </div>
+
+      <button class="btn col-4 offset-4 resetBtn" type="button">New Game</button>
+
+       <!-- This is pop up when 5 questions answered and user reaches Earth/end of quiz -->
+          <!-- Modal code structure taken from bootstrap docs-->
+          <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" id="modalSuccess"> You made it. Click below if you want to play again
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn gameModal" data-dismiss="modal">Learn more and see Space pictures!</button>
+                  
+                  <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">Play again</button>
+                </div>
+              </div>
+            </div>
           </div>
-       
-      <button class="btn col-4 offset-4" type="button" id="resetBtn">New Game</button>
 
     </div>
     <!-- end of row for ctrls-->
@@ -155,12 +177,6 @@
 
   <!--end of game-->
 
-  <!-- container to add spacing on pg for lg screens, to push down the footer on the viewport-->
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-12 d-none d-lg-block spacing-row"></div>
-  </div>
-</div> -->
 
 
 

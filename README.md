@@ -219,6 +219,8 @@ BUT CANVAS DRAW ELEMENTS NOT SHOWING ON LIVE SITE...FILE PATH???
 
 LIVE SITE: NO SPACING ISSUES ON AMI.RESPONSIVE BUT ARE ON TECHSINI.COM???? apple devices???
 
+favicon and canvas imgs file paths
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
@@ -277,6 +279,8 @@ Credit: solution to my issue with navbar and content z-indez was found on [Freec
 add credit in re fisher yates code
 
 // code on how to set focus to nextq button on modal, found on stackoverflow
+
+favicons.io
 
 ### Media
 

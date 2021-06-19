@@ -209,33 +209,15 @@ function scoreCheckDraw() {
   }
 }
 
-// reset the quiz and game and canvas when right answer modal open
-document.getElementById("resetBtnA").addEventListener("click", function() {
-   document.getElementById("score").innerText = 0;
-  showQuestion();
-  currentQuestion = 0;
-  // clear canvas and re-draw moon start img
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
+//event listener for new game
+document.querySelectorAll('.resetBtn').forEach(item => {
+  item.addEventListener('click', event => {
+    document.getElementById("score").innerText = 0;
+    showQuestion();
+    currentQuestion = 0;
+    // clear canvas and re-draw moon start img
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
+  });
 });
 
-
-// reset the quiz and game and canvas when wrong answer modal open
-document.getElementById("resetBtnB").addEventListener("click", function() {
-  document.getElementById("score").innerText = 0;
- showQuestion();
- currentQuestion = 0;
- // clear canvas and re-draw moon start img
- ctx.clearRect(0, 0, canvas.width, canvas.height);
- ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
-});
-
-// reset the quiz and game and canvas when wrong answer modal open
-document.getElementById("resetBtn").addEventListener("click", function() {
-  document.getElementById("score").innerText = 0;
- showQuestion();
- currentQuestion = 0;
- // clear canvas and re-draw moon start img
- ctx.clearRect(0, 0, canvas.width, canvas.height);
- ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
-});
