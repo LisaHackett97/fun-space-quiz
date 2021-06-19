@@ -49,7 +49,8 @@ function showQuestion() {
     correctAnswer.innerHTML = q.correctAnswer;
   } else {
     //Show the end screen
-    confirm("No more questions. Click ok to continue");
+    // confirm("No more questions. Click ok to continue");
+    $('#success').modal('show');
   }
 }
 
@@ -97,7 +98,7 @@ $('#answers > button').keypress(function (event) {
 
 // check if answer chose matches text set for the correct answer
 function check() {
-  if (chosenAnswer == correctAnswer.innerText) {
+  if (chosenAnswer == correctAnswer.innerText ) {
     openAnswerModal();
     incrementScore();
   } else {
@@ -203,9 +204,11 @@ function scoreCheckDraw() {
 
   } else if (oldScore === 5) {
     drawQuestion5();
+    $('#success').modal('show');
 
   } else {
-    confirm("game over");
+    // 
+   //
   }
 }
 
@@ -213,11 +216,16 @@ function scoreCheckDraw() {
 document.querySelectorAll('.resetBtn').forEach(item => {
   item.addEventListener('click', event => {
     document.getElementById("score").innerText = 0;
-    showQuestion();
+    
     currentQuestion = 0;
+    showQuestion();
     // clear canvas and re-draw moon start img
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
   });
 });
 
+// Success-End of game modal
+// function success() {
+//   $('#success').modal('show');
+// }

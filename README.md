@@ -215,11 +215,13 @@ set up reset btns, set d-hide modal triggers but then wrg answer next w doesn't 
 footer floating up on lg screens per dev tools
 Added empty div, and set height, which keeps footer down but may need to increase game area size for leg scrrens. had added a media query but then removed it and te4sted live site. Media q and spacin div not needed on live site. dev tools issue
 
-BUT CANVAS DRAW ELEMENTS NOT SHOWING ON LIVE SITE...FILE PATH???
+BUT CANVAS DRAW ELEMENTS NOT SHOWING ON LIVE SITE...FILE PATH. fixed
 
 LIVE SITE: NO SPACING ISSUES ON AMI.RESPONSIVE BUT ARE ON TECHSINI.COM???? apple devices???
 
 favicon and canvas imgs file paths
+
+New game, not refreshing first question. needed to reoder function calls in the reset Javascript fn
 
 ### Performance and accessibility Testing
 
