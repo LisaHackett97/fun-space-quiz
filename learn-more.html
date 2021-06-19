@@ -226,7 +226,6 @@
                         <input type="email" name="email" id="email" required aria-required="true"
                             placeholder="email address">
                         <br>
-                        
                         <!-- spacing before text area -->
                         <br>
                         <br>
@@ -240,6 +239,42 @@
                 </form>
             </div>
             <!--end of row for contact form-->
+
+             <!-- Button trigger modal -->
+             <button type="button" class="btn d-none" data-toggle="modal" data-target="#contactModal" id="contactModal">
+                
+            </button>
+        </div>
+
+       
+        <!--Pop up when email sent-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn d-none" data-toggle="modal" data-target="#emailModal"></button>
+        
+
+        <!-- This is pop up when a question answered -->
+        <!-- Modal code structure taken from bootstrap docs-->
+        <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="modalSendMail">
+                Your email has been sent. <i class="fas fa-paper-plane"></i> <br> We are so excited to read and will be back in touch asap
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn" data-dismiss="modal" onClick="parent.location='game.html'">Go to Game</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end of send email modal-->
         </div>
         <!--end of contact form container-->
     </div>
@@ -268,6 +303,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script src="assets/js/email.js"></script>
+
+    
 </body>
 
 </html>

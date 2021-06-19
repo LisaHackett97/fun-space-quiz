@@ -10,8 +10,9 @@ let contactForm = document.getElementById("contact-form");
             .then(
                 function (response) {
                     // alert("thank you so much for sending us your email")
+                    $('#emailModal').modal('show');
 
-                   confirm("thank you so much for sending us your email", response)
+                //    confirm("thank you so much for sending us your email", response)
                 },
                 function (error) {
                    confirm("We're sorry, your message couldn't be sent at this time", error)
