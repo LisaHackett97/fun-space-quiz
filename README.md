@@ -148,6 +148,12 @@ Contains two sections:
 - CSS3- Style sheet programming language
 - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) Use as a framework for layout and responsiveness.
 
+emailjs.com
+removebackground
+tinyjpg
+paint tool on lao#ptop windows
+jshint
+
 [Back to table of contents](#table-of-contents)
 
 ## Testing
