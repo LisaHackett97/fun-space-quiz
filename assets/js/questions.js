@@ -68,7 +68,7 @@ let quizData = [
     {
         question: "What is the diameter of the sun?",
         answers: {
-            a: "About 1.4 million kilometres ",
+            a: "About 1.4 million kilometres",
             b: "About 2.3 million kilometres",
             c: "About 1.2 million kilometres",
             d: "About 3.2 million kilometres"

@@ -12,10 +12,13 @@ font-family: 'Poppins', sans-serif;
   --decoration2: #8ef9f3;
   --decoration3: #00f5d4;
 }
-
+/* contrast issues */
+/* use ##304A55 for main-text color 
+mayve #fee440 for decoration1*/
 * {
   margin: 0;
   padding: 0;
+ 
 }
 
 /* main styling */
@@ -37,7 +40,7 @@ h1 {
 
 }
 
-#game-header{ 
+#game-header {
   font-size: 25px;
 
   /* margin: 5px; */
@@ -112,7 +115,8 @@ a:focus .start-pg {
 }
 
 /*-- remove underline when over over anchor elements on landing page --*/
-.landing-pg:hover a, .landing-pg:focus a {
+.landing-pg:hover a,
+.landing-pg:focus a {
   text-decoration: none;
 }
 
@@ -342,37 +346,37 @@ input {
 /*--End of form Section--*/
 
 
-/* .spacing-row {height: 500px;} */
-
 
 footer {
   color: #395c6b;
   background: #8ef9f3;
   font-family: 'Poppins', sans-serif;
-  margin-top: 25px;
-  
+  margin-top: 15px;
+
 
 }
 
 footer p {
   font-size: 1rem;
-  padding-top: 25px;
+  padding-top: 10px;
+  padding-right: 10px;
   font-weight: 500;
 }
 
 .social-links {
   display: flex;
-  padding-top: 10px;
+  padding: 5px;
 }
 
 .social-links a {
-  font-size: 3rem;
+  font-size: 1.2rem;
   padding: 5px;
   color: var(--heading-color);
-  border-radius: 100%;
+  border-radius: 10%;
 }
 
 .social-links a:hover {
+  color: var(--heading-color);
   background-color: var(--main-text-color);
 }
 
@@ -386,12 +390,12 @@ footer p {
 
 canvas {
   width: 250px;
-   height:350px;
-   background-image: url("../images/game-bg-stars.png");
+  height: 350px;
+  background-image: url("../images/game-bg-stars.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-   
+
 }
 
 #question {
@@ -404,8 +408,8 @@ canvas {
   /* border: 2px dotted var(--decoration1); */
   margin-top: 15px;
   font-weight: 800;
- font-style: italic;
- padding-left: 10px;
+  font-style: italic;
+  padding-left: 10px;
 
 }
 
@@ -413,56 +417,65 @@ canvas {
 .answerButton {
   border: 1px solid var(--decoration3);
   color: var(--main-text-color);
-  max-height: 100%;    
+  max-height: 100%;
   margin-top: 5px;
-background-color: #395c6b1c;
+  background-color: #395c6b1c;
 }
 
 .answerButton:hover {
   border: none;
   color: var(--decoration1);
- background-color: var(--main-text-color);
+  background-color: var(--main-text-color);
 }
 
-.controls {margin-top: 10px;}
+.controls {
+  margin-top: 10px;
+}
 
-.controls button, #resetBtn {
+.controls button,
+#resetBtn {
   color: var(--main-text-color);
   font-weight: 700;
   background-color: var(--decoration2);
- margin-top: 5px;
- font-size: 14px;
- width: 25vw;
+  margin-top: 5px;
+  font-size: 14px;
+  width: 25vw;
 }
 
-.controls button:hover, #resetBtn:hover {
+.controls button:hover,
+#resetBtn:hover {
   background-color: #fee440;
 }
 
 /* hide the span on screen, do not want it visible to user, contains the answer */
-#correctAnswer{
+#correctAnswer {
   display: none;
 }
 
 /* modalop up modal buttons other modal styling set with styling on instructions modal*/
 
-#answerModal, #wrongAnswer {
+#answerModal,
+#wrongAnswer {
   width: 100vw;
-  
+
 }
 
 .modal-footer .gameModal {
-  color: #d33f49;
+  color: var(--decoration1);
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  border: 2px solid #d33f49;
+  font-weight: 400;
+   border: 2px solid #395c6b;
+  background-color: var(--main-text-color);
+
 }
 
+
 .modal-footer .gameModal:hover {
- background-color: var(--decoration3);
- font-weight: 700;
- border-style: none;
- border-radius:20%;
+  color: var(--main-text-color);
+  background-color: var(--decoration1);
+  font-weight: 700;
+  border-style: none;
+  border-radius: 20%;
 }
 
 
@@ -479,51 +492,35 @@ background-color: #395c6b1c;
 
   }
 
-    
+
   footer p {
-   font-size: 14px;
+    font-size: 14px;
     padding-top: 10px;
     margin-bottom: 5px;
-   
+
   }
-  
+
   .social-links {
-     padding-top: 5px;
+    padding-top: 5px;
   }
 }
+
 /* media query to reduce size of question text on xs screens */
 @media screen and (max-width: 576px) {
-  #question, .answerButton, .questionScores{
+
+  #question,
+  .answerButton,
+  .questionScores {
     font-size: 15px;
   }
 
   header {
-    padding:0;
+    padding: 0;
   }
+
   canvas {
     width: 400px;
-     height:200px;
-      
+    height: 200px;
+
   }
 }
-
-/* media query to let game area take up more of viewport height on larger screens. testing on Ipad pro on dev tools */
-/* @media screen and (min-width: 1024px) {
-
-#main-section {margin-top: 200px;}
-
-.controls {
-  margin-top: 75px;
-  margin-bottom: 200px;
-}
-
-.questionScores {
-  margin-top: 55px;
-  margin-bottom: 55px;
-}
-
-.question-area {
-  margin-top: 55px;}
-
-
-} */

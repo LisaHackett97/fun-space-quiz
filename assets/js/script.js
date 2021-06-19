@@ -23,12 +23,17 @@ const q = quizData[currentQuestion];
 
 // code on how to set focus to nextq button on modal, found on stackoverflow
 $("#answerModal").on('shown.bs.modal', function (event) {
-  $("#qfocus").focus().css("background-color", "#676d703f");
+  $("#qfocus").focus().css("color","white");
 });
 
 $("#wrongAnswer").on('shown.bs.modal', function (event) {
-  $("#wrgAnsFocus").focus().css("background-color", "#676d703f");
+ 
+  $("#wrgAnsFocus").focus().css("color","white");
 });
+
+
+
+
 
 // run the game. Shuffle fn called first so user doesn't see same q each time game is refreshed
 function runGame() {
@@ -210,8 +215,9 @@ function scoreCheckDraw() {
     drawQuestion4();
 
   } else if (oldScore === 5) {
-    drawQuestion5();
+    
     $('#success').modal('show');
+    drawQuestion5();
 
   } else {
     // 
@@ -219,11 +225,10 @@ function scoreCheckDraw() {
   }
 }
 
-//event listener for new game
+//event listener to start new game
 document.querySelectorAll('.resetBtn').forEach(item => {
   item.addEventListener('click', event => {
-    document.getElementById("score").innerText = 0;
-    
+    document.getElementById("score").innerText = 0;    
     currentQuestion = 0;
     showQuestion();
     // clear canvas and re-draw moon start img
