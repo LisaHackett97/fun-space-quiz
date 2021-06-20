@@ -523,6 +523,31 @@ canvas {
   display: none;
 }
 
+/* 404 Page */
+
+#Error404Page{
+  background: url("../images/404-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+ #Error404Page h2, p {
+  color:var(--decoration3);
+  padding:15px;
+  margin: 50px;
+}
+
+
+ #Error404Page a {
+  color:var(--decoration1);
+  border: 2px solid var(--decoration1);
+  border-radius: 10%;
+  padding:15px;
+ 
+}
+#Error404Page h3 {
+  color:var(--decoration1);
+  
+}
 
 
 /*-- media query to adjust height of figcation, so no overflow with indicators. and for layout of footer --*/
