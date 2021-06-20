@@ -6,15 +6,13 @@ font-family: 'Poppins', sans-serif;
  */
 
 :root {
-  --main-text-color: #395c6b;
-  --heading-color: #d33f49;
-  --decoration1: #fee440;
-  --decoration2: #8ef9f3;
-  --decoration3: #00f5d4;
+  --main-text-color: #292F36;
+  --heading-color: #F9B5AA;
+  --decoration1: #FFE66D;
+  --decoration2: #2B2C5A;
+  --decoration3: #45cfcf;
 }
-/* contrast issues */
-/* use ##304A55 for main-text color 
-mayve #fee440 for decoration1*/
+
 * {
   margin: 0;
   padding: 0;
@@ -148,7 +146,7 @@ a:focus .start-pg {
 }
 
 .modal-content {
-  background-color: var(--decoration2);
+  background-color: var(--decoration3);
   font-size: 1rem;
 }
 /* modal btn styling done with rule in game pg modal section */
@@ -164,7 +162,7 @@ header {
 .nav-link {
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
-  color: var(--decoration3);
+  color: var(--main-text-color);
   display: flex;
   justify-content: flex-end;
 }
@@ -192,7 +190,12 @@ header {
 
 .fa.fa-bars {
   font-size: 2rem;
-  color: var(--decoration3);
+  color: var(--main-text-color);
+}
+
+.navbar-collapse {
+  background-color: var(--heading-color);
+  padding:10px;
 }
 
 /* Credit: solution to my issue with navbar and content z-indez was found on https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059 */
@@ -365,7 +368,7 @@ wrapper and footer classes --*/
 
 footer {
   color: #395c6b;
-  background: #8ef9f3;
+  background: var(--decoration3);
   font-family: 'Poppins', sans-serif;
   margin-top: 15px;
  }
@@ -385,7 +388,7 @@ footer p {
 .social-links a {
   font-size: 1.2rem;
   padding: 5px;
-  color: var(--heading-color);
+  color: var(--decoration2);
   border-radius: 10%;
 }
 
@@ -450,7 +453,7 @@ canvas {
 #resetBtn {
   color: var(--main-text-color);
   font-weight: 700;
-  background-color: var(--decoration2);
+  background-color: var(--heading-color);
   margin-top: 5px;
   font-size: 14px;
   width: 25vw;
@@ -500,7 +503,7 @@ canvas {
     height: 150px;
   }
   #main-content {
-    margin-top: auto;
+    margin-top: 200px;
   }
 
   footer p {
@@ -543,11 +546,7 @@ canvas {
     height: 50px;
   }
 
-  #main-section {
-    margin-top: 50px;
-  }
-
-  .carouselSection {
+    .carouselSection {
     padding-top: 40px;
   }
 

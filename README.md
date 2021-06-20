@@ -206,6 +206,8 @@ notes for js game
  need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
  <!-- function to limit number of questions in game -->
 
+
+changed colors used color pciker in wave extension and [this site](https://www.colorcombos.com/combolibrary.html)
 [Back to table of contents](#table-of-contents)
 
 ### Bugs
