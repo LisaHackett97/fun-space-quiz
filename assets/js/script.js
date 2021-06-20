@@ -11,26 +11,30 @@ const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
-const correctAnswer = document.getElementById("correctAnswer");
-const answerButtons = document.getElementById('answers');
-const answered = [];
-let answer = document.getElementsByClassName("answerButton");
+// const correctAnswer = document.getElementById("correctAnswer");
+// const answerButtons = document.getElementById('answers');
+// const answered = [];
+//let answer = document.getElementsByClassName("answerButton");
 let chosenAnswer;
 let currentQuestion = 0;
 // let availableQ = [];
+
+// import {quizData[]} from './questions.js';
+ 
+
 let quizArr = quizData;
-const q = quizData[currentQuestion];
+//const q = quizData[currentQuestion];
 
 
 
 // code on how to set focus to nextq button on modal, found on stackoverflow
 $("#answerModal").on('shown.bs.modal', function (event) {
-  $("#qfocus").focus().css("text-decoration","underline");
+  $("#qfocus").focus().css("text-decoration", "underline");
 });
 
 $("#wrongAnswer").on('shown.bs.modal', function (event) {
- 
-  $("#wrgAnsFocus").focus().css("text-decoration","underline");
+
+  $("#wrgAnsFocus").focus().css("text-decoration", "underline");
 });
 
 // run the game. Shuffle fn called first so user doesn't see same q each time game is refreshed
@@ -62,13 +66,13 @@ function showQuestion() {
 // https://bost.ocks.org/mike/shuffle/
 
 function shuffleQuestion() {
-  var x = quizArr.length,
+  var x = quizData.length,
     temp, i;
   while (x) {
     i = Math.floor(Math.random() * x--);
-    temp = quizArr[x];
-    quizArr[x] = quizArr[i];
-    quizArr[i] = temp;
+    temp = quizData[x];
+    quizData[x] = quizData[i];
+    quizData[i] = temp;
   }
 }
 
@@ -103,13 +107,13 @@ $('#answers > button').keypress(function (event) {
 
 // check if answer chose matches text set for the correct answer
 function check() {
-  if (chosenAnswer == correctAnswer.innerText ) {
-   
+  if (chosenAnswer == correctAnswer.innerText) {
+
     incrementScore();
     openAnswerModal();
-    
+
   } else {
-      wrongAnswerModal();
+    wrongAnswerModal();
   }
 }
 
@@ -204,26 +208,24 @@ function scoreCheckDraw() {
     drawQuestion4();
 
   } else if (oldScore === 5) {
-    
+
     $('#success').modal('show');
     drawQuestion5();
 
   } else {
     // 
-   //
+    //
   }
 }
 
 //event listener to start new game
 document.querySelectorAll('.resetBtn').forEach(item => {
   item.addEventListener('click', event => {
-    document.getElementById("score").innerText = 0;    
+    document.getElementById("score").innerText = 0;
     currentQuestion = 0;
     showQuestion();
     // clear canvas and re-draw moon start img
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);  
+    ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);
   });
 });
-
-
