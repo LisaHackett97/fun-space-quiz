@@ -7,18 +7,20 @@ font-family: 'Poppins', sans-serif;
 
 :root {
   --main-text-color: #292F36;
-  --heading-color: #F9B5AA;
+  --heading-color: #f38d6d;
   --decoration1: #FFE66D;
   --decoration2: #2B2C5A;
   --decoration3: #45cfcf;
 }
-
+/* 
+--heading-color: #f7ada2; */
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
  
 }
-/* main styling */
+
 
 /* set height to 100% in order to apply styles for stick footer on game pg */
 html, body {
@@ -140,7 +142,7 @@ a:focus .start-pg {
   border: 2px solid var(--heading-color);
 }
 
-/* applies to modal on game page also */
+/* modal styling */
 .modal-header,
 .modal-footer {
   border: none;
@@ -150,14 +152,47 @@ a:focus .start-pg {
   background-color: var(--decoration3);
   font-size: 1rem;
 }
-/* modal btn styling done with rule in game pg modal section */
 
+
+/* game page modal */
+#answerModal,
+#wrongAnswer {
+  width: 100vw;
+
+}
+
+/*  styling code for all modal footer btns across the site */
+.modal-footer .btn {
+  color: var(--main-text-color);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+   border: 2px solid #395c6b;
+  background-color: var(--decoration1);
+
+}
+/* hover code for all modal footer btns across the site */
+
+ .modal-footer .btn:hover {
+  color: var(--main-text-color);
+  background-color: var(--decoration1);
+  font-weight: 700;
+  border-style: none;
+  border-radius: 20%;
+}
+
+.fa-heart-broken,
+.fa-thumbs-up,
+.fa-smile-beam{
+  color: var(--heading-color);
+}
 
 /* Nav Bar Styling */
 
 header {
-  background-color: var(--heading-color)
+  background-color: var(--heading-color);  
 }
+
+
 
 /*-- Style nav position nav links for smaller screens, collapsed menu--*/
 .nav-link {
@@ -196,8 +231,9 @@ header {
 }
 
 .navbar-collapse {
-  background-color: var(--heading-color);
-  padding:10px;
+ padding:10px;
+ background-color: var(--heading-color);
+ 
 }
 
 /* Credit: solution to my issue with navbar and content z-indez was found on https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059 */
@@ -414,6 +450,7 @@ canvas {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-radius: 2%;
 
 }
 
@@ -471,32 +508,6 @@ canvas {
   display: none;
 }
 
-/* modal buttons game page. Other modal styling set with styling on instructions modal*/
-
-#answerModal,
-#wrongAnswer {
-  width: 100vw;
-
-}
-
-/*  styling code for all modal footer btns across the site */
-.modal-footer .btn {
-  color: var(--decoration1);
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-   border: 2px solid #395c6b;
-  background-color: var(--main-text-color);
-
-}
-/* hover code for all modal footer btns across the site */
-
- .modal-footer .btn:hover {
-  color: var(--main-text-color);
-  background-color: var(--decoration1);
-  font-weight: 700;
-  border-style: none;
-  border-radius: 20%;
-}
 
 
 /*-- media query to adjust height of figcation, so no overflow with indicators. and for layout of footer --*/
