@@ -1,4 +1,4 @@
-// export {quizData};
+/*jshint esversion: 6 */
 
 let quizData = [
     {

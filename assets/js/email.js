@@ -1,4 +1,8 @@
+/*jshint esversion: 6 */
+/*globals $:false */
+
 let contactForm = document.getElementById("contact-form");
+let emailjs;
 
     function sendMail(contactForm) {
         emailjs.send("service_fhjfpgq", "contactForm", {
@@ -15,7 +19,7 @@ let contactForm = document.getElementById("contact-form");
                 //    confirm("thank you so much for sending us your email", response)
                 },
                 function (error) {
-                   confirm("We're sorry, your message couldn't be sent at this time", error)
+                   confirm("We're sorry, your message couldn't be sent at this time", error);
 
                 }
             );
