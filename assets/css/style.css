@@ -23,6 +23,7 @@ font-family: 'Poppins', sans-serif;
 /* set height to 100% in order to apply styles for stick footer on game pg */
 html, body {
   height:100%;
+  
   }
 
 /* main styling */
@@ -181,6 +182,7 @@ header {
 /* add spacing above Main container, so that there is visible space with navbar */
 #main-section {
   margin-top: 75px;
+  
 }
 
 /*--styling of burger icon for smaller screens--*/
@@ -345,7 +347,7 @@ input {
   border-radius: 10%;
   background-color: var(--heading-color);
   margin-left: 5px;
-  color: var(--decoration1);
+  color: var(--main-text-color);
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
 }
