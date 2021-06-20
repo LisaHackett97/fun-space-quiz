@@ -309,6 +309,7 @@ textarea,
 
 textarea {
   height: 10rem;
+   margin-top: 24px;
 }
 
 .details-labels {
@@ -346,6 +347,7 @@ footer {
   background: #8ef9f3;
   font-family: 'Poppins', sans-serif;
   margin-top: 15px;
+  
 
 
 }
@@ -446,7 +448,7 @@ canvas {
   display: none;
 }
 
-/* modalop up modal buttons game page. Other modal styling set with styling on instructions modal*/
+/* modal buttons game page. Other modal styling set with styling on instructions modal*/
 
 #answerModal,
 #wrongAnswer {
@@ -477,7 +479,10 @@ canvas {
 /*-- media query to increase height of figcation, so no overflow with indicators. and for layout of footer --*/
 @media screen and (max-width: 992px) {
   figcaption {    
-    height: 180px;
+    height: 150px;
+  }
+  #main-content {
+    margin-top: auto;
   }
 
   footer p {
@@ -504,6 +509,7 @@ canvas {
     padding: 0;
   }
 
+
   canvas {
     width: 400px;
     height: 200px;
@@ -520,6 +526,10 @@ canvas {
 
   #main-section {
     margin-top: 50px;
+  }
+
+  .carouselSection {
+    padding-top: 40px;
   }
 
 /* Hide the indicators on xs small screens */
