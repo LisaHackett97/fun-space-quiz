@@ -149,6 +149,16 @@ a:focus .start-pg {
   border: 2px solid var(--heading-color);
 }
 
+/* set text style on list items on isntruction modal */
+.modal-body li {
+  font-size: 14px;
+}
+
+.modal-body li {
+  padding: 3px;
+  margin-left: 5px;
+}
+
 /* modal styling */
 .modal-header,
 .modal-footer {
