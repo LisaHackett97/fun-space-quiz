@@ -530,7 +530,8 @@ canvas {
   background-size: cover;
 }
 
- #Error404Page h2, p {
+ #Error404Page h2, 
+ #Error404Page p {
   color:var(--decoration3);
   padding:15px;
   margin: 50px;

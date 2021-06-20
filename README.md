@@ -245,6 +245,9 @@ Solution on [this site](https://medium.com/recraftrelic/es5-vs-es6-with-example-
 But this then caused an issue where message, Uncaught SyntaxError: Cannot use import statement outside a module". Solution to that on stackover flow post
 solution was to give js files type of module. Removed that issue but next issue then related to the onlcik events in the html file for next q.site not displaying a next q when that onclick removed from modal button. Still works when main new q button selected. Needed to add Event listeners for next q buttons on wrg answer and correct answer modals
 
+corrected initial; validation errorsL now issues with footer too mig and no txt on learn pg, game page, text under footer and also text wrg color*
+pk, was styles for 404 pg over writing corrected now
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
