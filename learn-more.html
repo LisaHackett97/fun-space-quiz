@@ -13,9 +13,9 @@
 
     <title>Fun Space Quiz</title>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
-    <script type="text/javascript">
+    <script>
         (function () {
             emailjs.init("user_he7TLqdOmlhFJWTWw6UUa");
         })();
@@ -224,11 +224,10 @@
 
                         <!--required details section on form-->
                         <label for="name" class="details-labels">Name</label>
-                        <input type="text" name="name" id="name" required aria-required="true" placeholder="Name">
+                        <input type="text" name="name" id="name" required placeholder="Name">
                         <br>
                         <label for="email" class="details-labels">Your email</label>
-                        <input type="email" name="email" id="email" required aria-required="true"
-                            placeholder="email address">
+                        <input type="email" name="email" id="email" required placeholder="email address">
                         <br>
                         <!-- spacing before text area -->
 
@@ -258,7 +257,7 @@
 
         <!-- This is pop up when a question answered -->
         <!-- Modal code structure taken from bootstrap docs-->
-        <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel"
+        <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="modalSendMail"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -280,10 +279,8 @@
                 </div>
             </div>
         </div>
-        <!--end of send email modal-->
     </div>
-    <!--end of contact form container-->
-    </div>
+
     <!--end of main section container-->
 
     <footer>

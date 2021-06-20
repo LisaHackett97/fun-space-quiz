@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span</a>
+            <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span></a>
                 <a class="nav-link" href="learn-more.html">Learn about space!</a>
                 <a class="nav-link" href="learn-more.html#ask-question">Ask us anything</a>
 
@@ -50,7 +50,7 @@
         <h1 id="game-header" class="col-12 d-none d-md-block">Fly your rocket home</h1>
         <div class="game-area col-12">
           <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
-          <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">
+          <canvas id="gamecanvas" class="col-12" aria-label="Game area with space image, space rocket icon for correct questions answered">
             <p>This is the game area. answer questions from question-area to progress in the game. Canvas shows a space
               background with moon and planet earth, and space rocket icon to move across the canvas,
               to show progress</p>
@@ -87,7 +87,7 @@
 
             <!-- This is pop up when a question answered -->
             <!-- Modal code structure taken from bootstrap docs-->
-            <div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
+            <div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="modalTextAnswer"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -111,7 +111,7 @@
 
             <!-- This is pop up when a question answered Incorrectly -->
             <!-- Modal code structure taken from bootstrap docs-->
-            <div class="modal fade" id="wrongAnswer" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
+            <div class="modal fade" id="wrongAnswer" tabindex="-1" role="dialog" aria-labelledby="modalTextWrgAnswer"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -155,7 +155,7 @@
 
         <!-- This is pop up when 5 questions answered and user reaches Earth/end of quiz -->
         <!-- Modal code structure taken from bootstrap docs-->
-        <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="successModalLabel"
+        <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="modalSuccess"
           aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -186,13 +186,11 @@
   code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
  -->
     <div class="push"></div>
-  </div>
+  
 
   </div> <!-- end of wrapper -->
   <!-- end of main section-->
   <!--end of game-->
-
-<div><a href="404.html">Test for 404 pg </a></div>
 
   <footer class="footer">
     <div class="container">
