@@ -494,7 +494,7 @@ canvas {
 }
 
 
-/*-- media query to increase height of figcation, so no overflow with indicators. and for layout of footer --*/
+/*-- media query to adjust height of figcation, so no overflow with indicators. and for layout of footer --*/
 @media screen and (max-width: 992px) {
   figcaption {    
     height: 150px;
@@ -556,4 +556,20 @@ canvas {
    display:none
   }
 
+}
+
+/* media query to increase spacing on controls area on medium and above screens */
+@media screen and (min-width: 768px) {
+
+#answers {
+  margin-top: 20px;
+}
+
+#question {
+  margin-top: 20px;
+}
+
+.answerButton {
+  margin-bottom: 10px;
+}
 }
