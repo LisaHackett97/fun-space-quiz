@@ -20,6 +20,12 @@ mayve #fee440 for decoration1*/
   padding: 0;
  
 }
+/* main styling */
+
+/* set height to 100% in order to apply styles for stick footer on game pg */
+html, body {
+  height:100%;
+  }
 
 /* main styling */
 div,
@@ -343,6 +349,18 @@ input {
 
 /*--End of form Section--*/
 
+/*-- code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
+wrapper and footer classes --*/
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -105px;
+}
+
+.footer,
+.push {
+  height: 68px;
+  margin-top: 50px;
+}
 
 
 footer {
@@ -350,7 +368,7 @@ footer {
   background: #8ef9f3;
   font-family: 'Poppins', sans-serif;
   margin-top: 15px;
-}
+ }
 
 footer p {
   font-size: 1rem;

@@ -18,174 +18,183 @@
 </head>
 
 <body>
+  <!-- wrapper around main body section in order to apply stick footer styles
+  code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
+ -->
+  <div class="wrapper">
+    <header class="container-fluid fixed-top">
+      <nav class="navbar navbar-expand-lg">
 
-  <header class="container-fluid fixed-top">
-    <nav class="navbar navbar-expand-lg">
+        <!-- offset collapse button to appear on right side of screen -->
+        <button class="navbar-toggler col-2 offset-10" type="button" data-toggle="collapse"
+          data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><i class="fa fa-bars navbar-style my-icon"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span< /a>
+                <a class="nav-link" href="learn-more.html">Learn about space!</a>
+                <a class="nav-link" href="learn-more.html#ask-question">Ask us anything</a>
 
-      <!-- offset collapse button to appear on right side of screen -->
-      <button class="navbar-toggler col-2 offset-10" type="button" data-toggle="collapse"
-        data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><i class="fa fa-bars navbar-style my-icon"></i></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span</a>
-              <a class="nav-link" href="learn-more.html">Learn about space!</a>
-              <a class="nav-link" href="learn-more.html#ask-question">Ask us anything</a>
-
+          </div>
         </div>
-      </div>
-    </nav>
-  </header>
+      </nav>
+    </header>
 
-  <!-- Update with bootstrap classes/containers -->
-  <div class="container" id="main-section">
-    <div class="row">
-      <!-- hide heading on small screens so more of game is visible to user-->
-      <h1 id="game-header" class="col-12 d-none d-md-block">Fly your rocket home</h1>
-      <div class="game-area col-12">
-        <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
-        <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">
-          <p>This is the game area. answer questions from question-area to progress in the game. Canvas shows a space
-            background with moon and planet earth, and space rocket icon to move across the canvas,
-            to show progress</p>
-        </canvas>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="question-area col-md-12">
-        <!-- div for current question -->
-        <div id="question">Question</div>
-        <!-- div to display 4 possible answers -->
-        <div id="answers" class="col-12">
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">
-          </button>
-
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">
-          </button>
-
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer3">
-          </button>
-
-          <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer4">
-          </button>
-
-          <!-- span for holding correct answer to question. hidden on screen -->
-          <span id="correctAnswer"></span>
-
-
-
-          <!-- Button trigger modal -->
-          <button type="button" class="btn d-none" data-toggle="modal" data-target="#answerModal"></button>
-          <button type="button" class="btn d-none" data-toggle="modal" data-target="#wrongAnswer"></button>
-
-          <!-- This is pop up when a question answered -->
-          <!-- Modal code structure taken from bootstrap docs-->
-          <div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body" id="modalTextAnswer">
-                  Woohoo, you got it right <i class="far fa-thumbs-up"></i>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn gameModal" id="qfocus" onclick="nextQ();" data-dismiss="modal">Next
-                    question</button>
-                  <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">New Game</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- This is pop up when a question answered Incorrectly -->
-          <!-- Modal code structure taken from bootstrap docs-->
-          <div class="modal fade" id="wrongAnswer" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body" id="modalTextWrgAnswer"> Sorry you got it wrong!! <i class="fas fa-heart-broken"></i> <br>
-                  Try the question again or get a new question<br>
-                  Click one of the buttons
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
-                  <button type="button" class="btn gameModal" id="wrgAnsFocus" onclick="nextQ();"
-                    data-dismiss="modal">next q</button>
-                  <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">New Game</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of answered question modal -->
+    <!-- Update with bootstrap classes/containers -->
+    <div class="container" id="main-section">
+      <div class="row">
+        <!-- hide heading on small screens so more of game is visible to user-->
+        <h1 id="game-header" class="col-12 d-none d-md-block">Fly your rocket home</h1>
+        <div class="game-area col-12">
+          <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
+          <canvas id="gamecanvas" class="col-12" aria-label="Visual game area">
+            <p>This is the game area. answer questions from question-area to progress in the game. Canvas shows a space
+              background with moon and planet earth, and space rocket icon to move across the canvas,
+              to show progress</p>
+          </canvas>
         </div>
       </div>
 
-    </div>
-    <!-- end of row -->
+      <div class="row">
+        <div class="question-area col-md-12">
+          <!-- div for current question -->
+          <div id="question">Question</div>
+          <!-- div to display 4 possible answers -->
+          <div id="answers" class="col-12">
+            <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer1">
+            </button>
 
-    <div class="row controls">
+            <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer2">
+            </button>
 
-      <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
-      </button>
+            <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer3">
+            </button>
 
-      <!-- div to show number of questions user has answered correctly -->
-      <div class="col-12 text-center">
-        <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span id="score">0</span></p>
-      </div>
+            <button class="btn answerButton col-xs-12 col-md-10 offset-md-1" type="button" id="answer4">
+            </button>
 
-      <button class="btn col-4 offset-4 resetBtn" type="button">New Game</button>
+            <!-- span for holding correct answer to question. hidden on screen -->
+            <span id="correctAnswer"></span>
 
-       <!-- This is pop up when 5 questions answered and user reaches Earth/end of quiz -->
-          <!-- Modal code structure taken from bootstrap docs-->
-          <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body" id="modalSuccess"> You made it home to Earth.  <i class="far fa-smile-beam"></i> <br> Click below if you want to play again
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn gameModal" data-dismiss="modal" onClick="parent.location='learn-more.html'">
-                    Learn more and see Space pictures!</button>
-                  
-                  <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">Play again</button>
+
+
+            <!-- Button trigger modal -->
+            <button type="button" class="btn d-none" data-toggle="modal" data-target="#answerModal"></button>
+            <button type="button" class="btn d-none" data-toggle="modal" data-target="#wrongAnswer"></button>
+
+            <!-- This is pop up when a question answered -->
+            <!-- Modal code structure taken from bootstrap docs-->
+            <div class="modal fade" id="answerModal" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" id="modalTextAnswer">
+                    Woohoo, you got it right <i class="far fa-thumbs-up"></i>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn gameModal" id="qfocus" onclick="nextQ();" data-dismiss="modal">Next
+                      question</button>
+                    <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">New Game</button>
+                  </div>
                 </div>
               </div>
             </div>
+
+            <!-- This is pop up when a question answered Incorrectly -->
+            <!-- Modal code structure taken from bootstrap docs-->
+            <div class="modal fade" id="wrongAnswer" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body" id="modalTextWrgAnswer"> Sorry you got it wrong!! <i
+                      class="fas fa-heart-broken"></i> <br>
+                    Try the question again or get a new question<br>
+                    Click one of the buttons
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
+                    <button type="button" class="btn gameModal" id="wrgAnsFocus" onclick="nextQ();"
+                      data-dismiss="modal">next q</button>
+                    <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">New Game</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of answered question modal -->
           </div>
+        </div>
+
+      </div>
+      <!-- end of row -->
+
+      <div class="row controls">
+
+        <button class="btn col-4 offset-4" type="button" id="nextQ">New Q
+        </button>
+
+        <!-- div to show number of questions user has answered correctly -->
+        <div class="col-12 text-center">
+          <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span id="score">0</span></p>
+        </div>
+
+        <button class="btn col-4 offset-4 resetBtn" type="button">New Game</button>
+
+        <!-- This is pop up when 5 questions answered and user reaches Earth/end of quiz -->
+        <!-- Modal code structure taken from bootstrap docs-->
+        <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="answerModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body" id="modalSuccess"> You made it home to Earth. <i class="far fa-smile-beam"></i>
+                <br> Click below if you want to play again
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn gameModal" data-dismiss="modal"
+                  onClick="parent.location='learn-more.html'">
+                  Learn more and see Space pictures!</button>
+
+                <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">Play again</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end of row for ctrls-->
 
     </div>
-    <!-- end of row for ctrls-->
+<!-- div with push class needed order to apply stick footer styles
+  code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
+ -->
+    <div class="push"></div>
+  </div>
 
-  </div>
-  </div>
+  </div> <!-- end of wrapper -->
   <!-- end of main section-->
-
-
   <!--end of game-->
 
 
 
-
-  <footer>
+  <footer class="footer">
     <div class="container">
       <div class="row align-items-center">
         <!--you-tube link-->

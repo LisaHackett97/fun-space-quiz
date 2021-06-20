@@ -295,6 +295,10 @@ add credit in re fisher yates code
 
 favicons.io
 
+<!-- wrapper around main body section in order to apply stick footer styles
+  code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
+ -->
+
 ### Media
 
 #### Images Used
