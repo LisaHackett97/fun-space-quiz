@@ -350,9 +350,6 @@ footer {
   background: #8ef9f3;
   font-family: 'Poppins', sans-serif;
   margin-top: 15px;
-  
-
-
 }
 
 footer p {
@@ -492,6 +489,7 @@ canvas {
     font-size: 14px;
     padding-top: 10px;
     margin-bottom: 5px;
+  
   }
 
   .social-links {

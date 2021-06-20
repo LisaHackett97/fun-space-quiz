@@ -223,7 +223,7 @@ Added empty div, and set height, which keeps footer down but may need to increas
 
 BUT CANVAS DRAW ELEMENTS NOT SHOWING ON LIVE SITE...FILE PATH. fixed
 
-LIVE SITE: NO SPACING ISSUES ON AMI.RESPONSIVE BUT ARE ON TECHSINI.COM???? apple devices??? when I removed line breaks in form and added more margin to text area, issue resolved. TO TEST ON LIVE
+LIVE SITE: NO SPACING ISSUES ON AMI.RESPONSIVE BUT ARE ON TECHSINI.COM???? apple devices???  GAME PG ONLY
 
 favicon and canvas imgs file paths
 
