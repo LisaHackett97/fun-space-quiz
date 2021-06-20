@@ -1,9 +1,13 @@
+/*jshint esversion: 6 */
+/*globals $:false */
+
 document.addEventListener("DOMContentLoaded", function () {
 
   runGame();
 
 });
 
+import quizData from './questions.js';
 // set variables needed
 
 const newQuestion = document.getElementById("question");
@@ -11,19 +15,22 @@ const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
-// const correctAnswer = document.getElementById("correctAnswer");
+
+const correctAnswer = document.getElementById("correctAnswer");
 // const answerButtons = document.getElementById('answers');
 // const answered = [];
 //let answer = document.getElementsByClassName("answerButton");
 let chosenAnswer;
+let q;
 let currentQuestion = 0;
+// let quizData;
 // let availableQ = [];
 
 // import {quizData[]} from './questions.js';
- 
+// let q = quizData[currentQuestion];
 
-let quizArr = quizData;
-//const q = quizData[currentQuestion];
+// let quizArr = quizData;
+
 
 
 
@@ -45,7 +52,7 @@ function runGame() {
 
 // show a question 
 function showQuestion() {
-  const q = quizData[currentQuestion];
+  q = quizData[currentQuestion];
   // if the current question number, less than length of array, show a question
   if (currentQuestion <= quizData.length - 1) {
     newQuestion.innerHTML = q.question;
@@ -77,9 +84,15 @@ function shuffleQuestion() {
 }
 
 // adding event listener to next q button, to iterate current q number and show next Q
+// Main pg button and on modals
 document.getElementById("nextQ").addEventListener("click", nextQ);
 document.getElementById("nextQ").addEventListener("key", nextQ);
-// document.getElementById("re-try").addEventListener("key", "");
+document.getElementById("wrgAnsFocus").addEventListener("click", nextQ);
+document.getElementById("wrgAnsFocus").addEventListener("key", nextQ);
+document.getElementById("qfocus").addEventListener("click", nextQ);
+document.getElementById("qfocus").addEventListener("key", nextQ);
+
+
 
 // iterate +1 to the current question variable, then run the show question function
 // will show next question in the array QuizData

@@ -235,6 +235,16 @@ media q for fig captions and carousel indictors on xs smal screens, also hiude h
 email js and validation causing a 501 error. removed submit fn frrom js file, re-arranged order in email.js, send email fn first. fixed issue
 To check on live site as it was causing a 405 issues there..
 
+jsHint /*jshint esversion:6*/ added to top of js file, removed warnings. found anser on slack.
+'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+jshint getting message about the jquery variable. found solution on [stackoverflow](https://stackoverflow.com/questions/8852765/).... declares to JSHint that $ is a global variable, and the false indicates that it should not be overridden.
+
+jshint: talling my QuizData bot defined. this is the array of questions held in questions.js
+Solution on [this site](https://medium.com/recraftrelic/es5-vs-es6-with-example-code-9901fa0136fc). set up import/export on the 2 js files.
+But this then caused an issue where message, Uncaught SyntaxError: Cannot use import statement outside a module". Solution to that on stackover flow post
+solution was to give js files type of module. Removed that issue but next issue then related to the onlcik events in the html file for next q.site not displaying a next q when that onclick removed from modal button. Still works when main new q button selected. Needed to add Event listeners for next q buttons on wrg answer and correct answer modals
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing

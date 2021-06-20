@@ -81,3 +81,5 @@ let quizData = [
 
 
 ];
+
+export default quizData;
