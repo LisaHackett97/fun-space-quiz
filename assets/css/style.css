@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 
 /*
@@ -199,13 +206,18 @@ header {
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
   color: var(--main-text-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .nav-link.active {
   text-decoration: underline;
-  text-decoration-color: var(--decoration2);
+  -webkit-text-decoration-color: var(--decoration2);
+          text-decoration-color: var(--decoration2);
   font-weight: 700;
   color: var(--decoration2);
 }
@@ -264,7 +276,9 @@ These are held within figure elements on the carousel
 img.scaled {
   height: 50vh;
   width: 90%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 5px;
 }
 
@@ -289,8 +303,7 @@ figcaption {
   height: 50vh;
   background-color: var(--decoration1);
   margin: 5px;
-  text-align: bottom;
-}
+  }
 
 
 /* position indicator to bottom */
@@ -419,6 +432,8 @@ footer p {
 }
 
 .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 5px;
 }

@@ -206,7 +206,6 @@ notes for js game
  need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
  <!-- function to limit number of questions in game -->
 
-
 changed colors used color pciker in wave extension and [this site](https://www.colorcombos.com/combolibrary.html)
 [Back to table of contents](#table-of-contents)
 
@@ -296,6 +295,8 @@ add credit in re fisher yates code
 // code on how to set focus to nextq button on modal, found on stackoverflow
 
 favicons.io
+
+webkits Prefixed by [autoprefixer](https://autoprefixer.github.io)
 
 <!-- wrapper around main body section in order to apply stick footer styles
   code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
