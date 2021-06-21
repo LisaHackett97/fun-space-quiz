@@ -610,10 +610,34 @@ canvas {
     height: 50px;
   }
 
+  /* to push section under navbar when heding is hidden */
     .carouselSection {
-    padding-top: 40px;
+      margin-top: 60px;  
+  }
+  /* below are to scale up iamges to take up more of the screen on sm sizes */
+  .carousel-item{
+    width: 100%;
+    margin: 0%;   
   }
 
+figure.scaled {
+  width: 95%;
+  padding-left: 10px;
+  margin-bottom: 100px;
+}
+
+/* restyle indicators on sml screens and just display the icon*/
+  .carousel-control-prev,
+  .carousel-control-next{
+background-color: rgba(255, 0, 0, 0);
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #e94513;
+    height: 25px;
+    border: 25%;
+  }
 /* Hide the indicators on xs small screens */
   ol.carousel-indicators {
    display:none

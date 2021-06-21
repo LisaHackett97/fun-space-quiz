@@ -250,6 +250,10 @@ pk, was styles for 404 pg over writing corrected now
 
 jshint gives me a msg that emailjs is not defined. However if I do define it, it causes a 501 error or 405 error on live site. Removed the declaration.
 
+carousel/figures imgs on smaller screens were not taken up full width and looked strected vertically
+removed mainconatiner as not needed, g-0 on the carousel row and added some adjustements to carousel items and figures on a media screen: width, margins and pasdding
+Decided that it looked better to make the prev and next indicators transparent on small screens and change color of the icons
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
