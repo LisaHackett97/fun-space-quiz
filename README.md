@@ -319,7 +319,53 @@ webkits Prefixed by [autoprefixer](https://autoprefixer.github.io)
 
 #### Images Used
 
+Images are credited as followins:
+
+unsplash.com
+
+-carousel-pluto
+-carousel-saturn  
+-carousel-neptune
+-carousel-venus
+-carousel-mars
+-carousel-mercury
+-carousel-uranus
+-carousel-jupiter
+-carousel-the-sun
+-carousel-diamonds
+-404-bg
+-game-stars
+
+Pexels.com
+
+-landing-stars
+-carousel-galaxy
+
+raw-pixel.com (public domain imgs)
+
+-carousel-earth
+
+vecteezy.com/free-vector/
+
+-game images: Earth, moon and rocket (with rocket img being adjusted with windows paint tool for the done icon)
+-landing-rocket
+-landing-astronaut
+
+shutterstock.com standard licence
+
+-carousel-asteroid-dino
+
 ### Content
+
+- content from quiz on the following site, with some additional quiz content take from the 2nd site
+  funtrivia.com
+  kidsworldfun.com
+
+- content for carousel on learn more page
+planetsforkids.org
+parenting.firstcry.com/articles/20-must-know-facts-about-space-for-kids/
+space-facts.com/planets/
+esa.int
 
 ### Colours
 
