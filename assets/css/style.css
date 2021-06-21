@@ -19,21 +19,21 @@ font-family: 'Poppins', sans-serif;
   --decoration2: #2B2C5A;
   --decoration3: #45cfcf;
 }
-/* 
---heading-color: #f7ada2; */
+
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
- 
+
 }
 
 
 /* set height to 100% in order to apply styles for stick footer on game pg */
-html, body {
-  height:100%;
-  
-  }
+html,
+body {
+  height: 100%;
+
+}
 
 /* main styling */
 div,
@@ -46,21 +46,13 @@ p {
 h1 {
   color: var(--main-text-color);
   font-family: 'Exo 2', sans-serif;
-  font-size: 45px;
+  font-size: 35px;
   font-weight: 600;
-  margin: 10px;
   text-align: center;
-  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
 }
-
-#game-header {
-  font-size: 25px;
-  text-align: center;
-  padding: 5px;
-
-}
-
 
 
 /* landing page */
@@ -183,13 +175,14 @@ a:focus .start-pg {
   color: var(--main-text-color);
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
-   border: 2px solid #395c6b;
+  border: 2px solid #395c6b;
   background-color: var(--decoration1);
 
 }
+
 /* hover code for all modal footer btns across the site */
 
- .modal-footer .btn:hover {
+.modal-footer .btn:hover {
   color: var(--main-text-color);
   background-color: var(--decoration1);
   font-weight: 700;
@@ -199,14 +192,15 @@ a:focus .start-pg {
 
 .fa-heart-broken,
 .fa-thumbs-up,
-.fa-smile-beam{
+.fa-smile-beam {
   color: var(--heading-color);
 }
 
 /* Nav Bar Styling */
 
 header {
-  background-color: var(--heading-color);  
+  background-color: var(--heading-color);
+  line-height: .8;
 }
 
 
@@ -216,18 +210,12 @@ header {
   font-family: 'Exo 2', sans-serif;
   font-weight: 600;
   color: var(--main-text-color);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .nav-link.active {
   text-decoration: underline;
   -webkit-text-decoration-color: var(--decoration2);
-          text-decoration-color: var(--decoration2);
+  text-decoration-color: var(--decoration2);
   font-weight: 700;
   color: var(--decoration2);
 }
@@ -239,7 +227,7 @@ header {
 /* add spacing above Main container, so that there is visible space with navbar */
 #main-section {
   margin-top: 75px;
-  
+
 }
 
 /*--styling of burger icon for smaller screens--*/
@@ -253,9 +241,9 @@ header {
 }
 
 .navbar-collapse {
- padding:10px;
- background-color: var(--heading-color);
- 
+  padding: 10px;
+  background-color: var(--heading-color);
+
 }
 
 /* Credit: solution to my issue with navbar and content z-indez was found on https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059 */
@@ -275,9 +263,10 @@ Use root element and then color picker to get a lighter shade --*/
 /*-- carousel styling --*/
 /* margin-left of 10% required to align items and override effect of the b/s class */
 .carousel-item {
-  width: 85%;
-  margin-left: 10%;
+  width: 90%;
+  margin-left: 5%;
 }
+
 
 /* 
 styling img elements scaled class to align and scale on all devices 
@@ -285,23 +274,25 @@ These are held within figure elements on the carousel
 */
 img.scaled {
   height: 50vh;
-  width: 90%;
+  width: 95%;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 5px;
+  -ms-flex-pack: center;
+  justify-content: center;
+   margin: 0 0 0 -5px;
 }
 
 /* styling figure elements with scaled class to align and scale on all devices */
 figure.scaled {
-  width: 90%;
+  width: 100%;
   margin: 5px;
   text-align: center;
 
 }
 
+/* need to fix height or elemnt changes sizes with content, form them moves around pg */
 figcaption {
   margin-bottom: 15px;
+  padding-top: 10px;
   height: 140px;
 }
 
@@ -309,11 +300,11 @@ figcaption {
 /* styling carousel controls to align with imgs */
 .carousel-control-next,
 .carousel-control-prev {
-  width: 25px;
+  width: 35px;
   height: 50vh;
   background-color: var(--decoration1);
   margin: 5px;
-  }
+}
 
 
 /* position indicator to bottom */
@@ -377,12 +368,13 @@ textarea,
   margin-left: 5px;
 }
 
-#ask-question{
+#ask-question {
   margin-top: 20px;
 }
+
 textarea {
   height: 10rem;
-   margin-top: 24px;
+  margin-top: 24px;
 }
 
 .details-labels {
@@ -432,7 +424,7 @@ footer {
   background: var(--decoration3);
   font-family: 'Poppins', sans-serif;
   margin-top: 15px;
- }
+}
 
 footer p {
   font-size: 1rem;
@@ -486,7 +478,6 @@ canvas {
 }
 
 .questionScores {
-  /* border: 2px dotted var(--decoration1); */
   margin-top: 15px;
   font-weight: 800;
   font-style: italic;
@@ -535,46 +526,53 @@ canvas {
 
 /* 404 Page */
 
-#Error404Page{
+#Error404Page {
   background: url("../images/404-bg.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
- #Error404Page h2, 
- #Error404Page p {
-  color:var(--decoration3);
-  padding:15px;
+#Error404Page h2,
+#Error404Page p {
+  color: var(--decoration3);
+  padding: 15px;
   margin: 50px;
 }
 
 
- #Error404Page a {
-  color:var(--decoration1);
+#Error404Page a {
+  color: var(--decoration1);
   border: 2px solid var(--decoration1);
   border-radius: 10%;
-  padding:15px;
- 
+  padding: 15px;
+
 }
+
 #Error404Page h3 {
-  color:var(--decoration1);
-  
+  color: var(--decoration1);
+
 }
 
 
-/*-- media query to adjust height of figcation, so no overflow with indicators. and for layout of footer --*/
+/*-- 
+media query to adjust height of figcaption, so no overflow with indicators. 
+H1 hidden on sm screens affecting layout and for layout of footer 
+--*/
 @media screen and (max-width: 992px) {
-  figcaption {    
+  figcaption {
     height: 150px;
+    /* font-size: 19px;
+    margin-bottom: 50px;
+    margin-top: 10px; */
   }
-  #main-content {
+  /* #main-content {
     margin-top: 200px;
-  }
+  } */
 
   footer p {
     font-size: 14px;
     padding-top: 10px;
     margin-bottom: 5px;
-  
+
   }
 
   .social-links {
@@ -582,7 +580,57 @@ canvas {
   }
 }
 
-/* media query to reduce size of question text and adjust canvas on xs screens */
+/* Media query applies to small and x-samll screens. Change display of carousel when H1 is hidden*/
+@media screen and (max-width: 768px) {
+/* Adjust caption under images on learn-more page, for size and spacing */
+figcaption {
+  font-size: 17px;
+  padding-left: 15px;
+  padding-right: 15px;
+ height: 200px;
+
+}
+
+
+/* to push section under navbar down when heading is hidden */
+.carouselSection {
+  margin-top: 60px;
+}
+
+
+/* below are to scale up carousel to take to take up more of the screen on sm sizes */
+/* .carouselColumn { */
+/* padding:0; */
+/* padding-left: 5px; */
+/* padding-right: 5px; */
+
+
+.carousel-item {
+  width: 100%;
+  margin: 0;
+}
+
+figure.scaled {
+  width: 100%;
+  margin:0;
+}
+
+
+/* restyle indicators on sml screens and just display the icon*/
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #e94513;
+  height: 25px;
+  border: 25%;
+}
+}
+
+/* media query to reduce size of question text and adjust canvas on xs screens only*/
 @media screen and (max-width: 576px) {
 
   #question,
@@ -593,6 +641,7 @@ canvas {
 
   header {
     padding: 0;
+    height: 50px;
   }
 
 
@@ -602,43 +651,9 @@ canvas {
 
   }
 
-  figcaption {
-    font-size: 14px;
-    height: 220px;
-  }
-  header {
-    height: 50px;
-  }
+  
 
-  /* to push section under navbar when heding is hidden */
-    .carouselSection {
-      margin-top: 60px;  
-  }
-  /* below are to scale up iamges to take up more of the screen on sm sizes */
-  .carousel-item{
-    width: 100%;
-    margin: 0%;   
-  }
-
-figure.scaled {
-  width: 95%;
-  padding-left: 10px;
-  margin-bottom: 100px;
-}
-
-/* restyle indicators on sml screens and just display the icon*/
-  .carousel-control-prev,
-  .carousel-control-next{
-background-color: rgba(255, 0, 0, 0);
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: #e94513;
-    height: 25px;
-    border: 25%;
-  }
-/* Hide the indicators on xs small screens */
+  /* Hide the indicators on xs small screens */
   ol.carousel-indicators {
    display:none
   }
@@ -648,15 +663,15 @@ background-color: rgba(255, 0, 0, 0);
 /* media query to increase spacing on controls area on medium and above screens */
 @media screen and (min-width: 768px) {
 
-#answers {
-  margin-top: 20px;
-}
+  #answers {
+    margin-top: 20px;
+  }
 
-#question {
-  margin-top: 20px;
-}
+  #question {
+    margin-top: 20px;
+  }
 
-.answerButton {
-  margin-bottom: 10px;
-}
+  .answerButton {
+    margin-bottom: 10px;
+  }
 }

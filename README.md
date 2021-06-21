@@ -254,6 +254,9 @@ carousel/figures imgs on smaller screens were not taken up full width and looked
 removed mainconatiner as not needed, g-0 on the carousel row and added some adjustements to carousel items and figures on a media screen: width, margins and pasdding
 Decided that it looked better to make the prev and next indicators transparent on small screens and change color of the icons
 Then realised h1 were not showing as expected, update the way rows were showing on game and learn pages, changed margins for conatienrs and h1
+Update styling on carousel and next/prev. remove data-ride attrib (Why needed??)
+Media query applies to small and x-samll screens. Change display of carousel. H1 hidden on sm/xs, therfore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and fonr size. whn media q applied to screens up to 768, now full screen on xs and spacing on medium
+To check again tmrw and/or note... removed styling on carouselCoumn
 
 ### Performance and accessibility Testing
 
