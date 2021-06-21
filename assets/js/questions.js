@@ -1,7 +1,6 @@
 /*jshint esversion: 6 */
 
-let quizData = [
-    {
+let quizData = [{
         question: "Which is the first planet in the solar system from the sun?",
         answers: {
             a: "Venus",
@@ -76,6 +75,109 @@ let quizData = [
             d: "About 3.2 million kilometres"
         },
         correctAnswer: "About 1.4 million kilometres"
+    },
+    {
+        question: "Which is the world’s largest light detecting telescope?",
+        answers: {
+            a: "Chantra X-ray telescope",
+            b: "Hubble telescope",
+            c: "The twin Keck telescopes",
+            d: "Mercury Telescope",
+        },
+        correctAnswer: "The twin Keck telescopes"
+    },
+    {
+
+        question: "How long did it take the Cassini-Huygens to reach Saturn?",
+        answers: {
+            a: "Almost seven years",
+            b: "Less than six year",
+            c: "More than seven years",
+            d: "Six months"
+        },
+        correctAnswer: "Almost seven years"
+    },
+    {
+        question: "Which was the first living creature to be sent to space?",
+        answers: {
+
+            a: "Laika the dog",
+            b: "Yuri Gagarin",
+            c: "A monkey",
+            d: "Your pet hamster"
+        },
+        correctAnswer: "Laika the dog"
+    },
+    {
+        question: "Who was the first woman to travel to space?",
+        answers: {
+            a: "Alexei Leonov",
+            b: "Valentina Tereshkova",
+            c: "Kalpana Chawla",
+            d: "Ana Putin"
+        },
+        correctAnswer: "Kalpana Chawla"
+    },
+    {
+        question: "Which soviet astronaut performed the first ever spacewalk?",
+        answers: {
+            a: "Yuri Gagarin",
+            b: "Alexei Leonov",
+            c: "Edward White",
+            d: "Alexi Rosonovski"
+        },
+        correctAnswer: "Alexei Leonov"
+    },
+    {
+        question: "Who was the first person in space?",
+        answers: {
+            a: "Neil Armstrong",
+            b: "Vlad Yeltsin",
+            c: "Kalpana Chawla",
+            d: "Yuri Gagarin"
+        },
+        correctAnswer: "Yuri Gagarin"
+    },
+    {
+        question: "Which of these is a satellite of Pluto?",
+        answers: {
+            a: "Lo",
+            b: "Charon",
+            c: "Ariel",
+            d: "Titiana"
+        },
+        correctAnswer: "Charon"
+    },
+    {
+        question: "How far is the Proxima Centauri star from earth?",
+        answers: {
+            a: "50 billion kilometres",
+            b: "More than 40 trillion kilometres",
+            c: "40 million kilometres",
+            d: "Almost 40 trillion kilometres"
+        },
+        correctAnswer: "Almost 40 trillion kilometres"
+    },
+    {
+
+        question: "The nearest star to earth, after the sun, is",
+        answers: {
+            a: "Proxima Centauri",
+            b: "Barnard’s star",
+            c: "Gliese 581",
+            d: "Kepler"
+        },
+        correctAnswer: "Proxima Centauri"
+    },
+    {
+        question: "When you are on Mars, that sunset looks like which colour?",
+        answers: {
+            a: "Orange",
+            b: "Purple",
+            c: "Red",
+            d: "Blue"
+        },
+        correctAnswer: "Blue"
     }
 
 
