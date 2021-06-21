@@ -253,6 +253,7 @@ jshint gives me a msg that emailjs is not defined. However if I do define it, it
 carousel/figures imgs on smaller screens were not taken up full width and looked strected vertically
 removed mainconatiner as not needed, g-0 on the carousel row and added some adjustements to carousel items and figures on a media screen: width, margins and pasdding
 Decided that it looked better to make the prev and next indicators transparent on small screens and change color of the icons
+Then realised h1 were not showing as expected, update the way rows were showing on game and learn pages, changed margins for conatienrs and h1
 
 ### Performance and accessibility Testing
 

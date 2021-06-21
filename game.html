@@ -35,8 +35,8 @@
           <div class="navbar-nav">
             <a class="nav-link" href="index.html">Home</a>
             <a class="nav-link active" href="game.html">Play Game <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="learn-more.html">Learn about space!</a>
-                <a class="nav-link" href="learn-more.html#ask-question">Ask us anything</a>
+            <a class="nav-link" href="learn-more.html">Learn about space!</a>
+            <a class="nav-link" href="learn-more.html#ask-question">Ask us anything</a>
 
           </div>
         </div>
@@ -45,18 +45,22 @@
 
     <!-- Update with bootstrap classes/containers -->
     <div class="container" id="main-section">
+      <!-- <div class="row"> -->
+      <!-- hide heading on small screens so more of game is visible to user-->
+      <h1 id="game-header" class="col-12 d-none d-md-block">Fly your rocket home</h1>
       <div class="row">
-        <!-- hide heading on small screens so more of game is visible to user-->
-        <h1 id="game-header" class="col-12 d-none d-md-block">Fly your rocket home</h1>
         <div class="game-area col-12">
           <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
-          <canvas id="gamecanvas" class="col-12" aria-label="Game area with space image, space rocket icon for correct questions answered">
+          <canvas id="gamecanvas" class="col-12"
+            aria-label="Game area with space image, space rocket icon for correct questions answered">
             <p>This is the game area. answer questions from question-area to progress in the game. Canvas shows a space
               background with moon and planet earth, and space rocket icon to move across the canvas,
               to show progress</p>
           </canvas>
         </div>
       </div>
+
+      <!-- end of game row -->
 
       <div class="row">
         <div class="question-area col-md-12">
@@ -127,8 +131,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn gameModal" data-dismiss="modal">ReTry</button>
-                    <button type="button" class="btn gameModal" id="wrgAnsFocus"
-                      data-dismiss="modal">next q</button>
+                    <button type="button" class="btn gameModal" id="wrgAnsFocus" data-dismiss="modal">next q</button>
                     <button type="button" class="btn gameModal resetBtn" data-dismiss="modal">New Game</button>
                   </div>
                 </div>
@@ -136,10 +139,12 @@
             </div>
             <!-- End of answered question modal -->
           </div>
+          <!-- end of #answers div -->
         </div>
+        <!-- End of question-area  col section-->
 
       </div>
-      <!-- end of row -->
+      <!-- end of question area row -->
 
       <div class="row controls">
 
@@ -182,14 +187,16 @@
       <!-- end of row for ctrls-->
 
     </div>
-<!-- div with push class needed order to apply stick footer styles
+    <!-- End of main-section container -->
+
+    <!-- div with push class needed order to apply stick footer styles
   code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
  -->
     <div class="push"></div>
-  
+
 
   </div> <!-- end of wrapper -->
-  <!-- end of main section-->
+
   <!--end of game-->
 
   <footer class="footer">
