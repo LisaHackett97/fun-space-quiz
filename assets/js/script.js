@@ -13,6 +13,17 @@ const correctAnswer = document.getElementById("correctAnswer");
 let chosenAnswer;
 let q;
 let currentQuestion = 0;
+let canvas = document.getElementById('gamecanvas');
+let ctx = canvas.getContext('2d');
+
+// adding event listener to next q button, to iterate current q number and show next Q
+// Main pg button and on modals
+document.getElementById("nextQ").addEventListener("click", nextQ);
+document.getElementById("nextQ").addEventListener("key", nextQ);
+document.getElementById("wrgAnsFocus").addEventListener("click", nextQ);
+document.getElementById("wrgAnsFocus").addEventListener("key", nextQ);
+document.getElementById("qfocus").addEventListener("click", nextQ);
+document.getElementById("qfocus").addEventListener("key", nextQ);
 
 document.addEventListener("DOMContentLoaded", function () {
   runGame();
@@ -24,7 +35,6 @@ $("#answerModal").on('shown.bs.modal', function (event) {
 });
 
 $("#wrongAnswer").on('shown.bs.modal', function (event) {
-
   $("#wrgAnsFocus").focus().css("text-decoration", "underline");
 });
 
@@ -46,8 +56,6 @@ function showQuestion() {
     answer4.innerHTML = q.answers.d;
     correctAnswer.innerHTML = q.correctAnswer;
   } else {
-    //Show the end screen
-    // confirm("No more questions. Click ok to continue");
     $('#success').modal('show');
   }
 }
@@ -67,17 +75,6 @@ function shuffleQuestion() {
   }
 }
 
-// adding event listener to next q button, to iterate current q number and show next Q
-// Main pg button and on modals
-document.getElementById("nextQ").addEventListener("click", nextQ);
-document.getElementById("nextQ").addEventListener("key", nextQ);
-document.getElementById("wrgAnsFocus").addEventListener("click", nextQ);
-document.getElementById("wrgAnsFocus").addEventListener("key", nextQ);
-document.getElementById("qfocus").addEventListener("click", nextQ);
-document.getElementById("qfocus").addEventListener("key", nextQ);
-
-
-
 // iterate +1 to the current question variable, then run the show question function
 // will show next question in the array QuizData
 // including checkScoreDraw to draw on canvas as score increments
@@ -92,8 +89,7 @@ $('#answers > button').click(function (event) {
   chosenAnswer = $(this).text();
   event.preventDefault();
   check();
-  // endGame();
-});
+  });
 // keyPress alternative
 $('#answers > button').keypress(function (event) {
   chosenAnswer = $(this).text();
@@ -129,9 +125,6 @@ function incrementScore() {
 
 // canvas code
 
-let canvas = document.getElementById('gamecanvas');
-let ctx = canvas.getContext('2d');
-
 // rocket img to use as mover in game
 const rocketImg = new Image();
 rocketImg.src = "assets/images/game-rocket.png";
@@ -150,7 +143,6 @@ moonImage.onload = function () {
 // set image  for last position in game
 const earthImage = new Image();
 earthImage.src = "assets/images/game-earth.png";
-
 
 // draw rocket after 1 question answered correctly
 function drawQuestion1() {
@@ -174,13 +166,11 @@ function drawQuestion4() {
 }
 
 function drawQuestion5() {
-
   ctx.drawImage(earthImage, 255, -10, earthImage.width / 7, earthImage.height / 7);
   ctx.drawImage(completeImg, 210, 27, completeImg.width / 3.5, completeImg.height / 3.5);
 }
 
 // draw images on canvas for each score increment
-
 function scoreCheckDraw() {
   let oldScore = parseInt(document.getElementById('score').innerText);
   if (oldScore === 0) {
@@ -203,7 +193,7 @@ function scoreCheckDraw() {
     $('#success').modal('show');
     drawQuestion5();
 
-  } 
+  }
 }
 
 //event listener to start new game
