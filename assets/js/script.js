@@ -1,38 +1,22 @@
 /*jshint esversion: 6 */
 /*globals $:false */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-  runGame();
-
-});
-
 import quizData from './questions.js';
-// set variables needed
 
+// set variables needed
 const newQuestion = document.getElementById("question");
 const answer1 = document.getElementById("answer1");
 const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
-
 const correctAnswer = document.getElementById("correctAnswer");
-// const answerButtons = document.getElementById('answers');
-// const answered = [];
-//let answer = document.getElementsByClassName("answerButton");
+
 let chosenAnswer;
 let q;
 let currentQuestion = 0;
-// let quizData;
-// let availableQ = [];
 
-// import {quizData[]} from './questions.js';
-// let q = quizData[currentQuestion];
-
-// let quizArr = quizData;
-
-
-
+document.addEventListener("DOMContentLoaded", function () {
+  runGame();
+});
 
 // code on how to set focus to nextq button on modal, found on stackoverflow
 $("#answerModal").on('shown.bs.modal', function (event) {
@@ -115,23 +99,17 @@ $('#answers > button').keypress(function (event) {
   chosenAnswer = $(this).text();
   event.preventDefault();
   check();
-  // endGame();
 });
 
 // check if answer chose matches text set for the correct answer
 function check() {
   if (chosenAnswer == correctAnswer.innerText) {
-
     incrementScore();
     openAnswerModal();
-
   } else {
     wrongAnswerModal();
   }
 }
-
-
-
 
 //to Open modal when correct Answer selected
 function openAnswerModal() {
@@ -225,10 +203,7 @@ function scoreCheckDraw() {
     $('#success').modal('show');
     drawQuestion5();
 
-  } else {
-    // 
-    //
-  }
+  } 
 }
 
 //event listener to start new game
@@ -236,7 +211,7 @@ document.querySelectorAll('.resetBtn').forEach(item => {
   item.addEventListener('click', event => {
     document.getElementById("score").innerText = 0;
     currentQuestion = 0;
-    showQuestion();
+    runGame();
     // clear canvas and re-draw moon start img
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);

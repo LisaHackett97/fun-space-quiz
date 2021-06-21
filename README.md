@@ -258,6 +258,8 @@ Update styling on carousel and next/prev. remove data-ride attrib (Why needed??)
 Media query applies to small and x-samll screens. Change display of carousel. H1 hidden on sm/xs, therfore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and fonr size. whn media q applied to screens up to 768, now full screen on xs and spacing on medium
 To check again tmrw and/or note... removed styling on carouselCoumn
 
+Bug: game wasn't shuffling questions when new game btn clicked. run game needed to part of the  query selector fn for reset click event listener. OK now
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
