@@ -7,10 +7,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 
-/*
-font-family: 'Exo 2', sans-serif;
-font-family: 'Poppins', sans-serif;
- */
 
 :root {
   --main-text-color: #292F36;
@@ -560,21 +556,14 @@ H1 hidden on sm screens affecting layout and for layout of footer
 @media screen and (max-width: 992px) {
   figcaption {
     height: 150px;
-    /* font-size: 19px;
-    margin-bottom: 50px;
-    margin-top: 10px; */
-  }
-  /* #main-content {
-    margin-top: 200px;
-  } */
+      }
+ 
 
   footer p {
     font-size: 14px;
     padding-top: 10px;
     margin-bottom: 5px;
-
   }
-
   .social-links {
     padding-top: 5px;
   }
@@ -582,7 +571,8 @@ H1 hidden on sm screens affecting layout and for layout of footer
 
 /* Media query applies to small and x-samll screens. Change display of carousel when H1 is hidden*/
 @media screen and (max-width: 768px) {
-/* Adjust caption under images on learn-more page, for size and spacing */
+
+  /* Adjust caption under images on learn-more page, for size and spacing */
 figcaption {
   font-size: 17px;
   padding-left: 15px;
@@ -591,19 +581,10 @@ figcaption {
 
 }
 
-
 /* to push section under navbar down when heading is hidden */
 .carouselSection {
   margin-top: 60px;
 }
-
-
-/* below are to scale up carousel to take to take up more of the screen on sm sizes */
-/* .carouselColumn { */
-/* padding:0; */
-/* padding-left: 5px; */
-/* padding-right: 5px; */
-
 
 .carousel-item {
   width: 100%;
@@ -614,7 +595,6 @@ figure.scaled {
   width: 100%;
   margin:0;
 }
-
 
 /* restyle indicators on sml screens and just display the icon*/
 .carousel-control-prev,
@@ -644,15 +624,11 @@ figure.scaled {
     height: 50px;
   }
 
-
   canvas {
     width: 400px;
     height: 200px;
-
   }
-
-  
-
+ 
   /* Hide the indicators on xs small screens */
   ol.carousel-indicators {
    display:none
