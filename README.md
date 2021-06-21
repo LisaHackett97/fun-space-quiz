@@ -248,6 +248,8 @@ solution was to give js files type of module. Removed that issue but next issue 
 corrected initial; validation errorsL now issues with footer too mig and no txt on learn pg, game page, text under footer and also text wrg color*
 pk, was styles for 404 pg over writing corrected now
 
+jshint gives me a msg that emailjs is not defined. However if I do define it, it causes a 501 error or 405 error on live site. Removed the declaration.
+
 ### Performance and accessibility Testing
 
 #### Lighthouse testing

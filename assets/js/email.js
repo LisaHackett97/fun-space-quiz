@@ -2,7 +2,6 @@
 /*globals $:false */
 
 let contactForm = document.getElementById("contact-form");
-let emailjs;
 
     function sendMail(contactForm) {
         emailjs.send("service_fhjfpgq", "contactForm", {
