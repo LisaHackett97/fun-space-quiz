@@ -62,7 +62,7 @@ As a prospective user, I want to
 
 Looking at both strategy and scope of the project, I referred back to the user stories, which helped in planning out the project.
 On the strategy plane, I did research looking at basic games, quizzes and information relevant to the topic. I also did some research by asking children I know what they like about space. I identified what worked well and not so well from a UX perspective, including colours and how interesting or unusual information is for the user.
-Colours and interesting inforFor my site, I listed out the opportunities/problems and how each of these might be addressed.
+Colours and interesting info for my site, I listed out the opportunities/problems and how each of these might be addressed.
 And for the scope plane, I planned out the content and functional requirements.
 
 [strategy and scope tables](readme-assets/strategy-scope-plan.pdf)
@@ -90,7 +90,7 @@ These were built using balsamiq.
 
 #### Colors
 
-I plan to use bright colours to make a fun visual site.
+I planned to use bright colours to make a fun visual site.
 
 - fee440
 - 8ef9f3
@@ -104,11 +104,11 @@ During development, I changed the main colours used, as the original colours wer
 
 #### Typography
 
-I plan to use Exo2 and Poppins fonts. This did not change during development as the fonts suited the site from a visual perspective.
+I planned to use Exo2 and Poppins fonts. This did not change during development as the fonts suited the site from a visual perspective.
 
 #### Images
 
-I plan to use landing page full background image, with buttons over-laid, an image for the game area with a planet type icon for each point in the game.
+I planned to use landing page full background image, with buttons over-laid, an image for the game area with a planet type icon for each point in the game.
 There will also be a success image for when user finishes the game and a number of images for the learn more carousel.
 
 - I decided not to use an image when user finishes the game, as the success pop up modal, worked better. Modal button gives users 3 options: play again,
@@ -268,7 +268,6 @@ notes for js game
  need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
  <!-- function to limit number of questions in game -->
 
-changed colors used color pciker in wave extension and [this site](https://www.colorcombos.com/combolibrary.html)
 [Back to table of contents](#table-of-contents)
 
 ### Bugs
@@ -362,8 +361,6 @@ To download and run locally, follow the below steps:
 3. Click Download Zip
 4. Once files have downloaded, you can extract and useclone-project.png locally.
 
-Select this file for screenshot [Run Locally]
-
 To Clone, follow the below steps:
 
 1. Log into GitHub and select the repository, fun-space-quiz
@@ -374,11 +371,11 @@ To Clone, follow the below steps:
 6. Use command git clone and the copied URL
 7. Press ente
 
-Select this file for screenshot [Clone repo]
+Select this file for screenshot [readme-assets/clone-repo.PNG]
 
 Forking the repository:
 
-1. Log into GitHub and select the repository, MS1-Dog-Daycare
+1. Log into GitHub and select the repository, fun-space-quiz
 2. Select Fork on top right hand corner.
 3. A copy should be created in your github profile and pull requests submitted.
 
@@ -386,74 +383,74 @@ GitHub docs link [Forking a repository](https://docs.github.com/en/desktop/contr
 
 ## Credits
 
-z-index
-Credit: solution to my issue with navbar and content z-indez was found on [Freecodecamp.org](https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059)
-
-add credit in re fisher yates code
-
-// code on how to set focus to nextq button on modal, found on stackoverflow
-
-favicons.io
-
-webkits Prefixed by [autoprefixer](https://autoprefixer.github.io)
-
-<!-- wrapper around main body section in order to apply stick footer styles
-  code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
- -->
-
 ### Media
 
-https://animate.style/....
-<a href='https://www.freepik.com/free-photos-vectors/travel'>Travel vector created by vectorpouch - www.freepik.com</a>
 #### Images Used
 
-Images are credited as followins:
+Images are credited as follows:
 
-unsplash.com
+- unsplash.com
 
--carousel-pluto
--carousel-saturn  
--carousel-neptune
--carousel-venus
--carousel-mars
--carousel-mercury
--carousel-uranus
--carousel-jupiter
--carousel-the-sun
--carousel-diamonds
--carousel-earth
--404-bg
--game-stars
+  - carousel-pluto
+  - carousel-saturn  
+  - carousel-neptune
+  - carousel-venus
+  - carousel-mars
+  - carousel-mercury
+  - carousel-uranus
+  - carousel-jupiter
+  - carousel-the-sun
+  - carousel-diamonds
+  - carousel-earth
+  - 404-bg
+  - game-stars
 
-Pexels.com
+- Pexels.com
 
--landing-stars
--carousel-galaxy
+  - landing-stars
+  - carousel-galaxy
 
-vecteezy.com/free-vector/
+- vecteezy.com/free-vector/
 
--game images: Earth, moon and rocket (with rocket img being adjusted with windows paint tool for the done icon)
--landing-rocket
--landing-astronaut
+  - game images: Earth, moon and rocket (with rocket img being adjusted with windows paint tool for the done icon)
+  - landing-rocket
+  - landing-astronaut
 
-shutterstock.com standard licence
+- shutterstock.com standard licence
 
--carousel-asteroid-dino
+  - carousel-asteroid-dino
+
+#### Other
+
+- I used some slide in animations on text on the 404 page. This was created from the following site. [animations](https://animate.style/)
+- favicons.io for site favicon.
 
 ### Content
 
 - content from quiz on the following site, with some additional quiz content take from the 2nd site
-  funtrivia.com
-  kidsworldfun.com
+  - funtrivia.com
+  - kidsworldfun.com
 
 - content for carousel on learn more page
-planetsforkids.org
-parenting.firstcry.com/articles/20-must-know-facts-about-space-for-kids/
-space-facts.com/planets/
-esa.int
+  - planetsforkids.org
+  - parenting.firstcry.com/articles/20-must-know-facts-about-space-for-kids/
+  - space-facts.com/planets/
+  - esa.int
 
 ### Colours
 
+I used cooler.co to select inital colours. During development I changed colors using color picker in wave extension and [this site](https://www.colorcombos.com/combolibrary.html).
+
 ### Code
 
+- webkits Prefixed by [autoprefixer](https://autoprefixer.github.io)
+- code for sticky footer [css-tricks](https://css-tricks.com/couple-takes-sticky-footer/)
+- solution to an issue with navbar and content z-indez was found on [Freecodecamp.org](https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059)
+- Help with using the fisher-yates method to shuffle the quiz array questions found on the following sites:
+  - [tutorialspoint.com](https://www.tutorialspoint.com/)
+  - [bost.ocks.org](https://bost.ocks.org/mike/shuffle/)
+- I followed the code institute lesson on email js when implementing the email functions
+
 ### Acknowledgements
+
+code on how to set focus to nextq button on modal, found on stackoverflow
