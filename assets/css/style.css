@@ -259,10 +259,10 @@ Use root element and then color picker to get a lighter shade --*/
 /*-- carousel styling --*/
 /* margin-left of 10% required to align items and override effect of the b/s class */
 .carousel-item {
-  width: 90%;
-  margin-left: 5%;
+  width: 98%;
+  padding-left: 34px;
+  padding-right: 34px; 
 }
-
 
 /* 
 styling img elements scaled class to align and scale on all devices 
@@ -270,19 +270,19 @@ These are held within figure elements on the carousel
 */
 img.scaled {
   height: 50vh;
-  width: 95%;
+  width: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-   margin: 0 0 0 -5px;
-}
+  }
 
-/* styling figure elements with scaled class to align and scale on all devices */
+/* styling figure/image elements with scaled class to align and scale on all devices 
+100% width needed on both image ande figure
+margin needed on figure to keep image in alignment with carousel controls
+*/
 figure.scaled {
   width: 100%;
-  margin: 5px;
-  text-align: center;
-
+ text-align: center;
 }
 
 /* need to fix height or elemnt changes sizes with content, form them moves around pg */
@@ -299,9 +299,14 @@ figcaption {
   width: 35px;
   height: 50vh;
   background-color: var(--decoration1);
-  margin: 5px;
+  margin-right: 15px;
+  
 }
-
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  background-color: #a18c04;
+  border-radius: 50%;
+}
 
 /* position indicator to bottom */
 ol.carousel-indicators {
@@ -572,41 +577,23 @@ H1 hidden on sm screens affecting layout and for layout of footer
 /* Media query applies to small and x-samll screens. Change display of carousel when H1 is hidden*/
 @media screen and (max-width: 768px) {
 
+/* to give carousel section more spacing under navbar when heading is hidden */
+.carousel-inner {
+  margin-top: 50px;
+}
+
+/* little more pading is needed so image and control are not overlapping on smaller screens */
+.carousel-item {
+  padding-right: 38px;
+  }
+
+
   /* Adjust caption under images on learn-more page, for size and spacing */
 figcaption {
   font-size: 17px;
   padding-left: 15px;
   padding-right: 15px;
  height: 200px;
-
-}
-
-/* to push section under navbar down when heading is hidden */
-.carouselSection {
-  margin-top: 60px;
-}
-
-.carousel-item {
-  width: 100%;
-  margin: 0;
-}
-
-figure.scaled {
-  width: 100%;
-  margin:0;
-}
-
-/* restyle indicators on sml screens and just display the icon*/
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: rgba(255, 0, 0, 0);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #e94513;
-  height: 25px;
-  border: 25%;
 }
 }
 
