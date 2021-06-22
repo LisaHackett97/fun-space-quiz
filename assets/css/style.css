@@ -544,13 +544,15 @@ canvas {
 /* 404 Page */
 
 #Error404Page {
-  background: url("../images/404-bg.jpg") no-repeat center center fixed;
+  background: url("../images/404-bg-pg.jpg") no-repeat center center fixed;
   background-size: cover;
 }
-
+#Error404Page p{
+  font-weight: 600;
+}
 #Error404Page h2,
 #Error404Page p {
-  color: var(--decoration3);
+  color:#fffbfd;
   padding: 15px;
   margin: 50px;
 }
@@ -559,6 +561,7 @@ canvas {
 #Error404Page a {
   color: var(--decoration1);
   border: 2px solid var(--decoration1);
+  font-weight: 800;
   border-radius: 10%;
   padding: 15px;
 

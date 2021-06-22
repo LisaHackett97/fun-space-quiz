@@ -268,7 +268,7 @@ small x to close on success button showing as grey on screen, cannot remove
 
 adjust layout/sizinf og#f modal footer bootons
 
-keep clicking next question button without answering, get to end of array set, and success modal pop up instead of the alert
+keep clicking next question button without answering, get to end of array set, and success modal pop up instead of the alert. remove success call, and add confirm msg
 
 button answers height on answer div and buttons needs to be set on small screens or elements move on page content changes
 ### Performance and accessibility Testing
