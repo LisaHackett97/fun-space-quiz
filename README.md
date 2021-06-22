@@ -346,6 +346,7 @@ unsplash.com
 -carousel-jupiter
 -carousel-the-sun
 -carousel-diamonds
+-carousel-earth
 -404-bg
 -game-stars
 
@@ -353,10 +354,6 @@ Pexels.com
 
 -landing-stars
 -carousel-galaxy
-
-raw-pixel.com (public domain imgs)
-
--carousel-earth
 
 vecteezy.com/free-vector/
 
