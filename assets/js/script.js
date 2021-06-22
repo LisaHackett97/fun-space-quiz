@@ -56,8 +56,8 @@ function showQuestion() {
     answer4.innerHTML = q.answers.d;
     correctAnswer.innerHTML = q.correctAnswer;
   } else {
-    //Show the end screen
-    confirm("No more questions. Click ok to continue");
+    //Message when user has clicked through all the questions in the array
+    confirm("No more questions. Click ok to continue. Then you can select New Game to start over");
     // $('#success').modal('show');
   }
 }
