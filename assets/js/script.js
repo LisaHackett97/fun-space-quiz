@@ -9,15 +9,16 @@ const answer2 = document.getElementById("answer2");
 const answer3 = document.getElementById("answer3");
 const answer4 = document.getElementById("answer4");
 const correctAnswer = document.getElementById("correctAnswer");
-
 let chosenAnswer;
 let q;
 let currentQuestion = 0;
 let canvas = document.getElementById('gamecanvas');
 let ctx = canvas.getContext('2d');
 
-// adding event listener to next q button, to iterate current q number and show next Q
-// Main pg button and on modals
+/* 
+adding event listener to next q button, to iterate current q number and show next Q
+on game pg button and on modals
+*/
 document.getElementById("nextQ").addEventListener("click", nextQ);
 document.getElementById("nextQ").addEventListener("key", nextQ);
 document.getElementById("wrgAnsFocus").addEventListener("click", nextQ);
@@ -58,14 +59,14 @@ function showQuestion() {
   } else {
     //Message when user has clicked through all the questions in the array
     confirm("No more questions. Click ok to continue. Then you can select New Game to start over");
-    // $('#success').modal('show');
   }
 }
 
-// help with using the fisher-yates method
-// https://www.tutorialspoint.com/
-// https://bost.ocks.org/mike/shuffle/
-
+/* 
+ help with using the fisher-yates method
+ https://www.tutorialspoint.com/
+ https://bost.ocks.org/mike/shuffle/
+*/
 function shuffleQuestion() {
   var x = quizData.length,
     temp, i;
@@ -77,13 +78,16 @@ function shuffleQuestion() {
   }
 }
 
-// iterate +1 to the current question variable, then run the show question function
-// will show next question in the array QuizData
-// including checkScoreDraw to draw on canvas as score increments
+/*
+ iterate +1 to the current question variable, then run the show question function
+ will show next question in the array QuizData
+ including checkScoreDraw to draw on canvas as score increments
+ */
 function nextQ() {
   currentQuestion++;
   showQuestion();
   scoreCheckDraw();
+
 }
 
 // when buttons within the div #answers clicked , set chosenAnswer to text of the button and run check fn
@@ -91,7 +95,7 @@ $('#answers > button').click(function (event) {
   chosenAnswer = $(this).text();
   event.preventDefault();
   check();
-  });
+});
 // keyPress alternative
 $('#answers > button').keypress(function (event) {
   chosenAnswer = $(this).text();
@@ -125,9 +129,7 @@ function incrementScore() {
   document.getElementById('score').innerText = ++oldScore;
 }
 
-// canvas code
-
-// rocket img to use as mover in game
+// rocket img to use as mover on game canvas
 const rocketImg = new Image();
 rocketImg.src = "assets/images/game-rocket.png";
 
@@ -172,11 +174,23 @@ function drawQuestion5() {
   ctx.drawImage(completeImg, 210, 27, completeImg.width / 3.5, completeImg.height / 3.5);
 }
 
-// draw images on canvas for each score increment
+//event listener to start new game
+document.querySelectorAll('.resetBtn').forEach(item => {
+  item.addEventListener('click', event => {
+    document.getElementById("score").innerText = 0;
+    currentQuestion = 0;
+    runGame();
+    // clear canvas and re-draw moon start img
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);
+  });
+});
+
+//draw images on canvas for each score increment
 function scoreCheckDraw() {
   let oldScore = parseInt(document.getElementById('score').innerText);
   if (oldScore === 0) {
-    // do nothing
+    showQuestion();
 
   } else if (oldScore === 1) {
     drawQuestion1();
@@ -194,18 +208,5 @@ function scoreCheckDraw() {
 
     $('#success').modal('show');
     drawQuestion5();
-
   }
 }
-
-//event listener to start new game
-document.querySelectorAll('.resetBtn').forEach(item => {
-  item.addEventListener('click', event => {
-    document.getElementById("score").innerText = 0;
-    currentQuestion = 0;
-    runGame();
-    // clear canvas and re-draw moon start img
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(moonImage, -71, 95, moonImage.width / 3, moonImage.height / 3);
-  });
-});
