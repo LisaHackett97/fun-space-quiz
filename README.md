@@ -100,7 +100,7 @@ I plan to use bright colours to make a fun visual site.
 
 During development, I changed the main colours used, as the original colours were giving some contrast errors when checking with WAVE.
 
-![Final Colours Used](readme-assets/final-colours.png)
+![Final Colours Used](readme-assets/final-colours.PNG)
 
 #### Typography
 
@@ -111,7 +111,8 @@ I plan to use Exo2 and Poppins fonts. This did not change during development as 
 I plan to use landing page full background image, with buttons over-laid, an image for the game area with a planet type icon for each point in the game.
 There will also be a success image for when user finishes the game and a number of images for the learn more carousel.
 
-- I decided not to use an image when user finishes the game, as the success pop up modal, worked better. It gave user further opyions to navigate on the site or replay.
+- I decided not to use an image when user finishes the game, as the success pop up modal, worked better. Modal button gives users 3 options: play again,
+see the final game image, or naivigate to the learn-more page.
 
 [Back to table of contents](#table-of-contents)
 
@@ -123,34 +124,68 @@ The site consists of
 
 ### Landing Page
 
-containing the following:
+Contains the following:
 
+- Space/stars background image
 - Button to select game play
 - Button to go to learn more page
-- Instructions for game play, which will be a pop up on smaller screens
+- Button for instructionswhich is a pop up.
+- Inside the inctruction modal pop-up, the user then had to option to click to go to the game, or close the pop-up
 
 ### Navigation Menu
 
-- Contains links to Game page, Learn More Page, which contains the gallery carousel and to the contact form, collpasible icon on smaller screens.
+- Contains links to:
+  - Landing page, which is called Home on the navbar.
+  - Game play: brings user to top of the game page.
+  - Learn More Page, which contains the gallery carousel.
+  - Contact form, which is called Ask us anything on the nav bar.
+- Navbar is collapsible icon on smaller screens.
 
 ### Game Page
 
-- navigation menu
-- game play area
-- Question and answer area
-- success pop up
+Contains the following:
+
+- Navigation menu
+- Fly your rocket home heading: This is hidden on smaller screen.
+- Game play visual/canvas area, which displays the following:
+  - Outer Space Stars background image.
+  - Moon icon to represent start of game.
+  - Planet Earth icon to represent end of game.
+  - Rocket icon to represent progress. For previous steps the rocket is greyed out but still visible.  
+- Question and answer area, displaying four possible answers to choose from.
+- Button option for user to select a new question.
+- Score area: Gives user information on how many questions to answer, and also ho wmany questions they have answered corretly in the game.
+- Button option for a new game.
+- Modal pop-ups, with option buttons:
+  - Correct answer: options for new game and next question.
+  - Wrong Answer: options for retry the question, new game and new question.
+  - Success: options to close modal and see the final game image, new game and learn more, which brings user to learn more page.
+- Footer, containg a link to you-tube.
 
 ### Learn More Page
 
-Contains two sections:
+Contains the following:
 
-- Gallery Carousel, which will contain images and related information
-- contact form, where the user can ask a question or send a fact/other information they want to share.
+- Navigation menu
+- Want to know more heading: This is hidden on smaller screen
+- Gallery Carousel, which contain images and related information.
+- Contact form, where the user can ask a question or send a fact/other information they want to share.
+- Footer, containg a link to you-tube.
+
+### 404 page
+
+Contains the following:-
+
+- Message for user if they get the 404 error.
+- Link back to the landing page
+- Background image with animations to slide in the text.
 
 ### Future Features
 
--Limit the number of re-tries of a question.
-
+- Function to limit the number of re-tries of a question, and run a game over function.
+- Difficulty levels for questions.
+- High Score tables.
+- Sounds during game.
 
 [Back to table of contents](#table-of-contents)
 
@@ -159,13 +194,27 @@ Contains two sections:
 - HTML5 - Programming language for structuring the site.
 - CSS3- Style sheet programming language
 - [Bootstrap](https://getbootstrap.com/docs/4.6/getting-started/introduction/) Use as a framework for layout and responsiveness.
-
-emailjs.com
-removebackground
-tinyjpg
-paint tool on lao#ptop windows
-jshint
-kanban online
+- [Font Awesome](https://fontawesome.com/) -used to provide icons across the site.
+- [Google fonts](https://fonts.google.com/) -used to select and provide typography.
+- [Github](https://github.com/)- software hosting platform to keep project in a remote location
+- [Gitpod](https://gitpod.io/) - a development hosting platform
+- Git - used for version-control.
+- [Balsamiq](https://balsamiq.com/) - used to build wireframes. Downloaded software to use.
+- Chrome Dev Tools - used to view responsiveness and layout as site was being developed. I found this very useful when developing the site, as it aided my learning throughout the project.
+- Unicorn revealer extension was helpful when developing the site
+- WAVE extension for reviewing accessibility and colour contrasts in testing.
+- emailjs.com
+- [Site to remove backgound on images](https://www.remove.bg/)
+- tinyjpg
+- paint tool on lao#ptop windows
+- [Online kanban tool for plan and management of project tasks](https://lisah.kanbantool.com/login#?)
+- [techsini for mock-ups](https://techsini.com/multi-mockup/index.php)
+- Validators:
+  - jshint
+  - validator.w3.org
+  - jigsaw.w3.org/css-validator
+- [Site for CSS animations](https://animate.style/.)
+- favicons.io
 
 [Back to table of contents](#table-of-contents)
 
