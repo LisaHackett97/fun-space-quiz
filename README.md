@@ -1,6 +1,6 @@
-# Fun Space Quiz
+# [Fun Space Game](https://lisahackett97.github.io/fun-space-quiz//?target="_blank">)
 
-Site MockUp to be inserted
+![Site-Mockup](readme-assets/mock-up.png)
 
 This is a fun interactive site for kids to learn about space while playing a simple “travel through space game”. User can also view interesting Space related images and facts and send in their own facts or ask questions.
 Primary goal of the site is to encourage kids to have fun while learning about space and solar system in a fun, interactive way.
@@ -80,7 +80,8 @@ to the game or if they wish, can go to the learn more page, where they can view 
 [Wireframe Tablet](readme-assets/spacegame-wireframe-tablet.pdf)
 [Wireframe Desktop](readme-assets/spacegame-wireframe-desktop.pddf)
 These were built using balsamiq.
-
+The main change from the wireframes is that I decided not to have a title on the landing/hpme page, and to add a heading in fi9r the game page for tablet/desktop scrrens.
+Also decided to keep instructiond as a pop up on all screen sizes.
 ### Surface
 
 [Surface Plan](readme-assets/surface-plane-plan.pdf)
@@ -95,6 +96,8 @@ I plan to use bright colours to make a fun visual site.
 - 395c6b
 - d33f49
 
+During development, i changed the main colours used, as the original colours were giving some contrast errors when checking with WAVE.
+![Final Colours Used](readme-assets/final-colours.png)
 #### Typography
 
 I plan to use Exo2 and Poppins fonts.
@@ -139,6 +142,9 @@ Contains two sections:
 - contact form, where the user can ask a question or send a fact/other information they want to share.
 
 ### Future Features
+
+-Limit the number of re-tries of a question.
+
 
 [Back to table of contents](#table-of-contents)
 
@@ -271,6 +277,8 @@ adjust layout/sizinf og#f modal footer bootons
 keep clicking next question button without answering, get to end of array set, and success modal pop up instead of the alert. remove success call, and add confirm msg
 
 button answers height on answer div and buttons needs to be set on small screens or elements move on page content changes
+
+bug: footer not filling across. missing closing divv foir main container of the learn pg. margins etc overfliowng.....
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
@@ -340,6 +348,8 @@ webkits Prefixed by [autoprefixer](https://autoprefixer.github.io)
 
 ### Media
 
+https://animate.style/....
+<a href='https://www.freepik.com/free-photos-vectors/travel'>Travel vector created by vectorpouch - www.freepik.com</a>
 #### Images Used
 
 Images are credited as followins:
