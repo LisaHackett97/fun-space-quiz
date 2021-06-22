@@ -56,7 +56,9 @@ function showQuestion() {
     answer4.innerHTML = q.answers.d;
     correctAnswer.innerHTML = q.correctAnswer;
   } else {
-    $('#success').modal('show');
+    //Show the end screen
+    confirm("No more questions. Click ok to continue");
+    // $('#success').modal('show');
   }
 }
 

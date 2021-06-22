@@ -623,6 +623,8 @@ figcaption {
   padding-right: 15px;
  height: 200px;
 }
+
+
 }
 
 /* media query to reduce size of question text and adjust canvas on xs screens only*/
@@ -633,6 +635,10 @@ figcaption {
   .questionScores {
     font-size: 15px;
     
+  }
+
+  #modalHeadContent{
+    font-size: 15px;
   }
   /* height on answer div and buttons needs to be set on small screens or elements move on page content changes */
 .answerButton{
