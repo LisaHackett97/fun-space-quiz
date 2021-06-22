@@ -1,6 +1,6 @@
 # [Fun Space Game](https://lisahackett97.github.io/fun-space-quiz//?target="_blank">)
 
-![Site-Mockup](readme-assets/mock-up.png)
+![Site-Mockup](readme-assets/mock-up.PNG)
 
 This is a fun interactive site for kids to learn about space while playing a simple “travel through space game”. User can also view interesting Space related images and facts and send in their own facts or ask questions.
 Primary goal of the site is to encourage kids to have fun while learning about space and solar system in a fun, interactive way.
@@ -80,8 +80,10 @@ to the game or if they wish, can go to the learn more page, where they can view 
 [Wireframe Tablet](readme-assets/spacegame-wireframe-tablet.pdf)
 [Wireframe Desktop](readme-assets/spacegame-wireframe-desktop.pddf)
 These were built using balsamiq.
-The main change from the wireframes is that I decided not to have a title on the landing/hpme page, and to add a heading in fi9r the game page for tablet/desktop scrrens.
-Also decided to keep instructiond as a pop up on all screen sizes.
+
+- The main change from the wireframes is that I decided not to have a title on the landing/hpme page, and to add a heading in fi9r the game page for tablet/desktop scrrens.
+- Also decided to keep instructionS as a pop up on all screen sizes.
+
 ### Surface
 
 [Surface Plan](readme-assets/surface-plane-plan.pdf)
@@ -96,16 +98,20 @@ I plan to use bright colours to make a fun visual site.
 - 395c6b
 - d33f49
 
-During development, i changed the main colours used, as the original colours were giving some contrast errors when checking with WAVE.
+During development, I changed the main colours used, as the original colours were giving some contrast errors when checking with WAVE.
+
 ![Final Colours Used](readme-assets/final-colours.png)
+
 #### Typography
 
-I plan to use Exo2 and Poppins fonts.
+I plan to use Exo2 and Poppins fonts. This did not change during development as the fonts suited the site from a visual perspective.
 
 #### Images
 
 I plan to use landing page full background image, with buttons over-laid, an image for the game area with a planet type icon for each point in the game.
-There will also be a success image for when user finishes the game and a number of images for the lern more carousel.
+There will also be a success image for when user finishes the game and a number of images for the learn more carousel.
+
+- I decided not to use an image when user finishes the game, as the success pop up modal, worked better. It gave user further opyions to navigate on the site or replay.
 
 [Back to table of contents](#table-of-contents)
 
