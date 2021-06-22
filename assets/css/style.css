@@ -626,6 +626,19 @@ figcaption {
   .answerButton,
   .questionScores {
     font-size: 15px;
+    
+  }
+  /* height on answer div and buttons needs to be set on small screens or elements move on page content changes */
+.answerButton{
+ height: 48px;
+ padding-bottom: 15px;
+  font-size:  14px;
+
+}
+  #answers{
+    height: 210px;
+    padding-top: 10px;
+    margin-bottom: 10px;
   }
 
   header {

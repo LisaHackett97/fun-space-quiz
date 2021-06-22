@@ -263,6 +263,14 @@ but then tested in on my own phone. indicators taking up too much space
 Bug: game wasn't shuffling questions when new game btn clicked. run game needed to part of the  query selector fn for reset click event listener. OK now
 
 game questions floating down when amount of txt in q changed: fixed height on question div
+
+small x to close on success button showing as grey on screen, cannot remove
+
+adjust layout/sizinf og#f modal footer bootons
+
+keep clicking next question button without answering, get to end of array set, and success modal pop up instead of the alert
+
+button answers height on answer div and buttons needs to be set on small screens or elements move on page content changes
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
