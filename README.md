@@ -258,6 +258,7 @@ Then realised h1 were not showing as expected, update the way rows were showing 
 Update styling on carousel and next/prev. remove data-ride attrib (Why needed??)
 Media query applies to small and x-samll screens. Change display of carousel. H1 hidden on sm/xs, therfore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and fonr size. whn media q applied to screens up to 768, now full screen on xs and spacing on medium
 To check again tmrw and/or note... removed styling on carouselCoumn. UPDATE again! changed width on carousel items all screen sizes, adjusted column set for large scrrens, some small adjs for media query sm and xs. and reversed to the same colour for  contrls indicators on all screens
+but then tested in on my own phone. indicators taking up too much space
 
 Bug: game wasn't shuffling questions when new game btn clicked. run game needed to part of the  query selector fn for reset click event listener. OK now
 
