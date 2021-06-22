@@ -262,6 +262,7 @@ but then tested in on my own phone. indicators taking up too much space
 
 Bug: game wasn't shuffling questions when new game btn clicked. run game needed to part of the  query selector fn for reset click event listener. OK now
 
+game questions floating down when amount of txt in q changed: fixed height on question div
 ### Performance and accessibility Testing
 
 #### Lighthouse testing

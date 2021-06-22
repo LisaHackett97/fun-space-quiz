@@ -137,7 +137,7 @@ a:focus .start-pg {
   border: 2px solid var(--heading-color);
 }
 
-/* set text style on list items on isntruction modal */
+/* set text style on list items on instruction modal */
 .modal-body li {
   font-size: 14px;
 }
@@ -151,6 +151,17 @@ a:focus .start-pg {
 .modal-header,
 .modal-footer {
   border: none;
+  background-color: var(--decoration3);
+}
+
+#modalFooterSuccess button{
+  height: 70px;
+}
+
+#wrongAnsModalFooter button {
+  height: 65px;
+  /* width: 100%; */
+ padding-right: 15px;
 }
 
 .modal-content {
@@ -158,12 +169,10 @@ a:focus .start-pg {
   font-size: 1rem;
 }
 
-
 /* game page modal */
 #answerModal,
 #wrongAnswer {
   width: 100vw;
-
 }
 
 /*  styling code for all modal footer btns across the site */
@@ -476,6 +485,7 @@ canvas {
   margin-top: 5px;
   text-align: center;
   font-weight: 600;
+  height:50px;
 }
 
 .questionScores {
