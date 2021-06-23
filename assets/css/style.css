@@ -587,11 +587,15 @@ H1 hidden on sm screens affecting layout and for layout of footer
   /* to give carousel section more spacing under navbar when heading is hidden */
   .carousel-inner {
     margin-top: 10px;
+    width:100%;
   }
 
   /* little more pading is needed so image and control are not overlapping on smaller screens */
   .carousel-item {
     width: 100%;
+   
+    padding-left: 21px;
+    padding-right: 20px;
   }
 
   .carousel-control-next {
