@@ -226,8 +226,7 @@
                         <!--text area for user to add more information. Closing textarea tag needs to be on same code line so placeholder text shows-->
                         <textarea name="message" placeholder="Send us your question or tell us what you know!!"
                             aria-label="textarea for additional information"></textarea>
-                        <button class="btn form-button" type="submit" id="form-button"
-                            onclick="ValidateEmail(document.form.email)">Send Form
+                        <button class="btn form-button" type="submit" id="form-button">Send
                         </button>
                     </fieldset>
                 </form>
@@ -250,8 +249,8 @@
                             your message and
                             will be back in touch asap
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                        <div class="modal-footer"> 
+                            <button type="button" class="btn" data-dismiss="modal" onclick="clearForm(document.form.reset)">Close</button>
                             <button type="button" class="btn" data-dismiss="modal"
                                 onClick="parent.location='game.html'">Go
                                 to Game</button>
