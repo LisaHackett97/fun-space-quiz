@@ -215,10 +215,27 @@ Contains the following:-
   - jigsaw.w3.org/css-validator
 - [Site for CSS animations](https://animate.style/.)
 - favicons.io
+- [Crticial style path generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/#what-is)
 
 [Back to table of contents](#table-of-contents)
 
 ## Testing
+
+Testing Plan:
+For each change/bug resolved, test the feature to ensure working as expected
+Once development finished
+
+1. Validate css, html and javascript.
+2. Lighthouse reports
+3. WAVE accessibility reports
+4. Cross browers testing
+
+- Manual testing.
+  - Functionality: test each feature on each page. Negative and positive cases. 
+  - Review already resolved bugs and test again.
+  - User stories testing
+
+- Any changes made, re-run all steps and note any issues
 
 ### Functionality Testing
 
@@ -234,105 +251,73 @@ Contains the following:-
 
 ### Issues during development
 
-I used the bootstrap documentation code for the carousel.
-I wanted text related to the image to appear under it but using the code exactly as it was in the documentation, did not give the user view on all screens as I wanted,
-I tried a few different code snippets I found researching the topic but after trying a few different versions, I decided use the original bootstrap code
- but modify it. I decided to enclose the images with the figure tag and to use the figcaption tag for the text details.
- Img, figure and carousel controls were required to be styled to ensure text appeared beneath img, and ctrls to left/right, without overlap, and also appearing as expected on diff screen sizes.
+I used the bootstrap documentation code for the carousel. as I wanted text related to the image to appear under it but using the code exactly as it was in the documentation, did not give the user view on all screens as I wanted. After trying a few different versions I found through research, I decided use the original bootstrap code but modify it. I decided to enclose the images with the figure tag and to use the figcaption tag for the text details.
+Img, figure and carousel controls were required to be styled to ensure text appeared beneath img, and ctrls to left/right, without overlap, and also appearing as expected on diff screen sizes.
 
 The fieldset was overflowing on the contact form and appearing on top of the footer. Resolved once styling applied to container and the element itself.
 
-Form is moving up and down on page, depending on the text content of the figcaptions. Height needed to be set to the figcaption element
+Carousel indicator was overlapping with figcaption elements. Solved by positioing ol and li items to bottom of their container element and styling the items.
 
-Carousel indicator overlapping with figcaption elements. Solved by positioing ol and li items to bottom of their container element and styling the items.
+The form input boxes overflow fieldset on xs screen size. Resolved by reducing the size of font on input boxes to resolve
 
-Once nav bar was fixed, main content of page was scolling on top of the navbar. Found a solution to set the z-index (code credit in credits section).
-When seting the bg colour to the root decoration1, it looked like a different shade to other yellows on the page. Tried setting opacity but then scrolled content was visible behind the navbar. Decided to swap bg and text colours. BG color change to the red chosen color and test to the blue --decoration3 color.
+When setting up the shuffle questions function, I tried to find a number of ways to do this, including sorting the quiz array, nut couldn't couldn't get anything to work.
+When I was researching I came across the fisher yates algorithim method. I wouldn't get it to work but needed to spend more time understanding it.
+Once I implemented the function, I then got an issue in the console, where it was telling me .length on the array name wasn't defined. To resolve, I set a new array varaible and passed it in the quiz variable, as quiz variable held in another js file. As I got towards the end of the site developments, I researched linking the javascript files, and implemeted import/export on main script file the one holding the quiz data.
 
-Form input boxes overflow fieldset on xs screen size. Reduced size of font on input boxes to resolve
+I had issues figuring out how to access the correct answer in the array, tried few diff methods. Needed to set a hidden span, and change format of correct answer in the array. I would like to find a better way of doing this but knowledge and time constraints have prveneted me doing so at this point.
 
-When setting up the shuffle questions function, I tried to find a number of ways to do this, including sorting the quiz array. couldn't get anything to work.
-When I was researching I came across the fisher yates algorithim method. I wouldn't get it to work but needed to spend more time understaning it.
-Understood and set it up but was getting an issue in the console, where it was telling me .length on the array name wasn't defined. To resolve, I set a new array varaible and passed it in the quiz variable, as quiz variable held in another js file.
+At one point the user was having to keep answering the same question, score continued to increment. Resolution was that the oder of the new question/shuffle functions needed to be changed. If I user gets a question correct, they will get a pop up module and options are to get next question or start a new game.
+As I wrote the javascript file, I checke the particular site area each time. When I change didn't work or caused issues like questions disappearing, I would review, including using dev tools to view the console and update javascript. Issues was usually the order of the functions ebing called.
 
-accessing correct answer in the array, tried few diff methods. Needed to set a hidden span, and change format of correct answer in the array
+I tried to use a switch case for the draw function, as suggested by my mentor. This is the function that when a user has a score of 1, the first rocket icon is drawn on the game canvas,and will repeat until user has 5 questions answered. I was not able to implement it due to knowledge and time constraints. The if/else statements work with the game as it is.
 
-score not incremting, ok now.
+When I set up reset btns, (to start game over), d-hide modal triggers and opens the modal but if the user answerd incorrctly, the next question button wasn't working.I needed on click to be added to button with id of wrgAnsFocus.
 
-add canvas element with star bg. add moon draw image and rockets as movers. First used lines to test. update coordiantes on rocket for spacing
-Add earth img
-
-notes for js game
-
- need to create array/container for answered questions
- need to stop user being able to answer same question. Bug: can keep answering same q and score keeps incrementing
- <!-- function to limit number of questions in game -->
+I needed media queries for fig captions and carousel indictors on xs smal screens, also hide h1 heading on small screens and change layout of carousel when heading was hidden.
 
 [Back to table of contents](#table-of-contents)
 
 ### Bugs
 
-Images did not initially display on the deployed site. For the carousel images, I needed to remove the / before the file path and for the bg images on game and landing pages, I need to change the relative path to "../images" instead of "/assets/images". These changes resolved the issue on the live site.
+- On the learn-more page, form area would move on the page, depending on the text content of the figcaptions. Height needed to be set to the figcaption element to resolve.
 
-set focus in doc ready, was telling that wrg ans q was last. reoder, run game after focus
+- Once nav bar was fixed, main content of page was scolling on top of the navbar. Found a solution to set the z-index (code credit in credits section).
 
-fixed: If user gets first question wrong, get game over message as score is still at 0. added another confition to the if else statement to do nothing when score is 0.
+- Images did not initially display on the deployed site. For the carousel images, I needed to remove the / before the file path and for the bg images on game and landing pages, I need to change the path to "../images" instead of "/assets/images". These changes resolved the issue on the live site.
 
-set up reset btns, set d-hide modal triggers but then wrg answer next w doesn't work. needed on click to be added to button with id of wrgAnsFocus. fixed.
+- If first question was answered wrong, the game over message was displayed as score was still at 0. Resolved by adding another condition to the if else statement to run the show question function is 0. Display of success modal after 5 questions answered correctly stops user answering further questions
 
-footer floating up on lg screens per dev tools
-Added empty div, and set height, which keeps footer down but may need to increase game area size for leg scrrens. had added a media query but then removed it and te4sted live site. Media q and spacin div not needed on live site. dev tools issue
+- The footer was floating up on medium and large screens on the game page, as there wasn't enough content to push footer down. Resolution found (see credits section), adding a wrapper on the main body and a div with push slass. Css was then applied
 
-BUT CANVAS DRAW ELEMENTS NOT SHOWING ON LIVE SITE...FILE PATH. fixed
+- Game canvas draw element were not showing on the live site. This was resolved as the file path needed to be updated>
 
-LIVE SITE: NO SPACING ISSUES ON AMI.RESPONSIVE BUT ARE ON TECHSINI.COM???? apple devices???  GAME PG ONLY
+- When a new game was called, the first question was not refreshing. To resolve I needed to reoder function calls in the reset Javascript fn.
 
-favicon and canvas imgs file paths
+- email js and field validation were causing a 501 error. To resolve I needed to remove submit function from js file, re-arrange order in email.js, send email function to be first.
 
-New game, not refreshing first question. needed to reoder function calls in the reset Javascript fn
+- Was getting warnings in jshint in relation to ES6. Resolution found to clear these.
+  - jsHint /*jshint esversion:6*/ added to top of js file, removed warnings. found anser on slack.
 
-media q for fig captions and carousel indictors on xs smal screens, also hiude h1 heading on small screens
+- jshint getting message about the jquery variable. found solution on [stackoverflow](https://stackoverflow.com/questions/8852765/)/ Comment added to top of js file,  which declares to JSHint that $ is a global variable, and the false indicates that it should not be overridden. Cleared warnings/
 
-email js and validation causing a 501 error. removed submit fn frrom js file, re-arranged order in email.js, send email fn first. fixed issue
-To check on live site as it was causing a 405 issues there..
+- jshint: message that my QuizData was not defined. This is the array of questions held in questions.js
+  - Solution on [this site](https://medium.com/recraftrelic/es5-vs-es6-with-example-code-9901fa0136fc). set up import/export on the 2 js files.
+    - But this then caused an issue with message of "Uncaught SyntaxError: Cannot use import statement outside a module". Solution to that was found on stackoverflow post
+solution:- give js files type of module.
+      - This resolved but next issue then related to the onclick events in the html file for next q. Site was not displaying a next q when that onclick removed from modal button. Still works when main new q button selected. Resolution was that Event listeners for next q buttons on wrg answer and correct answer modals needed to be included.
 
-jsHint /*jshint esversion:6*/ added to top of js file, removed warnings. found anser on slack.
-'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-jshint getting message about the jquery variable. found solution on [stackoverflow](https://stackoverflow.com/questions/8852765/).... declares to JSHint that $ is a global variable, and the false indicates that it should not be overridden.
+- jshint gives me a msg that emailjs is not defined. However if I do define it, it causes a 501 error or 405 error on live site. Removed the declaration.
 
-jshint: talling my QuizData bot defined. this is the array of questions held in questions.js
-Solution on [this site](https://medium.com/recraftrelic/es5-vs-es6-with-example-code-9901fa0136fc). set up import/export on the 2 js files.
-But this then caused an issue where message, Uncaught SyntaxError: Cannot use import statement outside a module". Solution to that on stackover flow post
-solution was to give js files type of module. Removed that issue but next issue then related to the onlcik events in the html file for next q.site not displaying a next q when that onclick removed from modal button. Still works when main new q button selected. Needed to add Event listeners for next q buttons on wrg answer and correct answer modals
+- carousel/figures imgs on smaller screens were not taking up full width and looked strected vertically
+  - Media query applied to small and x-small screens. Change display of carousel. H1 hidden on sm/xs, therfore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and font size. 
+Reviewed again and decided to change width on carousel items all screen sizes, adjusted column set for large screens, some small adjs for media query sm and xs and reverted to the same colour for  contrls indicators on all screens. Also needed to decrease size of indicators to reduce space they were taking up on screen.
 
-corrected initial; validation errorsL now issues with footer too mig and no txt on learn pg, game page, text under footer and also text wrg color*
-pk, was styles for 404 pg over writing corrected now
+- The game wasn't shuffling questions when new game btn clicked. run game needed to part of the query selector function for reset click event listener.
 
-jshint gives me a msg that emailjs is not defined. However if I do define it, it causes a 501 error or 405 error on live site. Removed the declaration.
+- If a user keeps clicking next question button without answering, they get to end of array set, and success modal pop up instead of the alert. To resolve in the showQuestion function, add a confirm msg.
 
-carousel/figures imgs on smaller screens were not taken up full width and looked strected vertically
-removed mainconatiner as not needed, g-0 on the carousel row and added some adjustements to carousel items and figures on a media screen: width, margins and pasdding
-Decided that it looked better to make the prev and next indicators transparent on small screens and change color of the icons
-Then realised h1 were not showing as expected, update the way rows were showing on game and learn pages, changed margins for conatienrs and h1
-Update styling on carousel and next/prev. remove data-ride attrib (Why needed??)
-Media query applies to small and x-samll screens. Change display of carousel. H1 hidden on sm/xs, therfore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and fonr size. whn media q applied to screens up to 768, now full screen on xs and spacing on medium
-To check again tmrw and/or note... removed styling on carouselCoumn. UPDATE again! changed width on carousel items all screen sizes, adjusted column set for large scrrens, some small adjs for media query sm and xs. and reversed to the same colour for  contrls indicators on all screens
-but then tested in on my own phone. indicators taking up too much space
+- Footer was not filling across the full screen on learn more page after resolving issues/updating carousel for different screen sizes. I was missing a closing div for main container of the learn pg. Issue now resolved.
 
-Bug: game wasn't shuffling questions when new game btn clicked. run game needed to part of the  query selector fn for reset click event listener. OK now
-
-game questions floating down when amount of txt in q changed: fixed height on question div
-
-small x to close on success button showing as grey on screen, cannot remove
-
-adjust layout/sizinf og#f modal footer bootons
-
-keep clicking next question button without answering, get to end of array set, and success modal pop up instead of the alert. remove success call, and add confirm msg
-
-button answers height on answer div and buttons needs to be set on small screens or elements move on page content changes
-
-bug: footer not filling across. missing closing divv foir main container of the learn pg. margins etc overfliowng.....
 ### Performance and accessibility Testing
 
 #### Lighthouse testing
