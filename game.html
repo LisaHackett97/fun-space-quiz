@@ -64,7 +64,7 @@
       <div class="row">
         <div class="game-area col-12">
           <!-- This the game area. Visual progress and image. Text within canvas element is for fallback -->
-          <canvas id="gamecanvas" class="col-12"
+          <canvas id="gamecanvas" class="col-12" role="img"
             aria-label="Game area with space image, space rocket icon for correct questions answered">
             <p>This is the game area. answer questions from question-area to progress in the game. Canvas shows a space
               background with moon and planet earth, and space rocket icon to move across the canvas,
@@ -99,8 +99,8 @@
 
 
             <!-- Button trigger modal -->
-            <button type="button" class="btn d-none" data-toggle="modal" data-target="#answerModal"></button>
-            <button type="button" class="btn d-none" data-toggle="modal" data-target="#wrongAnswer"></button>
+            <!-- <button type="button" class="btn d-none" data-toggle="modal" data-target="#answerModal"></button> -->
+            <!-- <button type="button" class="btn d-none" data-toggle="modal" data-target="#wrongAnswer"></button> -->
 
             <!-- This is pop up when a question answered -->
             <!-- Modal code structure taken from bootstrap docs-->
@@ -173,7 +173,7 @@
 
         <!-- This is pop up when 5 questions answered and user reaches Earth/end of quiz -->
         <!-- Modal code structure taken from bootstrap docs-->
-        <button type="button" class="btn d-none" data-toggle="modal" data-target="#success"></button>
+        <!-- <button type="button" class="btn d-none" data-toggle="modal" data-target="#success"></button> -->
 
         <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="modalTextSuccess"
           aria-hidden="true">
