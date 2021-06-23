@@ -463,7 +463,7 @@ footer p {
 canvas {
   width: 250px;
   height: 350px;
-  background-image: url("../images/game-bg-stars.png");
+  background-image: url("../images/game-bg-stars.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

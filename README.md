@@ -241,7 +241,22 @@ Once development finished
 
 ### Functionality Testing
 
+Site was viewed in xs, small, medium, large and extra large sizes on Chrome and Edge browsers, using dev tools.
+
+Format for manual test cases: Expected - Feature is expected to do X when the user does Y Testing - Tested the feature by doing Y Result - The feature did not respond due to A,B,C or Result - The feature acted as normally and it did Y Fix - I did Z to the code because something was missing
+
+List out each feature on each page..
 ### Compatibility Testing
+
+- Site was manually tested on google chrome, microsoft edge and IE on windows 10. No issues.
+    Landing Page: 
+      Play Game button
+      Imnstructions
+      Instruction Modal
+      Learn More link
+    
+- Visual of site was also checked on other browsers using the following site [lambatest](https://www.lambdatest.com/) Browsers checked included firefox, opera, firefox and safari.
+  - Site displaying as expected.
 
 ### User stories Testing
 
@@ -338,6 +353,17 @@ Reviewed again and decided to change width on carousel items all screen sizes, a
 
 #### Lighthouse testing
 
+Home Page
+Performance score was under 90. re-optimized the images, and re-ran the report for mobile
+Other scores 100
+Then desktop scores all showing as 100
+
+Game Page:
+Score first run for mobile. Performace score of 78. Reoptimized background image and saved as .jpg instead of .png. Slighly improved score. No issue on desktop
+
+LearnMore page: 78 score on mobile performance. reoptimized carousel-earth image but only slightly improved score
+No issue on desktop
+
 #### Accessibility
 
 - WAVE extension for further accessibility testing.
@@ -408,7 +434,7 @@ To Clone, follow the below steps:
 4. Open git bash
 5. Change the working directory to where you want the cloned directory
 6. Use command git clone and the copied URL
-7. Press ente
+7. Press enter
 
 Select this file for screenshot [readme-assets/clone-repo.PNG]
 
@@ -489,7 +515,8 @@ I used cooler.co to select inital colours. During development I changed colors u
   - [tutorialspoint.com](https://www.tutorialspoint.com/)
   - [bost.ocks.org](https://bost.ocks.org/mike/shuffle/)
 - I followed the code institute lesson on email js when implementing the email functions
+- code for email validation was found on (https://www.w3resource.com/javascript/form/email-validation.php)
+- code on how to set focus to nextq button on modal, found on stackoverflow
 
 ### Acknowledgements
 
-code on how to set focus to nextq button on modal, found on stackoverflow
