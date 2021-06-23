@@ -9,99 +9,84 @@
         content="outer space game, with image section to learn more facts about space and planets" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-   
-
     <title>Fun Space Quiz</title>
     <!-- files for favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-     <!-- criticalCss  https://jonassebastianohlsson.com/criticalpathcssgenerator/ -->
-    <style> @import
-        url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');:root{--main-text-color:
-        #292F36;--heading-color: #f38d6d;--decoration1: #FFE66D;--decoration2: #2B2C5A;--decoration3:
-        #45cfcf}*{margin:0;padding:0;scroll-behavior:smooth}html,body{height:100%}div,p{color:var(--main-text-color);font-family:'Poppins',sans-serif;font-size:20px}#landing{background:url("../images/landing-stars.jpg")
-        no-repeat center center fixed
-        #395c6b;background-size:cover}#explore{background-image:url("../images/landing-astronaut.png");background-repeat:no-repeat;background-position:center;background-size:contain;padding:20px;margin:20px}#playgame{background-image:url("../images/landing-rocket.png");background-repeat:no-repeat;background-position:center;background-size:contain;padding:20px;margin:20px}.start{height:30vh}.start-instructions{height:15vh;padding:20px;margin:20px}.start-pg{color:var(--decoration1);font-weight:600}#instructions{color:var(--decoration1);border:2px
-        solid
-        var(--decoration1);border-radius:40%;font-weight:600;font-size:20px;padding:15px}#instructionModal{padding:0;width:85%;margin-left:15px}.modal-body
-        li{font-size:14px}.modal-body
-        li{padding:3px;margin-left:5px}.modal-header,.modal-footer{border:none;background-color:var(--decoration3)}.modal-content{background-color:var(--decoration3);font-size:1rem}.modal-footer
-        .btn{color:var(--main-text-color);font-family:'Poppins',sans-serif;font-weight:400;border:2px solid
-        #395c6b;background-color:var(--decoration1)}@media screen and (max-width:576px){#modalHeadContent{font-size:15px}}</style>
-    </head>
-    
-    <body id="landing">
-        <!-- link to bring user to game area-->
-        <div class="container landing-pg" role="main">
-            <a href="game.html">
-                <div class="row">
-                    <div class="col-12 start" id="playgame"></div>
-                    <div class="col-12 text-center start-pg">Play game</div>
-                </div>
-            </a>
-        </div>
-        <!-- Container for pop up to show user Game Instructions-->
-        <div class="container">
-            <div class="row start-instructions align-items-center">
-                <div class="col-md-4 offset-md-4 text-center">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn" data-toggle="modal" data-target="#instructionModal" id="instructions">
-                        Instructions
-                    </button>
-                </div>
-                <!-- Instruction Modal code structure taken from bootstrap docs-->
-                <div class="modal fade" id="instructionModal" tabindex="-1" role="dialog"
-                    aria-labelledby="instructionModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="instructionModalLabel">You were kidnapped by Aliens and brought
-                                    to the Moon. <i class="fab fa-reddit-alien"></i></h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="text-center" id="modalHeadContent">You've manage to escape and have the keys to a
-                                    rocket that will take you
-                                    home but only if you can answer 5 questions. Good Luck! </p>
-                                <ol>
-                                    <li>You will see 4 possible answers, click the one you think is right.</li>
-                                    <li>If you get it wrong, you can try the question again Or ask for a new one.</li>
-                                    <li>Start a new game at any time, by clicking New Game.</li>
-                                    <li>One you've reached Earth, you see play a new game or go to our learn more page.</li>
-                                    <li>Please use our contact form, to ask us any question you like,
-                                        tell something interesting you know about Outer space or even tell us if we are
-                                        wrong about something!!</li>
-                                    <li>Click Go to Game to give our game a try. Have Fun!</li>
-                                </ol>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn" data-dismiss="modal"
-                                    onClick="parent.location='game.html'">Go to Game</button>
-                            </div>
+    <script src="assets/js/email.js"></script>
+</head>
+
+<body id="landing">
+    <!-- link to bring user to game area-->
+    <div class="container landing-pg" role="main">
+        <a href="game.html">
+            <div class="row">
+                <div class="col-12 start" id="playgame"></div>
+                <div class="col-12 text-center start-pg">Play game</div>
+            </div>
+        </a>
+    </div>
+    <!-- Container for pop up to show user Game Instructions-->
+    <div class="container">
+        <div class="row start-instructions align-items-center">
+            <div class="col-md-4 offset-md-4 text-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn" data-toggle="modal" data-target="#instructionModal" id="instructions">
+                    Instructions
+                </button>
+            </div>
+            <!-- Instruction Modal code structure taken from bootstrap docs-->
+            <div class="modal fade" id="instructionModal" tabindex="-1" role="dialog"
+                aria-labelledby="instructionModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="instructionModalLabel">You were kidnapped by Aliens and brought
+                                to the Moon. <i class="fab fa-reddit-alien"></i></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center" id="modalHeadContent">You've manage to escape and have the keys to a
+                                rocket that will take you
+                                home but only if you can answer 5 questions. Good Luck! </p>
+                            <ol>
+                                <li>You will see 4 possible answers, click the one you think is right.</li>
+                                <li>If you get it wrong, you can try the question again Or ask for a new one.</li>
+                                <li>Start a new game at any time, by clicking New Game.</li>
+                                <li>One you've reached Earth, you see play a new game or go to our learn more page.</li>
+                                <li>Please use our contact form, to ask us any question you like,
+                                    tell something interesting you know about Outer space or even tell us if we are
+                                    wrong about something!!</li>
+                                <li>Click Go to Game to give our game a try. Have Fun!</li>
+                            </ol>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn" data-dismiss="modal"
+                                onClick="parent.location='game.html'">Go to Game</button>
                         </div>
                     </div>
                 </div>
-                <!-- end of main modal content -->
             </div>
+            <!-- end of main modal content -->
         </div>
-        <!-- link to bring user to learn more page-->
-        <div class="container landing-pg">
-            <a href="learn-more.html">
-                <div class="row start align-items-center" id="explore"></div>
-                <div class="col-12 text-center start-pg">
-                    Want to learn more?
-                </div>
-            </a>
-        </div>
-        <!-- scripts and link to main css sheet-->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
-    
-    </body>
-    
-    </html>
+    </div>
+    <!-- link to bring user to learn more page-->
+    <div class="container landing-pg">
+        <a href="learn-more.html">
+            <div class="row start align-items-center" id="explore"></div>
+            <div class="col-12 text-center start-pg">
+                Want to learn more?
+            </div>
+        </a>
+    </div>
+    <!-- scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

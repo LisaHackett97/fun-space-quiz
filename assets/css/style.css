@@ -260,8 +260,8 @@ Use root element and then color picker to get a lighter shade
 /* width and padding needed so images and carousel controls are aligned */
 .carousel-item {
   width: 98%;
-  padding-left: 34px;
-  padding-right: 34px;
+  padding-left: 36px;
+  padding-right: 35px;
 }
 
 /* 
@@ -300,6 +300,10 @@ figcaption {
   height: 50vh;
   background-color: var(--decoration1);
   margin-right: 15px;
+}
+
+.carousel-control-next {
+  width: 37px;
 }
 
 .carousel-control-prev-icon,
