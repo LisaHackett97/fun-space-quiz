@@ -233,7 +233,7 @@ Once development finished
 4. Cross browers testing
 
 - Manual testing.
-  - Functionality: test each feature on each page. Negative and positive cases. 
+  - Functionality: test each feature on each page. Negative and positive cases.
   - Review already resolved bugs and test again.
   - User stories testing
 
@@ -245,16 +245,119 @@ Site was viewed in xs, small, medium, large and extra large sizes on Chrome and 
 
 Format for manual test cases: Expected - Feature is expected to do X when the user does Y Testing - Tested the feature by doing Y Result - The feature did not respond due to A,B,C or Result - The feature acted as normally and it did Y Fix - I did Z to the code because something was missing
 
-List out each feature on each page..
+List out each feature on each page.
+
+Feature: Landing Page:
+Expected: Page is expected to open with background image and the three features displaying:
+Result: Page opened as expected
+
+Feature: Play Game icon with text underneath
+Expected: Text changes colour when hovered. Click and will being user to game page
+Testing: Hover over link (icon and text) with mouse, click on button to open.
+Result: Text colour changes on hover. Click and game area opens
+
+Feature: Learn More icon with text underneath
+Expected:Text changes colour when hovered. Click and will being user to game page
+Testing: Hover over link (icon and text) with mouse, click on button to open.
+Result:Text colour changes on hover. Click and game area opens
+
+Feature:Instructions button
+Expected: Text changes colour when hovered. Click and will open up instructions modal
+Testing: Hover over button with mouse, click on button to open.
+Result: Text colour changes on hover. Click and modal opens
+
+Feature: Instructions Mondal
+Expected: Modal opens, displays heading and list content. Two buttons: Close to close the mdal and diplay landing page. Go to game brings user to game page.
+Testing: View modal, click close and go to game buttons. Click outside modal to close.
+Result: Modal opens, displays as expected and buttons function as expected. User can click anywhere outside the modal and it will close.
+
+Feature: Game Page
+Expected: Page opens and displays nav bar to top, then heading (on large screens), game image, question, possible answers, New question button, score area, new game button and footer with link to you-tube.
+Result: Page opened as expected
+
+Feature: Nav Bar
+Expected: Links which bring user to Home (landing Page), Carousel with text detail (Learn about Space), contact form (Ask us anything) and active item (Play Game).
+          Each link brings user to expected area per the name on the menu. Navbar collapses on smaller screens, and will display deails when clicked.
+Testing: Click each link. And then using browser back button to check this doesn't cause an issue. Test on large and small screens. Burger icon to be clicked on small screens. Game Play game item on menu should be underlined to highlight the active page
+Result: Each link brings user to the expected part of the site. When on the new site area, back button on brower bring user back to the game page. On smaller screens, burger icon displays. When clicked, menu items display to left and work as expected when clicked. Active menu iem is underlined.
+
+- Feature: Heading
+- Expected: Text to display on on larger screens. Hidden on smaller screen sizes
+- Testing: Test if text hides using dev tools
+- Result: Works as expected
+
+- Feature: Game play visual area
+- Expected: Open with space background, and icon of the moon in bottom left corner. For each question that is answered correctly, a rocket icon will display, with previous rocket icon greyed out. After five questions answered correctly, image of earth in top right corner
+- Testing: Answer 5 questions correctly, and check if icons display
+- Result: Images display as expected
+
+- Feature: Question and Answer area.
+- Expected: Question and 4 possible answers are displayed. User can click on one of the answers. For correct answers, correct answer modal with 2 options displays. For incorrect answers, wrong answer modal displays with three options (Retry, new question, new game). When 5 questions asnwered correctly, success modal display after confirm the question was answered correctly.
+- Testing: Click a correct answer and incorrect answer. Click 5 correct answers to check success modal displays
+- Result: Click an answer for first question. Correct answered modal displayed. Clicked an incorrect answer for next question. Wrong answer modal displays. Success modal also displays as expected after 5 correct answers.
+
+- Feature: New question Buttom.
+- Expected: When clicked game area will display a different question and set of answers.
+- Testing: Click new question and check a different question/answer set displays.
+            Keep clicking button until get to end of array and message appears
+- Result: Works as expected. Clicked through the current set and no more questions alert displays
+
+- Feature:
+- Expected:
+- Testing:
+- Result:
+
+- Feature: New game button.
+- Expected: When clicked, score resets to 0 and a different question and set of answers is displayed.
+- Testing: Click new question and check a different question/answer set displays. Function will keep shuffling questions and displaying a different set from the quiz array. Click this button more than the number of questions in the array to check no error
+- Result: Works as expected. Quiz data currenlty has 17 question. Clicked button 30 times and different questions kept appearing. No error message
+
+- Feature: Score Area: text with number of questions user has answered correctly in current game displayed
+- Expected: You have : X section will start at 0 and iterate to 5 for questions answered correctly
+- Testing: Start a new game, answer 5 questions correctly. Check score increments each time.
+- Result: Working as expected. Score does not go back 5 and starts at 0.
+
+- Feature: Footer with one external link
+- Expected: Link will change color on hove and when clicked will open in new tab.
+- Testing: Hover over link, click you-tube icon to open in new tab
+- Result:Working as expected.
+
+- Feature: Correct Answer Modal
+- Expected: Will open over game when question answered correctly. will display  a message tellng user answer was right and gives user two options. New game: when clicked will start a new game. Next question: closes modal and display a new question in game. Clicking outside the modal content closes modal.
+- Testing: Click on a correct answer. Click new game to start a new game. Click next question to check new question has displayed. click outside modal to close.
+- Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
+
+- Feature: Incorrect Answer Modal
+- Expected: Will open over game when question answered incorrectly. Modal will display a message tellng user answer was right and gives user three options. New game: when clicked will start a new game. Next question: closes modal and display a new question in game. Retry option: closed modal displaying same question which user can try answer again/ Clicking outside the modal content closes modal. Game currently doesn't limit retries so user can keep clicking until they get the question right, for younger kids this will help them learn somethng where they might a question difficult.
+- Testing: Click on a incorrect answer. Click new game to start a new game. Click next question to check new question has displayed. Click retry to answer same question again. click outside modal to close. User can retry question until they get it correct: Answer 3 incorrect, click 4th answer to get correct
+- Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
+
+- Feature: Success Modal
+- Expected: Will open over game when 5 questions are answered correctly. Will display a message to the user and gives user threeo options. Play again: when clicked will start a new game. Learn more: brings ser to the learn more page and See your journey: closed modal and allows user to view game images on display area Clicking outside the modal content closes modal.
+- Testing: Click 5 correct answers. Check modal displays, Click all 3 options to check they bring user to expected area. click outside modal to close.
+- Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
+
+- Feature:
+- Expected:
+- Testing:
+- Result:
+
+
+- Feature:
+- Expected:
+- Testing:
+- Result:
+
+
 ### Compatibility Testing
 
 - Site was manually tested on google chrome, microsoft edge and IE on windows 10. No issues.
-    Landing Page: 
+    Landing Page:
       Play Game button
-      Imnstructions
+      Instructions
       Instruction Modal
       Learn More link
-    
+
 - Visual of site was also checked on other browsers using the following site [lambatest](https://www.lambdatest.com/) Browsers checked included firefox, opera, firefox and safari.
   - Site displaying as expected.
 
@@ -340,14 +443,14 @@ solution:- give js files type of module.
 - jshint gives me a msg that emailjs is not defined. However if I do define it, it causes a 501 error or 405 error on live site. Removed the declaration.
 
 - carousel/figures imgs on smaller screens were not taking up full width and looked strected vertically
-  - Media query applied to small and x-small screens. Change display of carousel. H1 hidden on sm/xs, therfore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and font size. 
+  - Media query applied to small and x-small screens. Change display of carousel. H1 hidden on sm/xs, therfore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and font size.
 Reviewed again and decided to change width on carousel items all screen sizes, adjusted column set for large screens, some small adjs for media query sm and xs and reverted to the same colour for  contrls indicators on all screens. Also needed to decrease size of indicators to reduce space they were taking up on screen.
 
 - The game wasn't shuffling questions when new game btn clicked. run game needed to part of the query selector function for reset click event listener.
 
 - If a user keeps clicking next question button without answering, they get to end of array set, and success modal pop up instead of the alert. To resolve in the showQuestion function, add a confirm msg.
 
-- Footer was not filling across the full screen on learn more page after resolving issues/updating carousel for different screen sizes. I was missing a closing div for main container of the learn pg. Issue was showing resolved but has reverted ***TO INVESTIGAT5E FURTHER ***
+- Footer was not filling across the full screen on learn more page after resolving issues/updating carousel for different screen sizes. I was missing a closing div for main container of the learn pg. The footer needs to be outside the main container div. Once I ensure the #main-section container closed before footer, issue resolved. Footer is showing as fill page width on all devices
 
 ### Performance and accessibility Testing
 
@@ -388,18 +491,18 @@ No issue on desktop
 
 I used the following to validate code by direct input:
 
-- html https://validator.w3.org/
+- html <https://validator.w3.org/>
 During development of the site I ran the code through the validator and cleared up issues as I came across them.
 - index.html validation. No errors
 - game.html valiation. Warning related to aria-label on canvas element. Added role=img and this resolved the warning.
 - learn-more.html validation. No errors
 - 404.html validation. No errors.
 
-- css http://jigsaw.w3.org/css-validator/
+- css <http://jigsaw.w3.org/css-validator/>
 
 No issues
 
-- jshint https://jshint.com/
+- jshint <https://jshint.com/>
 
 No issues on script and questions files. On email.js, messages about one undefined and 3 unused variables.
 I used code per emailjs. Tested if could declare variable within file but this caused issues. Noted in bugs section. Variables are used in the script in the learn-more page, to send email.
@@ -515,8 +618,7 @@ I used cooler.co to select inital colours. During development I changed colors u
   - [tutorialspoint.com](https://www.tutorialspoint.com/)
   - [bost.ocks.org](https://bost.ocks.org/mike/shuffle/)
 - I followed the code institute lesson on email js when implementing the email functions
-- code for email validation was found on (https://www.w3resource.com/javascript/form/email-validation.php)
+- code for email validation was found on <https://www.w3resource.com/javascript/form/email-validation.php)>
 - code on how to set focus to nextq button on modal, found on stackoverflow
 
 ### Acknowledgements
-
