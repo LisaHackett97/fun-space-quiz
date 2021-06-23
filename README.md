@@ -345,9 +345,12 @@ Each feature on each page is tested, with an expectation and a result of testing
 
 ##### Feature: Success Modal
 
-- Expected: Will open over game when 5 questions are answered correctly. Will display a message to the user and gives user threeo options. Play again: when clicked will start a new game. Learn more: brings ser to the learn more page and See your journey: closed modal and allows user to view game images on display area Clicking outside the modal content closes modal.
+- Expected: Will open over game when 5 questions are answered correctly. Will display a message to the user and gives user three options. Play again: when clicked will start a new game. Learn more: brings user to the learn more page and See your journey: closed modal and allows user to view game images on display area Clicking outside the modal content closes modal.
 - Testing: Click 5 correct answers. Check modal displays, Click all 3 options to check they bring user to expected area. click outside modal to close.
 - Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
+My mentor suggested that after clicking on the see your journey button, user should not see the question area. It could be confusing user experience as they may think a new game has started.
+
+I updated the javascript to hide the question area and new question button when see your journey is clicked. I add event listeneers to the new Game button on the game page to unhide question area. Retested by walking through the same clicks. ie click See your journey, and it hides the questions, then click new game, new game set up and questions are now visible
 
 #### Learn More-Page
 
@@ -453,6 +456,8 @@ I tried to use a switch case for the draw function, as suggested by my mentor. T
 - When I set up reset btns, (to start game over), d-hide modal triggers and opens the modal but if the user answerd incorrctly, the next question button wasn't working.I needed on click to be added to button with id of wrgAnsFocus.
 
 - I needed media queries for fig captions and carousel indictors on xs smal screens, also hide h1 heading on small screens and change layout of carousel when heading was hidden.
+
+- I had used a critical css file generator to try and enhnace css loading
 
 [Back to table of contents](#table-of-contents)
 
@@ -674,7 +679,7 @@ I referred to the following to add to my knowledge and for help.
 - Slack Community - I searched for a topic and usually someone else had the same question. This has been a great help in developing my understanding.
 - Stackoverflow.com: Helped with finding a solution to set focus on next question button on modal
 - Help with implementing code for sticky footer [css-tricks](https://css-tricks.com/couple-takes-sticky-footer/)
-- Thank you to my mentor Adegbenga Adeye, especially for guidance on layout and items such as clearng form and focusing on game once that button was clicked
+- Thank you to my mentor Adegbenga Adeye, especially for guidance on layout and items such as clearing form, and focusing on game area image once the See your journey button was clicked.
 
 [Back to table of contents](#table-of-contents)
 

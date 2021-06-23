@@ -54,7 +54,7 @@
       <!-- end of game row -->
 
       <div class="row">
-        <div class="question-area col-md-12">
+        <div class="question-area col-md-12" id="quizArea">
           <!-- div for current question -->
           <div id="question">Question</div>
           <!-- div to display 4 possible answers -->
@@ -132,7 +132,7 @@
         <div class="col-12 text-center">
           <p class="questionScores">You need 5 to get back to Earth. <br> You have: <span id="score">0</span></p>
         </div>
-        <button class="btn col-4 offset-4 resetBtn" type="button">New Game</button>
+        <button class="btn col-4 offset-4 resetBtn" id="displayNewGame" type="button">New Game</button>
 
         <!-- This is pop up when 5 questions answered and user reaches Earth/end of quiz -->
         <!-- Modal code structure taken from bootstrap docs-->
@@ -147,7 +147,7 @@
                 <br> Click below if you want to play again
               </div>
               <div class="modal-footer" id="modalFooterSuccess">
-                <button type="button" class="btn gameModal col-3 mr-auto" data-dismiss="modal">See your journey</button>
+                <button type="button" class="btn gameModal col-3 mr-auto" data-dismiss="modal" id="journey">See your journey</button>
                 <button type="button" class="btn gameModal col-3 mr-auto" data-dismiss="modal"
                   onClick="parent.location='learn-more.html'">
                   Learn more!</button>

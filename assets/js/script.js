@@ -14,6 +14,8 @@ let q;
 let currentQuestion = 0;
 let canvas = document.getElementById('gamecanvas');
 let ctx = canvas.getContext('2d');
+let hideQuestions = document.getElementById("quizArea");
+let hideNewQuestionBtn = document.getElementById("nextQ");
 
 /* 
 adding event listener to next q button, to iterate current q number and show next Q
@@ -25,6 +27,11 @@ document.getElementById("wrgAnsFocus").addEventListener("click", nextQ);
 document.getElementById("wrgAnsFocus").addEventListener("key", nextQ);
 document.getElementById("qfocus").addEventListener("click", nextQ);
 document.getElementById("qfocus").addEventListener("key", nextQ);
+// this event listener is to unhide question area when user clicks new game, after they had viewed"journey"
+document.getElementById("displayNewGame").addEventListener("click", unhideQuestionArea);
+
+
+
 
 //onload, run game function
 document.addEventListener("DOMContentLoaded", function () {
@@ -45,6 +52,10 @@ function runGame() {
   shuffleQuestion();
   showQuestion();
 }
+document.getElementById("journey").addEventListener("click", displayGameImg);
+
+
+ 
 
 // show a question 
 function showQuestion() {
@@ -210,3 +221,20 @@ function scoreCheckDraw() {
     drawQuestion5();
   }
 }
+
+// When user clicks on Display your journey on success modal, game image displayed and question area hidden
+function displayGameImg () {   
+  hideQuestions.style.display = 'none';
+  hideNewQuestionBtn.style.display = 'none';
+  }
+
+
+  
+  // This function will unhide question area when user clicks new game
+  function unhideQuestionArea (){   
+    hideQuestions.style.display = 'block';
+    hideNewQuestionBtn.style.display = 'block';
+  }
+
+
+  
