@@ -1,6 +1,6 @@
-# [Fun Space Game](https://lisahackett97.github.io/fun-space-quiz//?target="_blank">)
+# [Fun Space Game](https://lisahackett97.github.io/fun-space-quiz/?target="_blank")
 
-![Site-Mockup](readme-assets/mock-up.PNG)
+![Site-Mockup](readme-assets/mock-up.png)
 
 This is a fun interactive site for kids to learn about space while playing a simple “travel through space game”. User can also view interesting Space related images and facts and send in their own facts or ask questions.
 Primary goal of the site is to encourage kids to have fun while learning about space and solar system in a fun, interactive way.
@@ -180,6 +180,8 @@ Contains the following:-
 - Link back to the landing page
 - Background image with animations to slide in the text.
 
+## favicon added to site for personalisation
+
 ### Future Features
 
 - Function to limit the number of re-tries of a question, and run a game over function.
@@ -245,7 +247,22 @@ Once development finished
 
 #### As a prospective user, I want to
 
+
+- Play the game to reach the moon and other planets.
+- View questions and answers about space/planets to learn more.
+- Be able to see my score for the game.
+- View images of planets and space.
+- Be able to view the site on mobile/desktop/tablet.
+- Be able to access all pages and navigate without confusion, without too many clicks.
+- Submit questions.
+- Learn more about space.
+
 #### As site owner I want to
+
+- To provide a fun, interactive site that is easy to navigate, and can be viewed on different screen sizes.
+- The user to enjoy playing the game.
+- Give some interesting facts and information on the subject.
+- Provide form for users to ask a question or tell us what they know.
 
 [Back to table of contents](#table-of-contents)
 
@@ -324,7 +341,47 @@ Reviewed again and decided to change width on carousel items all screen sizes, a
 
 #### Accessibility
 
+- WAVE extension for further accessibility testing.
+  - Contrast Checker I used the wave extension to check contrast. This led to the main colors chosen being changed. Final colours are not causing any contrast errors.
+  - Landing Page:
+    - No Errors. Two alerts.
+      - One alert is that there is no H1 heading. This was a decision on this landing page. images and links are provided to all areas of the site.
+      - Second alert says 'No page regions or ARIA Landmarks found". Added role=main to the container and this alert cleared.
+  
+  - Game page:
+    - Three errors, 1 alerts.
+      - The three errors were due to the html page containing empty buttons to trigger modals. With havscript functions/events, this buttons are no longer required. Removed all 3, and retested functions. No issues
+      - Warning on the p element, as it looks liek a header due to conciseness and size. This is not a header, it is to give text instructions to user to alert them to number of questions to be answered.
+
+
+  - learn-more page:
+    - Two errors, 0 alerts.
+      - The two errors are rsulting from having empty buttons. These were the modal trigger buttons. Removed both buttons and retested. No issues, these weren't required for the modals to work. javascript function for sending email included and calls the relevant modal.
+
+[These are the final WAVE reports](readme-assets/WAVE-reports.pdf)
+
+
 ### Code Validation
+
+I used the following to validate code by direct input:
+
+- html https://validator.w3.org/
+During development of the site I ran the code through the validator and cleared up issues as I came across them.
+- index.html validation. No errors
+- game.html valiation. Warning related to aria-label on canvas element. Added role=img and this resolved the warning.
+- learn-more.html validation. No errors
+- 404.html validation. No errors.
+
+- css http://jigsaw.w3.org/css-validator/
+
+No issues
+
+- jshint https://jshint.com/
+
+No issues on script and questions files. On email.js, messages about one undefined and 3 unused variables.
+I used code per emailjs. Tested if could declare variable within file but this caused issues. Noted in bugs section. Variables are used in the script in the learn-more page, to send email.
+
+[These are the final validation reports](readme-assets/validation-results.pdf)
 
 [Back to table of contents](#table-of-contents)
 
