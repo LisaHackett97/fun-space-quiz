@@ -247,9 +247,11 @@ Format for manual test cases: Expected - Feature is expected to do X when the us
 
 List out each feature on each page.
 
-Feature: Landing Page:
-Expected: Page is expected to open with background image and the three features displaying:
-Result: Page opened as expected
+#### Landing Page
+
+-Feature: Landing Page:
+-Expected: Page is expected to open with background image and the three features displaying:
+-Result: Page opened as expected
 
 Feature: Play Game icon with text underneath
 Expected: Text changes colour when hovered. Click and will being user to game page
@@ -282,72 +284,92 @@ Testing: Click each link. And then using browser back button to check this doesn
 Result: Each link brings user to the expected part of the site. When on the new site area, back button on brower bring user back to the game page. On smaller screens, burger icon displays. When clicked, menu items display to left and work as expected when clicked. Active menu iem is underlined.
 
 - Feature: Heading
-- Expected: Text to display on on larger screens. Hidden on smaller screen sizes
-- Testing: Test if text hides using dev tools
-- Result: Works as expected
+  - Expected: Text to display on on larger screens. Hidden on smaller screen sizes
+  - Testing: Test if text hides using dev tools
+  - Result: Works as expected
 
 - Feature: Game play visual area
-- Expected: Open with space background, and icon of the moon in bottom left corner. For each question that is answered correctly, a rocket icon will display, with previous rocket icon greyed out. After five questions answered correctly, image of earth in top right corner
-- Testing: Answer 5 questions correctly, and check if icons display
-- Result: Images display as expected
+  - Expected: Open with space background, and icon of the moon in bottom left corner. For each question that is answered correctly, a rocket icon will display, with previous rocket icon greyed out. After five questions answered correctly, image of earth in top right corner
+  - Testing: Answer 5 questions correctly, and check if icons display
+  - Result: Images display as expected
 
 - Feature: Question and Answer area.
-- Expected: Question and 4 possible answers are displayed. User can click on one of the answers. For correct answers, correct answer modal with 2 options displays. For incorrect answers, wrong answer modal displays with three options (Retry, new question, new game). When 5 questions asnwered correctly, success modal display after confirm the question was answered correctly.
-- Testing: Click a correct answer and incorrect answer. Click 5 correct answers to check success modal displays
-- Result: Click an answer for first question. Correct answered modal displayed. Clicked an incorrect answer for next question. Wrong answer modal displays. Success modal also displays as expected after 5 correct answers.
+  - Expected: Question and 4 possible answers are displayed. User can click on one of the answers. For correct answers, correct answer modal with 2 options displays. For incorrect answers, wrong answer modal displays with three options (Retry, new question, new game). When 5 questions asnwered correctly, success modal display after confirm the question was answered correctly.
+  - Testing: Click a correct answer and incorrect answer. Click 5 correct answers to check success modal displays
+  - Result: Click an answer for first question. Correct answered modal displayed. Clicked an incorrect answer for next question. Wrong answer modal displays. Success modal also displays as expected after 5 correct answers.
 
 - Feature: New question Buttom.
-- Expected: When clicked game area will display a different question and set of answers.
-- Testing: Click new question and check a different question/answer set displays.
+  - Expected: When clicked game area will display a different question and set of answers.
+  - Testing: Click new question and check a different question/answer set displays.
             Keep clicking button until get to end of array and message appears
-- Result: Works as expected. Clicked through the current set and no more questions alert displays
-
-- Feature:
-- Expected:
-- Testing:
-- Result:
+  - Result: Works as expected. Clicked through the current set and no more questions alert displays
 
 - Feature: New game button.
-- Expected: When clicked, score resets to 0 and a different question and set of answers is displayed.
-- Testing: Click new question and check a different question/answer set displays. Function will keep shuffling questions and displaying a different set from the quiz array. Click this button more than the number of questions in the array to check no error
-- Result: Works as expected. Quiz data currenlty has 17 question. Clicked button 30 times and different questions kept appearing. No error message
+  - Expected: When clicked, score resets to 0 and a different question and set of answers is displayed.
+  - Testing: Click new question and check a different question/answer set displays. Function will keep shuffling questions and displaying a different set from the quiz array. Click this button more than the number of questions in the array to check no error
+  - Result: Works as expected. Quiz data currenlty has 17 question. Clicked button 30 times and different questions kept appearing. No error message
 
 - Feature: Score Area: text with number of questions user has answered correctly in current game displayed
-- Expected: You have : X section will start at 0 and iterate to 5 for questions answered correctly
-- Testing: Start a new game, answer 5 questions correctly. Check score increments each time.
-- Result: Working as expected. Score does not go back 5 and starts at 0.
+  - Expected: You have : X section will start at 0 and iterate to 5 for questions answered correctly
+  - Testing: Start a new game, answer 5 questions correctly. Check score increments each time.
+  - Result: Working as expected. Score does not go back 5 and starts at 0.
 
 - Feature: Footer with one external link
-- Expected: Link will change color on hove and when clicked will open in new tab.
-- Testing: Hover over link, click you-tube icon to open in new tab
-- Result:Working as expected.
+  - Expected: Link will change color on hove and when clicked will open in new tab.
+  - Testing: Hover over link, click you-tube icon to open in new tab
+  - Result:Working as expected.
 
 - Feature: Correct Answer Modal
-- Expected: Will open over game when question answered correctly. will display  a message tellng user answer was right and gives user two options. New game: when clicked will start a new game. Next question: closes modal and display a new question in game. Clicking outside the modal content closes modal.
-- Testing: Click on a correct answer. Click new game to start a new game. Click next question to check new question has displayed. click outside modal to close.
-- Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
+  - Expected: Will open over game when question answered correctly. will display  a message tellng user answer was right and gives user two options. New game: when clicked will start a new game. Next question: closes modal and display a new question in game. Clicking outside the modal content closes modal.
+  - Testing: Click on a correct answer. Click new game to start a new game. Click next question to check new question has displayed. click outside modal to close.
+  - Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
 
 - Feature: Incorrect Answer Modal
-- Expected: Will open over game when question answered incorrectly. Modal will display a message tellng user answer was right and gives user three options. New game: when clicked will start a new game. Next question: closes modal and display a new question in game. Retry option: closed modal displaying same question which user can try answer again/ Clicking outside the modal content closes modal. Game currently doesn't limit retries so user can keep clicking until they get the question right, for younger kids this will help them learn somethng where they might a question difficult.
-- Testing: Click on a incorrect answer. Click new game to start a new game. Click next question to check new question has displayed. Click retry to answer same question again. click outside modal to close. User can retry question until they get it correct: Answer 3 incorrect, click 4th answer to get correct
-- Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
+  - Expected: Will open over game when question answered incorrectly. Modal will display a message tellng user answer was right and gives user three options. New game: when clicked will start a new game. Next question: closes modal and display a new question in game. Retry option: closed modal displaying same question which user can try answer again/ Clicking outside the modal content closes modal. Game currently doesn't limit retries so user can keep clicking until they get the question right, for younger kids this will help them learn somethng where they might a question difficult.
+  - Testing: Click on a incorrect answer. Click new game to start a new game. Click next question to check new question has displayed. Click retry to answer same question again. click outside modal to close. User can retry question until they get it correct: Answer 3 incorrect, click 4th answer to get correct
+  - Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
 
 - Feature: Success Modal
-- Expected: Will open over game when 5 questions are answered correctly. Will display a message to the user and gives user threeo options. Play again: when clicked will start a new game. Learn more: brings ser to the learn more page and See your journey: closed modal and allows user to view game images on display area Clicking outside the modal content closes modal.
-- Testing: Click 5 correct answers. Check modal displays, Click all 3 options to check they bring user to expected area. click outside modal to close.
-- Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
+  - Expected: Will open over game when 5 questions are answered correctly. Will display a message to the user and gives user threeo options. Play again: when clicked will start a new game. Learn more: brings ser to the learn more page and See your journey: closed modal and allows user to view game images on display area Clicking outside the modal content closes modal.
+  - Testing: Click 5 correct answers. Check modal displays, Click all 3 options to check they bring user to expected area. click outside modal to close.
+  - Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
 
-- Feature:
-- Expected:
-- Testing:
-- Result:
+#### Learn More Page
 
+- Feature: Learn More Page
+  - Expected: Page opens and displays nav bar to top, then heading (on large screens), displays carousel with images and text underneath, contact form and footer with link to you-tube.
+  - Result: Page opened and displayed as expected
 
-- Feature:
-- Expected:
-- Testing:
-- Result:
+- Feature: Nav Bar
+  - Expected: Links which bring user to Home (landing Page), active page - Carousel with text detail (Learn about Space), contact form (Ask us anything) and go to game area (Play Game).
+          Each link brings user to expected area per the name on the menu. Navbar collapses on smaller screens, and will display details when clicked.
+  - Testing: Click each link. And then using browser back button to check this doesn't cause an issue. Test on large and small screens. Burger icon to be clicked on small screens. Lear about space item on menu should be underlined to highlight the active page.
+  - Result: Each link brings user to the expected part of the site. When on the new site area, back button on brower bring user back to the game page. On smaller screens, burger icon displays. When clicked, menu items display to left and work as expected when clicked. Active menu iem is underlined.
 
+- Feature: Heading
+  - Expected: Text to display on on larger screens. Hidden on smaller screen sizes
+  - Testing: Test if text hides using dev tools
+  - Result: Works as expected
+  
+  - Feature: Gallery Carousel
+  - Expected: Images are visible on all screens. Text is displayed under the image. User can use left and right controls to scroll through the images. User can also click on the indicators under the text to select different items to view. Indicators are hidden on smaller screens.
+  - Testing: View images and check there is related text beneath. Click through all images using left and right controls. Click thorugh all images using indicators on larger screens.
+  - Result: Works as expected. I clicked through each image/text using the left control, the the right then the indictors. No issues.
+
+- Feature: Contact form
+  - Expected: User has to update name and email (required fields) and can add text for the message. Validation messages should display for user if name field is empty or email is invlaid, ie missing an @ sign. A pop up message is shown when email successfully sent
+  - Testing: Fill out correct name and valid email address, press send. Fill out correct name and incorrect format of email. Attempt to send mail. Leave name blank, update correct formatted email address and press send.
+  - Result: 
+    - When name field is updated and valid format email address included, press send form. A pop up modal is displayed, confirming email sent and giving user options to close modal or to go to the game. Go to game button beings user to the game page. Close button closes the modal.
+      - Two issues: 1. Text on modal and on button is inconsistent. Button says 'send form', modal says 'email sent'. Resolution is to change text on button to 'Send Email'.
+                2. Form should clear when user closes modal
+    - When a name is entered, and invalid email address (email without the @ sign), user presses send button and gets two message that the email format is invalid.
+    - When name is left blank and correct email format is used, a message will be shown on the name field. Indicates user is required to fill field out before email will send
+
+- Feature: Footer with one external link
+  - Expected: Link will change color on hove and when clicked will open in new tab.
+  - Testing: Hover over link, click you-tube icon to open in new tab
+  - Result: Working as expected.
 
 ### Compatibility Testing
 
