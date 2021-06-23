@@ -5,9 +5,10 @@
 * Browsers: last 4 version
 */
 
+/* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
 
-
+/* main colours used on site */
 :root {
   --main-text-color: #292F36;
   --heading-color: #f38d6d;
@@ -20,15 +21,12 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-
 }
-
 
 /* set height to 100% in order to apply styles for stick footer on game pg */
 html,
 body {
   height: 100%;
-
 }
 
 /* main styling */
@@ -47,9 +45,7 @@ h1 {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-
 }
-
 
 /* landing page */
 
@@ -74,7 +70,6 @@ div.scaled {
   background-size: contain;
   padding: 20px;
   margin: 20px;
-
 }
 
 /* background image for link to game*/
@@ -85,7 +80,6 @@ div.scaled {
   background-size: contain;
   padding: 20px;
   margin: 20px;
-
 }
 
 /* to set height of options for user on landing page*/
@@ -97,8 +91,6 @@ div.scaled {
   height: 15vh;
   padding: 20px;
   margin: 20px;
-
-
 }
 
 /* styling of text on landing page */
@@ -111,7 +103,6 @@ div.scaled {
 a:hover .start-pg,
 a:focus .start-pg {
   color: var(--heading-color);
-
 }
 
 /*-- remove underline when over over anchor elements on landing page --*/
@@ -119,8 +110,6 @@ a:focus .start-pg {
 .landing-pg:focus a {
   text-decoration: none;
 }
-
-
 
 /* Styling the Instructions modal */
 #instructions {
@@ -138,11 +127,11 @@ a:focus .start-pg {
 }
 
 #instructionModal {
-  padding:0;
+  padding: 0;
   width: 85%;
   margin-left: 15px;
-
 }
+
 /* set text style on list items on instruction modal */
 .modal-body li {
   font-size: 14px;
@@ -160,14 +149,13 @@ a:focus .start-pg {
   background-color: var(--decoration3);
 }
 
-#modalFooterSuccess button{
+#modalFooterSuccess button {
   height: 70px;
 }
 
 #wrongAnsModalFooter button {
   height: 65px;
-  /* width: 100%; */
- padding-right: 15px;
+  padding-right: 15px;
 }
 
 .modal-content {
@@ -188,11 +176,9 @@ a:focus .start-pg {
   font-weight: 400;
   border: 2px solid #395c6b;
   background-color: var(--decoration1);
-
 }
 
 /* hover code for all modal footer btns across the site */
-
 .modal-footer .btn:hover {
   color: var(--main-text-color);
   background-color: var(--decoration1);
@@ -201,6 +187,7 @@ a:focus .start-pg {
   border-radius: 20%;
 }
 
+/* to change colours on icons on modals */
 .fa-heart-broken,
 .fa-thumbs-up,
 .fa-smile-beam {
@@ -213,8 +200,6 @@ header {
   background-color: var(--heading-color);
   line-height: .8;
 }
-
-
 
 /*-- Style nav position nav links for smaller screens, collapsed menu--*/
 .nav-link {
@@ -238,7 +223,6 @@ header {
 /* add spacing above Main container, so that there is visible space with navbar */
 #main-section {
   margin-top: 75px;
-
 }
 
 /*--styling of burger icon for smaller screens--*/
@@ -254,7 +238,6 @@ header {
 .navbar-collapse {
   padding: 10px;
   background-color: var(--heading-color);
-
 }
 
 /* Credit: solution to my issue with navbar and content z-indez was found on https://forum.freecodecamp.org/t/why-is-my-navbar-behind-other-content/62059 */
@@ -266,17 +249,19 @@ header {
 
 /*--
 set background colour for full page 
-Use root element and then color picker to get a lighter shade --*/
+Use root element and then color picker to get a lighter shade 
+--*/
 #learn {
   background-color: #b61d2709
 }
 
 /*-- carousel styling --*/
-/* margin-left of 10% required to align items and override effect of the b/s class */
+
+/* width and padding needed so images and carousel controls are aligned */
 .carousel-item {
   width: 98%;
   padding-left: 34px;
-  padding-right: 34px; 
+  padding-right: 34px;
 }
 
 /* 
@@ -289,24 +274,24 @@ img.scaled {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  }
+}
 
-/* styling figure/image elements with scaled class to align and scale on all devices 
-100% width needed on both image ande figure
+/* 
+styling figure/image elements with scaled class to align and scale on all devices 
+100% width needed on both image and figure
 margin needed on figure to keep image in alignment with carousel controls
 */
 figure.scaled {
   width: 100%;
- text-align: center;
+  text-align: center;
 }
 
-/* need to fix height or elemnt changes sizes with content, form them moves around pg */
+/* height needs to be a fixed value or the element changes sizes with content, form then moves around pg */
 figcaption {
   margin-bottom: 15px;
   padding-top: 10px;
   height: 140px;
 }
-
 
 /* styling carousel controls to align with imgs */
 .carousel-control-next,
@@ -315,10 +300,10 @@ figcaption {
   height: 50vh;
   background-color: var(--decoration1);
   margin-right: 15px;
-  
 }
+
 .carousel-control-prev-icon,
-.carousel-control-next-icon{
+.carousel-control-next-icon {
   background-color: #a18c04;
   border-radius: 50%;
 }
@@ -338,7 +323,6 @@ ol.carousel-indicators li.active {
   margin: 5px;
   border: 0;
   border-radius: 20%;
-
 }
 
 ol.carousel-indicators li.active {
@@ -406,7 +390,6 @@ textarea {
 /*-- set font size for placeholder text on form --*/
 input {
   font-size: 16px;
-
 }
 
 /*stylng of button on form--*/
@@ -421,8 +404,10 @@ input {
 
 /*--End of form Section--*/
 
-/*-- code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
-wrapper and footer classes --*/
+/*-- 
+credit code for sticky footer https://css-tricks.com/couple-takes-sticky-footer/
+wrapper and footer classes 
+--*/
 .wrapper {
   min-height: 100%;
   margin-bottom: -105px;
@@ -433,7 +418,6 @@ wrapper and footer classes --*/
   height: 68px;
   margin-top: 50px;
 }
-
 
 footer {
   color: #395c6b;
@@ -491,7 +475,7 @@ canvas {
   margin-top: 5px;
   text-align: center;
   font-weight: 600;
-  height:50px;
+  height: 50px;
 }
 
 .questionScores {
@@ -499,7 +483,6 @@ canvas {
   font-weight: 800;
   font-style: italic;
   padding-left: 10px;
-
 }
 
 /* style answer buttons */
@@ -547,16 +530,17 @@ canvas {
   background: url("../images/404-bg-pg.jpg") no-repeat center center fixed;
   background-size: cover;
 }
-#Error404Page p{
+
+#Error404Page p {
   font-weight: 600;
 }
+
 #Error404Page h2,
 #Error404Page p {
-  color:#fffbfd;
+  color: #fffbfd;
   padding: 15px;
   margin: 50px;
 }
-
 
 #Error404Page a {
   color: var(--decoration1);
@@ -569,10 +553,9 @@ canvas {
 
 #Error404Page h3 {
   color: var(--decoration1);
-
 }
 
-/* Medaa Queries */
+/* Media Queries */
 
 /*-- 
 media query to adjust height of figcaption, so no overflow with indicators. 
@@ -581,14 +564,14 @@ H1 hidden on sm screens affecting layout and for layout of footer
 @media screen and (max-width: 992px) {
   figcaption {
     height: 150px;
-      }
- 
+  }
 
   footer p {
     font-size: 14px;
     padding-top: 10px;
     margin-bottom: 5px;
   }
+
   .social-links {
     padding-top: 5px;
   }
@@ -597,38 +580,35 @@ H1 hidden on sm screens affecting layout and for layout of footer
 /* Media query applies to small and x-samll screens. Change display of carousel when H1 is hidden*/
 @media screen and (max-width: 768px) {
 
-/* to give carousel section more spacing under navbar when heading is hidden */
-.carousel-inner {
-  margin-top: 10px;
-}
-
-/* little more pading is needed so image and control are not overlapping on smaller screens */
-.carousel-item {
-  /* padding-right: 28px; */
-  /* margin: 0; */
-  width: 100%;
+  /* to give carousel section more spacing under navbar when heading is hidden */
+  .carousel-inner {
+    margin-top: 10px;
   }
-  .carousel-control-next{
+
+  /* little more pading is needed so image and control are not overlapping on smaller screens */
+  .carousel-item {
+    width: 100%;
+  }
+
+  .carousel-control-next {
     margin: 00;
-    width:20px;
-    padding:0;
+    width: 20px;
+    padding: 0;
   }
 
-  .carousel-control-prev{
-  width:20px;
-  margin: 0;
-  padding:0;
+  .carousel-control-prev {
+    width: 20px;
+    margin: 0;
+    padding: 0;
   }
 
   /* Adjust caption under images on learn-more page, for size and spacing */
-figcaption {
-  font-size: 17px;
-  padding-left: 15px;
-  padding-right: 15px;
- height: 200px;
-}
-
-
+  figcaption {
+    font-size: 17px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 200px;
+  }
 }
 
 /* media query to reduce size of question text and adjust canvas on xs screens only*/
@@ -638,20 +618,20 @@ figcaption {
   .answerButton,
   .questionScores {
     font-size: 15px;
-    
   }
 
-  #modalHeadContent{
+  #modalHeadContent {
     font-size: 15px;
   }
-  /* height on answer div and buttons needs to be set on small screens or elements move on page content changes */
-.answerButton{
- height: 48px;
- padding-bottom: 15px;
-  font-size:  14px;
 
-}
-  #answers{
+  /* height on answer div and buttons needs to be set on small screens or elements move on page content changes */
+  .answerButton {
+    height: 48px;
+    padding-bottom: 15px;
+    font-size: 14px;
+  }
+
+  #answers {
     height: 210px;
     padding-top: 10px;
     margin-bottom: 10px;
@@ -666,17 +646,15 @@ figcaption {
     width: 400px;
     height: 200px;
   }
- 
+
   /* Hide the indicators on xs small screens */
   ol.carousel-indicators {
-   display:none
+    display: none
   }
-
 }
 
 /* media query to increase spacing on controls area on medium and above screens */
 @media screen and (min-width: 768px) {
-
   #answers {
     margin-top: 20px;
   }

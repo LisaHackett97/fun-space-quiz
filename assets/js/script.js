@@ -26,6 +26,7 @@ document.getElementById("wrgAnsFocus").addEventListener("key", nextQ);
 document.getElementById("qfocus").addEventListener("click", nextQ);
 document.getElementById("qfocus").addEventListener("key", nextQ);
 
+//onload, run game function
 document.addEventListener("DOMContentLoaded", function () {
   runGame();
 });
@@ -87,7 +88,6 @@ function nextQ() {
   currentQuestion++;
   showQuestion();
   scoreCheckDraw();
-
 }
 
 // when buttons within the div #answers clicked , set chosenAnswer to text of the button and run check fn

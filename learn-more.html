@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- critical css file path -->
-      <!-- criticalCss  https://jonassebastianohlsson.com/criticalpathcssgenerator/ -->
-   <style> @import
+    <!-- criticalCss  https://jonassebastianohlsson.com/criticalpathcssgenerator/ -->
+    <style> @import
     url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');:root{--main-text-color:
     #292F36;--heading-color: #f38d6d;--decoration1: #FFE66D;--decoration2: #2B2C5A;--decoration3:
     #45cfcf}*{margin:0;padding:0;scroll-behavior:smooth}html,body{height:100%}div,p{color:var(--main-text-color);font-family:'Poppins',sans-serif;font-size:20px}#landing{background:url("../images/landing-stars.jpg")
@@ -25,8 +25,6 @@
     #395c6b;background-color:var(--decoration1)}@media screen and (max-width:576px){#modalHeadContent{font-size:15px}}</style>
 
     <title>Fun Space Quiz</title>
-
-    
     <!-- files for favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
@@ -35,7 +33,6 @@
 <body id="learn">
     <header class="container-fluid fixed-top">
         <nav class="navbar navbar-expand-lg">
-
             <!-- offset collapse button to appear on right side of screen -->
             <button class="navbar-toggler col-2 offset-10" type="button" data-toggle="collapse"
                 data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -55,23 +52,19 @@
         </nav>
     </header>
 
-
     <div class="container" id="main-section">
-
         <h1 class="col-12 d-none d-md-block">Want to know more?</h1>
         <!-- code taken from bootstrap docs for carousel
              modified with figure and figcaption tags
              to show text aligned below imgs -->
         <div class="row justify-content-center g-0">
             <div class="col-lg-10 carouselColumn">
-
                 <div id="carouselCaptions" class="carousel">
                     <div class="carousel-inner">
-
+                        <!-- carousel images enclosed within figure elements, and contain a fagcaption for each image-->
                         <div class="carousel-item active">
                             <figure class="scaled">
                                 <img src="assets/images/carousel-earth.jpg" class="scaled" alt="the-earth-from-space">
-
                                 <figcaption>Did you know there are 2 asteroids (in addition to the moon) locked into
                                     co-orbital orbits with Earth? They’re called 3753 Cruithne and 2002 AA29.
                                 </figcaption>
@@ -81,7 +74,6 @@
                             <figure class="scaled">
                                 <img src="assets/images/carousel-diamonds.jpg" class="scaled"
                                     alt="img of diamonds, for fact relating to diamond rain in space">
-
                                 <figcaption>Lightning storms on Jupiter and Saturn turn methane into carbon soot,
                                     that falls and hardens into chunks of graphite and then diamonds.
                                     So it rains diamonds on Saturn and Jupiter!.
@@ -91,7 +83,6 @@
                         <div class="carousel-item">
                             <figure class="scaled">
                                 <img src="assets/images/carousel-the-sun.jpg" class="scaled" alt="the-sun">
-
                                 <figcaption>Our sun is over 300,000 times bigger than the Earth. <br>Our sun is
                                     thought to be an
                                     average-sized star and yet one million Earths could fit inside the sun.
@@ -102,7 +93,6 @@
                             <figure class="scaled">
                                 <img src="assets/images/carousel-asteroid-dino.jpg" class="scaled"
                                     alt="asteroid-and-dinosaur">
-
                                 <figcaption>Every few thousand years, an asteroid will actually crash into our
                                     world. <br>
                                     This happened about 65 million years and contributed to the dinosaurs becoming
@@ -113,7 +103,6 @@
                         <div class="carousel-item">
                             <figure class="scaled">
                                 <img src="assets/images/carousel-mars.jpg" class="scaled" alt="the-planet-mars">
-
                                 <figcaption>Mars is home to the tallest mountain in the solar system.
                                     Olympus Mons, a shield volcano, is 21km high and 600km in diameter.
                                 </figcaption>
@@ -185,7 +174,9 @@
                             </figure>
                         </div>
                     </div>
+                    <!-- end of carousel-inner div-->
 
+                    <!-- carousel controls on either side of images. Gives user control-->
                     <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
@@ -194,6 +185,7 @@
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                    <!-- these are the indicators below carousel, which slide acrss and active one is highlighted-->
                     <ol class="carousel-indicators">
                         <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselCaptions" data-slide-to="1"></li>
@@ -208,11 +200,11 @@
                         <li data-target="#carouselCaptions" data-slide-to="10"></li>
                     </ol>
                 </div>
+                <!--end of carouselCaptions div-->
             </div>
+            <!--end of carousel columns-->
         </div>
         <!-- end of carousel row -->
-        <!-- </div> -->
-        <!-- end of carousel container -->
 
         <!--contact form-->
         <div class="container contactSection" id="ask-question">
@@ -223,18 +215,15 @@
                         <legend>
                             Ask us anything:
                         </legend>
-
                         <!--required details section on form-->
                         <label for="name" class="details-labels">Name</label>
                         <input type="text" name="name" id="name" required placeholder="Name">
                         <br>
                         <label for="email" class="details-labels">Your email</label>
                         <input type="email" name="email" id="email" required placeholder="email address">
-                        <br>
                         <!-- spacing before text area -->
-
-
-                        <!--text are for user to add more information. Closing textarea tag needs to be on same code line so placeholder text shows-->
+                        <br>
+                        <!--text area for user to add more information. Closing textarea tag needs to be on same code line so placeholder text shows-->
                         <textarea name="message" placeholder="Send us your question or tell us what you know!!"
                             aria-label="textarea for additional information"></textarea>
                         <button class="btn form-button" type="submit" id="form-button"
@@ -245,49 +234,53 @@
             </div>
             <!--end of row for contact form-->
 
-
-        <!-- This is pop up when an email is sent successfully -->
-        <!-- Modal code structure taken from bootstrap docs-->
-        <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="modalSendMail"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body" id="modalSendMail">
-                        Your email has been sent. <i class="fas fa-paper-plane"></i> <br> We are so excited to read and
-                        will be back in touch asap
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn" data-dismiss="modal" onClick="parent.location='game.html'">Go
-                            to Game</button>
+            <!-- This is pop up when an email is sent successfully -->
+            <!-- Modal code structure taken from bootstrap docs-->
+            <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="modalSendMail"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="modalSendMail">
+                            Your email has been sent. <i class="fas fa-paper-plane"></i> <br> We are so excited to read
+                            your message and
+                            will be back in touch asap
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn" data-dismiss="modal"
+                                onClick="parent.location='game.html'">Go
+                                to Game</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!--end of main section container-->
+        <!-- Footer with one link to external site -->
+        </Footer>
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!--you-tube link-->
+                    <div class="col-md-8 offset-md-2 text-center social-links">
+                        <p>Want to see some cool videos? Check out our YouTube channel
+                        </p>
+                        <a href="https://www.youtube.com" target="_blank" rel="noopener"><i
+                                class="fab fa-youtube"></i><span class="sr-only">(you-tube link)</span></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
     </div>
     <!--end of main section container-->
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row align-items-center">
-                <!--you-tube link-->
-                <div class="col-md-8 offset-md-2 text-center social-links">
-                    <p>Want to see some cool videos? Check out our YouTube channel
-                    </p>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i><span
-                            class="sr-only">(you-tube link)</span></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <!-- scripts, email for emailjs and link to main css sheet-->
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
@@ -300,8 +293,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script src="assets/js/email.js"></script>
-
-
 </body>
 
 </html>

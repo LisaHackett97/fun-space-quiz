@@ -40,7 +40,7 @@ Primary goal of the site is to encourage kids to have fun while learning about s
 
 As a prospective user, I want to
 
-- Play the game to reach the moon and other planets.
+- Play the game to travel through space.
 - View questions and answers about space/planets to learn more.
 - Be able to see my score for the game.
 - View images of planets and space.
@@ -247,8 +247,7 @@ Once development finished
 
 #### As a prospective user, I want to
 
-
-- Play the game to reach the moon and other planets.
+- Play the game to travel through space.
 - View questions and answers about space/planets to learn more.
 - Be able to see my score for the game.
 - View images of planets and space.
@@ -333,7 +332,7 @@ Reviewed again and decided to change width on carousel items all screen sizes, a
 
 - If a user keeps clicking next question button without answering, they get to end of array set, and success modal pop up instead of the alert. To resolve in the showQuestion function, add a confirm msg.
 
-- Footer was not filling across the full screen on learn more page after resolving issues/updating carousel for different screen sizes. I was missing a closing div for main container of the learn pg. Issue now resolved.
+- Footer was not filling across the full screen on learn more page after resolving issues/updating carousel for different screen sizes. I was missing a closing div for main container of the learn pg. Issue was showing resolved but has reverted ***TO INVESTIGAT5E FURTHER ***
 
 ### Performance and accessibility Testing
 
@@ -353,13 +352,11 @@ Reviewed again and decided to change width on carousel items all screen sizes, a
       - The three errors were due to the html page containing empty buttons to trigger modals. With havscript functions/events, this buttons are no longer required. Removed all 3, and retested functions. No issues
       - Warning on the p element, as it looks liek a header due to conciseness and size. This is not a header, it is to give text instructions to user to alert them to number of questions to be answered.
 
-
   - learn-more page:
     - Two errors, 0 alerts.
       - The two errors are rsulting from having empty buttons. These were the modal trigger buttons. Removed both buttons and retested. No issues, these weren't required for the modals to work. javascript function for sending email included and calls the relevant modal.
 
 [These are the final WAVE reports](readme-assets/WAVE-reports.pdf)
-
 
 ### Code Validation
 

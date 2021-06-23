@@ -19,19 +19,16 @@ let contactForm = document.getElementById("contact-form");
                 },
                 function (error) {
                    confirm("We're sorry, your message couldn't be sent at this time", error);
-
                 }
             );
         return false; //to block from loading a new page
     }
 
- 
-
-
-// code for email validation
-// https://www.w3resource.com/javascript/form/email-validation.php
-// only alert user if email adress is showing as invalid
-
+/* 
+credit code for email validation
+https://www.w3resource.com/javascript/form/email-validation.php
+only alert user if email adress is showing as invalid
+*/
 function ValidateEmail(inputText) {
     var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (inputText.value.match(mailformat)) {

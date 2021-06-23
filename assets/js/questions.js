@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 
+// questions and answers array for quizData
 let quizData = [{
         question: "Which is the first planet in the solar system from the sun?",
         answers: {
@@ -10,7 +11,6 @@ let quizData = [{
         },
         correctAnswer: "Mercury"
     },
-
     {
         question: "We can't see the surface of Venus from space in visible light. Why?",
         answers: {
@@ -21,7 +21,6 @@ let quizData = [{
         },
         correctAnswer: "Venus is covered with a thick layer of clouds"
     },
-
     {
         question: "The second largest moon in our solar system is a natural satellite of Saturn. What is its name?",
         answers: {
@@ -32,7 +31,6 @@ let quizData = [{
         },
         correctAnswer: "Titan "
     },
-
     {
         question: "Between which two planets is the asteroid belt found?",
         answers: {
@@ -43,7 +41,6 @@ let quizData = [{
         },
         correctAnswer: "Mars and Jupiter "
     },
-
     {
         question: "Neptune was the first planet to be found by which method?",
         answers: {
@@ -54,7 +51,6 @@ let quizData = [{
         },
         correctAnswer: "Mathematical prediction"
     },
-
     {
         question: "Which of these chemical elements is the most abundant in the sun?",
         answers: {
@@ -65,7 +61,6 @@ let quizData = [{
         },
         correctAnswer: "Hydrogen"
     },
-
     {
         question: "What is the diameter of the sun?",
         answers: {
@@ -179,9 +174,6 @@ let quizData = [{
         },
         correctAnswer: "Blue"
     }
-
-
-
 ];
 
 export default quizData;
