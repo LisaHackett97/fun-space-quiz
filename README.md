@@ -391,6 +391,22 @@ I updated the javascript to hide the question area and new question button when 
     - Issue: Duplicate invalid messages in relation to email format. Removed the validate email function. If this function is used the the type taken off the email field on the form user, will get message but email still sends. Therefore, better user experience to use the type of email on the element and remove the function. Tested and email will not send unless an amaill adress with an @ is included.
   - When name is left blank and correct email format is used, a message will be shown on the name field. Indicates user is required to fill field out before email will send. Name thenupdated and email sends as expected.
 
+#### 404-page
+
+##### Text detail
+
+Text detail to give user a message to let know something gone wrong. Some text animated to slide it to make visual more interesting and fun for user
+Tested by opening page and check can see text sliding and displaying as expected. No issues
+
+##### link to home page
+
+Expected: Click on home link and will bring user back to landing page
+Tested by clicking the link button. Worked as expected
+
+##### background image
+
+Background image displaying as expected
+
 ##### Feature: Footer with external link
 
 - Expected: Link will change color on hove and when clicked will open in new tab.
@@ -457,7 +473,9 @@ I tried to use a switch case for the draw function, as suggested by my mentor. T
 
 - I needed media queries for fig captions and carousel indictors on xs smal screens, also hide h1 heading on small screens and change layout of carousel when heading was hidden.
 
-- I had used a critical css file generator to try and enhnace css loading
+- I had used a critical css file generator to try and enhnace css loading/above the fold but this did not improve performance and was showing all scc styles loading in head element so I removed it and reverted to usual css file link
+
+- My mentor suggedted using a switch statement instead of the if else for check Score and drawing on the canvas. I was unable to get it to work and due to time constraints I reverted to using the if/else statements.
 
 [Back to table of contents](#table-of-contents)
 

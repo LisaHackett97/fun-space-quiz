@@ -27,7 +27,7 @@ let quizData = [{
             a: "Titan ",
             b: "Europa",
             c: "Rhea",
-            d: " Mimas"
+            d: "Mimas"
         },
         correctAnswer: "Titan "
     },
@@ -36,23 +36,23 @@ let quizData = [{
         answers: {
             a: "Mars and Jupiter ",
             b: "Neptune and Pluto",
-            c: " Saturn and Uranus",
-            d: " All of these"
+            c: "Saturn and Uranus",
+            d: "All of these"
         },
         correctAnswer: "Mars and Jupiter "
     },
     {
         question: "Neptune was the first planet to be found by which method?",
         answers: {
-            a: "telescope ",
-            b: "all of these",
-            c: "the naked eye",
+            a: "Telescope ",
+            b: "All of these",
+            c: "The naked eye",
             d: "Mathematical prediction"
         },
         correctAnswer: "Mathematical prediction"
     },
     {
-        question: "Which of these chemical elements is the most abundant in the sun?",
+        question: "Which of these chemical can you find the most of, in the sun?",
         answers: {
             a: "Carbon ",
             b: "Hydrogen",
@@ -76,14 +76,14 @@ let quizData = [{
         answers: {
             a: "Chantra X-ray telescope",
             b: "Hubble telescope",
-            c: "The twin Keck telescopes",
+            c: "The Twin Keck telescopes",
             d: "Mercury Telescope",
         },
-        correctAnswer: "The twin Keck telescopes"
+        correctAnswer: "The Twin Keck telescopes"
     },
     {
 
-        question: "How long did it take the Cassini-Huygens to reach Saturn?",
+        question: "How long did it take the Cassini-Huygens spacecraft to reach Saturn?",
         answers: {
             a: "Almost seven years",
             b: "Less than six year",
@@ -165,7 +165,7 @@ let quizData = [{
         correctAnswer: "Proxima Centauri"
     },
     {
-        question: "When you are on Mars, that sunset looks like which colour?",
+        question: "When you are on Mars, the sunset looks like which colour?",
         answers: {
             a: "Orange",
             b: "Purple",

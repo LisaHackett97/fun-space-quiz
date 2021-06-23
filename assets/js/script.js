@@ -30,9 +30,6 @@ document.getElementById("qfocus").addEventListener("key", nextQ);
 // this event listener is to unhide question area when user clicks new game, after they had viewed"journey"
 document.getElementById("displayNewGame").addEventListener("click", unhideQuestionArea);
 
-
-
-
 //onload, run game function
 document.addEventListener("DOMContentLoaded", function () {
   runGame();
@@ -55,7 +52,7 @@ function runGame() {
 document.getElementById("journey").addEventListener("click", displayGameImg);
 
 
- 
+
 
 // show a question 
 function showQuestion() {
@@ -223,18 +220,13 @@ function scoreCheckDraw() {
 }
 
 // When user clicks on Display your journey on success modal, game image displayed and question area hidden
-function displayGameImg () {   
+function displayGameImg() {
   hideQuestions.style.display = 'none';
   hideNewQuestionBtn.style.display = 'none';
-  }
+}
 
-
-  
-  // This function will unhide question area when user clicks new game
-  function unhideQuestionArea (){   
-    hideQuestions.style.display = 'block';
-    hideNewQuestionBtn.style.display = 'block';
-  }
-
-
-  
+// This function will unhide question area when user clicks new game
+function unhideQuestionArea() {
+  hideQuestions.style.display = 'block';
+  hideNewQuestionBtn.style.display = 'block';
+}
