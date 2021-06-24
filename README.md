@@ -367,7 +367,7 @@ Each feature on each page is tested, with an expectation and a result of testing
 - Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
 My mentor suggested that after clic\king on the see your journey button, user should not see the question area. It could be confusing user experience as they may think a new game has started.
 
-I updated the javascript to hide the question area and new question button when see your journey is clicked. I add event listeners to the new Game button on the game page to unhide question area. Retested by walking through the same clicks. ie click See your journey, and it hides the questions, then click new game, new game set up and questions are now visible
+I updated the javascript to hide the question area and new question button when see your journey is clicked. I add event listeners to the new Game button on the game page to unhide question area. Retested by walking through the same clicks. ie click See your journey, and it hides the questions, then click new game, new game set up and questions are now visible. Final change was to make the page scroll to top when the questions are hidden, giving focus to the visual game area.
 
 #### Learn More-Page
 

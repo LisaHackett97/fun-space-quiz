@@ -13,7 +13,7 @@ let chosenAnswer;
 let q;
 let currentQuestion = 0;
 let canvas = document.getElementById('gamecanvas');
-let ctx = canvas.getContext('2d');
+let ctx = canvas.getContext('2d');gamecanvas
 let hideQuestions = document.getElementById("quizArea");
 let hideNewQuestionBtn = document.getElementById("nextQ");
 
@@ -223,6 +223,8 @@ function scoreCheckDraw() {
 function displayGameImg() {
   hideQuestions.style.display = 'none';
   hideNewQuestionBtn.style.display = 'none';
+  $('html,body').scrollTop(0);
+ 
 }
 
 // This function will unhide question area when user clicks new game
