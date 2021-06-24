@@ -112,7 +112,7 @@ I planned to use landing page full background image, with buttons over-laid, an 
 There will also be a success image for when user finishes the game and a number of images for the learn more carousel.
 
 - I decided not to use an image when user finishes the game, as the success pop up modal, worked better. Modal button gives users 3 options: play again,
-see the final game image, or naivigate to the learn-more page.
+see the final game image, or navigate to the learn-more page.
 
 [Back to table of contents](#table-of-contents)
 
@@ -129,7 +129,7 @@ Contains the following:
 - Space/stars background image
 - Button to select game play
 - Button to go to learn more page
-- Button for instructionswhich is a pop up.
+- Button for instructions which is a pop up.
 - Inside the inctruction modal pop-up, the user then had to option to click to go to the game, or close the pop-up
 
 ### Navigation Menu
@@ -160,7 +160,7 @@ Contains the following:
   - Correct answer: options for new game and next question.
   - Wrong Answer: options for retry the question, new game and new question.
   - Success: options to close modal and see the final game image, new game and learn more, which brings user to learn more page.
-- Footer, containg a link to you-tube.
+- Footer, containing a link to you-tube.
 
 ### Learn More Page
 
@@ -170,7 +170,7 @@ Contains the following:
 - Want to know more heading: This is hidden on smaller screen
 - Gallery Carousel, which contain images and related information.
 - Contact form, where the user can ask a question or send a fact/other information they want to share.
-- Footer, containg a link to you-tube.
+- Footer, containing a link to you-tube.
 
 ### 404 page
 
@@ -208,9 +208,9 @@ Contains the following:-
 - Unicorn revealer extension was helpful when developing the site
 - WAVE extension for reviewing accessibility and colour contrasts in testing.
 - emailjs.com
-- [Site to remove backgound on images](https://www.remove.bg/)
+- [Site to remove background on images](https://www.remove.bg/)
 - tinyjpg
-- paint tool on lao#ptop windows
+- paint tool on laptop windows
 - [Online kanban tool for plan and management of project tasks](https://lisah.kanbantool.com/login#?)
 - [techsini for mock-ups](https://techsini.com/multi-mockup/index.php)
 - Validators:
@@ -231,7 +231,7 @@ Once development finished, re-do tests
 1. Validate css, html and javascript.
 2. Lighthouse reports
 3. WAVE accessibility reports
-4. Cross browers testing
+4. Cross brower testing
 
 - Manual testing.
   - Functionality: test each feature on each page. Negative and positive cases.
@@ -261,11 +261,11 @@ Each feature on each page is tested, with an expectation and a result of testing
 
 ##### Feature: Learn More icon with text underneath
 
-- Expected:Text changes colour when hovered. Click and will being user to game page
+- Expected: Text changes colour when hovered. Click and will being user to game page
 - Testing: Hover over link (icon and text) with mouse, click on button to open.
-- Result:Text colour changes on hover. Click and game area opens
+- Result: Text colour changes on hover. Click and game area opens
 
-##### Feature:Instructions button
+##### Feature: Instructions button
 
 - Expected: Text changes colour when hovered. Click and will open up instructions modal
 - Testing: Hover over button with mouse, click on button to open.
@@ -278,9 +278,9 @@ Each feature on each page is tested, with an expectation and a result of testing
 - Result: Modal opens, displays as expected and buttons function as expected. User can click anywhere outside the modal and it will close.
 
 ##### Feature: Contact button
-- Expected: user clicks, and is brought to the contact form. Button should be located on top right of screen
+- Expected: User clicks, and is brought to the contact form. Button should be located on top right of screen
 - Testing: Click button and view form. Button was drifting to the centre on smaller screens. Adjusted padding with media query.
-- Result: works as expected
+- Result: Works as expected
 
 #### Game-Page
 
@@ -337,7 +337,7 @@ Each feature on each page is tested, with an expectation and a result of testing
 
 - Expected: Link will change color on hove and when clicked will open in new tab.
 - Testing: Hover over link, click you-tube icon to open in new tab
-- Result:Working as expected.
+- Result: Working as expected.
 
 ##### Feature: Correct Answer Modal
 
@@ -581,7 +581,7 @@ Final report: Performance is 93 on mobile and 100 on desktop. Imroved best pract
 Final report: Performance is scoring 98 on mobile and 98 on desktop
 
 These are the final lighthouse reports
-![lighthouse-reports](readme-assets/final-lighthouse-reports.pdf)
+[Click here to open](readme-assets/final-lighthouse-reports.pdf)
 
 #### Accessibility
 
@@ -603,7 +603,7 @@ These are the final lighthouse reports
     - Two errors, 0 alerts.
       - The two errors are rsulting from having empty buttons. These were the modal trigger buttons. Removed both buttons and retested. No issues, these weren't required for the modals to work. javascript function for sending email included and calls the relevant modal.
 
-[These are the final WAVE reports](readme-assets/WAVE-reports.pdf)
+[Click here are the final WAVE reports](readme-assets/WAVE-reports.pdf)
 
 ### Code Validation
 
