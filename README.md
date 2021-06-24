@@ -376,7 +376,7 @@ I updated the javascript to hide the question area and new question button when 
 
 - Expected: Images are visible on all screens. Text is displayed under the image. User can use left and right controls to scroll through the images. User can also click on the indicators under the text to select different items to view. Indicators are hidden on smaller screens.
 - Testing: View images and check there is related text beneath. Click through all images using left and right controls. Click through all images using indicators on larger screens.
-- Result: Works as expected. I clicked through each image/text using the left control, the the right then the indictors. Earth image looked stretched on larger screens, Changed the image and adjsuted width of carousel inner to 98%. Image looks ok now
+- Result: Works as expected. I clicked through each image/text using the left control, the the right then the indictors. Earth image looked stretched on larger screens, Changed the image and adjuted width of carousel inner to 98%. And felt that the hight of the imgaes needed to be reduced for medium and small screens. Rested all steps. Image looks ok now
 
 ##### Feature: Contact form
 

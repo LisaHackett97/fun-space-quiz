@@ -82,6 +82,27 @@ div.scaled {
   margin: 20px;
 }
 
+/* style contact option on landing page */
+#landingContact {
+  padding-right: 35px;
+}
+#homeContact {
+  margin-top:40px; 
+  padding-right:35px;
+}
+#homeContact a{   
+color: var(--decoration1);
+font-weight: 500;
+font-size: 12px;
+padding:10px;
+border: 2px solid var(--decoration1);
+border-radius:30%;
+}
+#homeContact a:hover {
+  color: var(--heading-color);
+}
+
+
 /* to set height of options for user on landing page*/
 .start {
   height: 30vh;
