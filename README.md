@@ -423,15 +423,17 @@ Background image displaying as expected
 
 ### Compatibility Testing
 
-- Site was manually tested on google chrome, microsoft edge and IE on windows 10. No issues.
+- Site was manually tested on google chrome and microsoft edge. No issues.
     Landing Page:
       Play Game button
       Instructions
       Instruction Modal
       Learn More link
 
-- Visual of site was also checked on other browsers using the following site [lambatest](https://www.lambdatest.com/) Browsers checked included firefox, opera, firefox and safari.
+- Visual of site was also checked on other browsers using the following site [lambatest](https://www.lambdatest.com/) Browsers checked included firefox, opera, and safari.
   - Site displaying as expected.
+
+- Recommended do not use IE10 to view site, please use Microsoft edge for best viewing experience
 
 ### User stories Testing
 
