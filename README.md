@@ -568,15 +568,20 @@ Reviewed again and decided to change width on carousel items all screen sizes, a
 #### Lighthouse testing
 
 Home Page
-Performance score was under 90. re-optimized the images, and re-ran the report for mobile
-Other scores 100
-Then desktop scores all showing as 100
+Performance score is 92 for mobile and 99 for desktop
 
 Game Page:
 Score first run for mobile. Performace score of 78. Reoptimized background image and saved as .jpg instead of .png. Slighly improved score. No issue on desktop
+Final report: Performance is scoring 93 on mobile and 99 on desktop
 
 LearnMore page: 78 score on mobile performance. reoptimized carousel-earth image but only slightly improved score
-No issue on desktop
+Final report: Performance is 93 on mobile and 100 on desktop. Imroved best practice score by changing aspect ratio on one image
+
+404 page:
+Final report: Performance is scoring 98 on mobile and 98 on desktop
+
+These are the final lighthouse reports
+![lighthouse-reports](readme-assets/final-lighthouse-reports.pdf)
 
 #### Accessibility
 
