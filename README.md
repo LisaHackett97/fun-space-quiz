@@ -184,10 +184,12 @@ Contains the following:-
 
 ### Future Features
 
-- Function to limit the number of re-tries of a question, and run a game over function.
+- Function to limit the number of re-tries of a question, and run a 'game over' function.
 - Difficulty levels for questions.
 - High Score tables.
 - Sounds during game.
+- More questions to be added to array.
+- Shuffle the answers provided within the question. eg same answer doesn't always appear at position A.
 
 [Back to table of contents](#table-of-contents)
 
@@ -224,7 +226,7 @@ Contains the following:-
 
 Testing Plan:
 For each change/bug resolved, test the feature to ensure working as expected
-Once development finished
+Once development finished, re-do tests
 
 1. Validate css, html and javascript.
 2. Lighthouse reports
@@ -237,6 +239,7 @@ Once development finished
   - User stories testing
 
 - Any changes made, re-run all steps and note any issues
+  Added contact button to home page, working as expected. Clickthrough each of the tests detailed below. No changes to results
 
 ### Functionality Testing
 
@@ -273,6 +276,11 @@ Each feature on each page is tested, with an expectation and a result of testing
 - Expected: Modal opens, displays heading and list content. Two buttons: Close to close the mdal and diplay landing page. Go to game brings user to game page.
 - Testing: View modal, click close and go to game buttons. Click outside modal to close.
 - Result: Modal opens, displays as expected and buttons function as expected. User can click anywhere outside the modal and it will close.
+
+##### Feature: Contact button
+- Expected: user clicks, and is brought to the contact form
+- Testing: Click button and view form.
+- Result: works as expected
 
 #### Game-Page
 
@@ -430,20 +438,55 @@ Background image displaying as expected
 #### As a prospective user, I want to
 
 - Play the game to travel through space.
+  - As the user answers questions correctly, a rocket icon is drawn onto the canvas. When they answer the next question correctly, new ricket appears, and previous one is greyed out. After 5 questions are answered correctly, a drawing of the earth is provided to show they user they have reached 'home'.
+
 - View questions and answers about space/planets to learn more.
+  - Questions and 4 possible answers are provided
+
 - Be able to see my score for the game.
+  - Score area provided under question/answer area. Text is provided to let the user how many questions they need to get Correct. The score lets thme know how many in the game is answered correctly. This number resets to 5 when user starts a new game.
+
 - View images of planets and space.
+  - Scrollable carousel gallery of space related images is provided on the Learn More page.
+
 - Be able to view the site on mobile/desktop/tablet.
+  - User can view the site on mobile/tablet/laptop/desktop screensizes without issues. Headings are hidden on smaller screens so user can focus on the game are or the carousel.
+
 - Be able to access all pages and navigate without confusion, without too many clicks.
+    - Clear options are provided on the Landing page. User can play GAem, get the instructions or Learn More. Link to the contact form is also provided.
+    - Within the Instruction modal, link to the game is provided, so user does not have to click back/close and then click Game (reducing # of clicks).
+    - A clear navbar with links to all areas of the site is provided on Gaame and Learn mroe pages. This is fixed to the top of the page for easy access.
+    - Within the game, user is given options on all modals to play a new game, therby reducing numbers of clicks to start again.
+    - On the success modal, a link is additionallyh provided, whre the user go go the to Learn more page (reducing clicks, user does not have to clock close, find item on nav bar and click)
+
 - Submit questions.
+  - Contact form is provided with name and email to be updated with area for a message. There are not too many details to be filled out. Links to the contact for "Ask us a question" are provided on the Landing page, Game page (nav Bar) and also included on the learn more pag Nav Bar
+
 - Learn more about space.
+  - Content is provided under each image in the gallery. Content is specific to the image, giving user opportunity to read about specifc space facts and link them up visually
+  - At the moment, the number of retries on a question is not limited. Therefore if a user doesn't know the anser to the question they can re-click, until they see the correct answer. This give them the opportunity to learn.
+
 
 #### As site owner I want to
 
 - To provide a fun, interactive site that is easy to navigate, and can be viewed on different screen sizes.
+  - User can easily navigate from landing page to other parts of the site. On game andlearn-more pages, there is a clear nav bar. Options are also provided on all modal pop ups.
+  - User can answer different questions, while seeing images drawn on the space canvas. User will get options to try questions again, get new question or start a new game.
+  - User can view a scrollable gallery of images with related information. This will automatically scroll or user can user left/right controls, on the indicators to select and view different images. 
+  - Site can be viewed on all screen sizes.
+  - Link to you-tube is provided on footers, where user could view more videos/information (Linked to generic site, but ina real world situation this would be planned to be linked to the site owners specific you-tube channel)
+
 - The user to enjoy playing the game.
+  - Images are drawn on the canvas showing progression on the game. These are represented by rocket icons showing the users journey to get from the moon home to earth. The instructions modal explains how the user ended up on the moon.
+  - Icons are provided on modals to make the experience more fun. For example, on the wrong anser modal, there is an icon of a broken heart, the instructions modal has an icon of an alien.
+
 - Give some interesting facts and information on the subject.
+  - Gallery carousel provides information and facts. They are directly related to the image shown.
+  - Questions also give the user oportunites to learn some interesting infortmation
+
 - Provide form for users to ask a question or tell us what they know.
+  - Easy to use contact form is provided. User can update text area with whatever information to want to. Email is then sent to the site owner.
+  - Links to the form are provided throughout the site.
 
 [Back to table of contents](#table-of-contents)
 
@@ -536,6 +579,8 @@ LearnMore page: 78 score on mobile performance. reoptimized carousel-earth image
 No issue on desktop
 
 #### Accessibility
+
+- For the canvas element, role of img and an aria label, as well as content within a p element have been provided to ensure information is provided to screen readers. 
 
 - WAVE extension for further accessibility testing.
   - Contrast Checker I used the wave extension to check contrast. This led to the main colors chosen being changed. Final colours are not causing any contrast errors.
