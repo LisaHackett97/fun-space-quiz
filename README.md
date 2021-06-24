@@ -278,8 +278,8 @@ Each feature on each page is tested, with an expectation and a result of testing
 - Result: Modal opens, displays as expected and buttons function as expected. User can click anywhere outside the modal and it will close.
 
 ##### Feature: Contact button
-- Expected: user clicks, and is brought to the contact form
-- Testing: Click button and view form.
+- Expected: user clicks, and is brought to the contact form. Button should be located on top right of screen
+- Testing: Click button and view form. Button was drifting to the centre on smaller screens. Adjusted padding with media query.
 - Result: works as expected
 
 #### Game-Page
@@ -423,17 +423,15 @@ Background image displaying as expected
 
 ### Compatibility Testing
 
-- Site was manually tested on google chrome and microsoft edge. No issues.
-    Landing Page:
-      Play Game button
-      Instructions
-      Instruction Modal
-      Learn More link
+- Site was manually tested on google chrome,microsoft edge, firefox and opera. No issues.
+- I have access to IE10. Site has limited functionaility as site uses ES6.  Recommended to use Microsoft edge rather than IE for best viewing experience
 
-- Visual of site was also checked on other browsers using the following site [lambatest](https://www.lambdatest.com/) Browsers checked included firefox, opera, and safari.
+- Visual of site was also checked on other browsers using the following site [lambatest](https://www.lambdatest.com/) Browsers checked included safari.
   - Site displaying as expected.
 
 - Recommended do not use IE10 to view site, please use Microsoft edge for best viewing experience
+
+- site ws also passed through the autoprefixer.github tool for extensions.
 
 ### User stories Testing
 
@@ -474,7 +472,7 @@ Background image displaying as expected
 - To provide a fun, interactive site that is easy to navigate, and can be viewed on different screen sizes.
   - User can easily navigate from landing page to other parts of the site. On game andlearn-more pages, there is a clear nav bar. Options are also provided on all modal pop ups.
   - User can answer different questions, while seeing images drawn on the space canvas. User will get options to try questions again, get new question or start a new game.
-  - User can view a scrollable gallery of images with related information. This will automatically scroll or user can user left/right controls, on the indicators to select and view different images. 
+  - User can view a scrollable gallery of images with related information. User can use left/right controls, or the indicators to select and view different images. 
   - Site can be viewed on all screen sizes.
   - Link to you-tube is provided on footers, where user could view more videos/information (Linked to generic site, but ina real world situation this would be planned to be linked to the site owners specific you-tube channel)
 

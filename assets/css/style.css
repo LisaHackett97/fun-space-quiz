@@ -648,6 +648,17 @@ H1 hidden on sm screens affecting layout and for layout of footer
     padding-right: 15px;
     height: 200px;
   }
+
+  /* to adjust placement of contact button on landing page on smaller screens */
+  #landingContact {
+    padding-right: 15px;
+  }
+  #homeContact {
+    margin-top:20px; 
+    padding-right:8px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 /* media query to reduce size of question text and adjust canvas on xs screens only*/
