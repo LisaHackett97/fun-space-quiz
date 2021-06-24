@@ -81,12 +81,19 @@ to the game or if they wish, can go to the learn more page, where they can view 
 [Wireframe Desktop](readme-assets/spacegame-wireframe-desktop.pddf)
 These were built using balsamiq.
 
-- The main change from the wireframes is that I decided not to have a title on the landing/hpme page, and to add a heading in fi9r the game page for tablet/desktop scrrens.
-- Also decided to keep instructionS as a pop up on all screen sizes.
+- The main change from the wireframes is that I decided not to have a title on the landing/home page, and to add a heading in for the game page for tablet/desktop scrrens.
+- Also decided to keep instructions as a pop up on all screen sizes.
 
 ### Surface
 
 [Surface Plan](readme-assets/surface-plane-plan.pdf)
+Main changes to the plan were colours changed, after contrast errors discovered on wave reports. I tried to keep to the same colour schemes but with slightyly differing shades that contrasted well.
+I also decided to use a rocketship icon for each point in the game, with progress shown by most recent question answered correct shown in colour, and previous questions answered icons shown in greyscale colours. After final question answered an img is drawn on the canvas representing earth. ie user has reached home and managed to travel back from the moon. I felt this was more fun, giving a story in the instruction modal that the user was kidnapped by aliens and had to get home to earth by answering questions.
+17 questions are currently in the quiz data array. 
+
+- More questions can easily be added to the array, without any issues, by following same structure as previous questions/answer sets. This was demonstrated towards the end of the development when I added further questions to the array with no issues. I had developed most of the site using a small set of 4-5 questions.
+
+- User can also keep retrying questions until they get it right. I would like in future to add in a function to limit re-tries, along with differeing levels of difficulty for the user. For the moment I think being able to retry questions could add to the learning experience of kids, where they can eventually get the questions right, see their progress on the game board and hopefully feel a sense of achivement and enjoyment from learning something new.
 
 #### Colors
 
@@ -180,7 +187,7 @@ Contains the following:-
 - Link back to the landing page
 - Background image with animations to slide in the text.
 
-## favicon added to site for personalisation
+### Favicon added to site for personalisation
 
 ### Future Features
 
@@ -226,8 +233,10 @@ Contains the following:-
 
 Testing Plan:
 For each change/bug resolved, test the feature to ensure working as expected
-Once development finished, re-do tests
-
+Once development finished, re-do tests. Re run tests and update below/bugs/issues as needed.
+Final changes made, then re-run code through validators, lighthosue and WAVE reports. click through all features and note if any further issues arise. Check responsiveness on different screen sizes
+Testing issues and resolutions are noted below under feature tests, ussues during development and ib the bugs section.
+Validation of code was re-checked each time a change was made, after the main development was done. Any issues resolved and tests re-run. Wave tests helped identify issues early so taht they could be corrected and feature/functions re-tested.
 1. Validate css, html and javascript.
 2. Lighthouse reports
 3. WAVE accessibility reports
@@ -273,7 +282,7 @@ Each feature on each page is tested, with an expectation and a result of testing
 
 ##### Feature: Instructions Modal
 
-- Expected: Modal opens, displays heading and list content. Two buttons: Close to close the mdal and diplay landing page. Go to game brings user to game page.
+- Expected: Modal opens, displays heading and list content. Two buttons: Close to close the modal and diplay landing page. Go to game brings user to game page.
 - Testing: View modal, click close and go to game buttons. Click outside modal to close.
 - Result: Modal opens, displays as expected and buttons function as expected. User can click anywhere outside the modal and it will close.
 
@@ -356,9 +365,9 @@ Each feature on each page is tested, with an expectation and a result of testing
 - Expected: Will open over game when 5 questions are answered correctly. Will display a message to the user and gives user three options. Play again: when clicked will start a new game. Learn more: brings user to the learn more page and See your journey: closed modal and allows user to view game images on display area Clicking outside the modal content closes modal.
 - Testing: Click 5 correct answers. Check modal displays, Click all 3 options to check they bring user to expected area. click outside modal to close.
 - Result:  working as expected. Modal and buttons displaying. Click on buttons does the expcted actions.
-My mentor suggested that after clicking on the see your journey button, user should not see the question area. It could be confusing user experience as they may think a new game has started.
+My mentor suggested that after clic\king on the see your journey button, user should not see the question area. It could be confusing user experience as they may think a new game has started.
 
-I updated the javascript to hide the question area and new question button when see your journey is clicked. I add event listeneers to the new Game button on the game page to unhide question area. Retested by walking through the same clicks. ie click See your journey, and it hides the questions, then click new game, new game set up and questions are now visible
+I updated the javascript to hide the question area and new question button when see your journey is clicked. I add event listeners to the new Game button on the game page to unhide question area. Retested by walking through the same clicks. ie click See your journey, and it hides the questions, then click new game, new game set up and questions are now visible
 
 #### Learn More-Page
 
@@ -518,7 +527,7 @@ I tried to use a switch case for the draw function, as suggested by my mentor. T
 
 - I had used a critical css file generator to try and enhnace css loading/above the fold but this did not improve performance and was showing all scc styles loading in head element so I removed it and reverted to usual css file link
 
-- My mentor suggedted using a switch statement instead of the if else for check Score and drawing on the canvas. I was unable to get it to work and due to time constraints I reverted to using the if/else statements.
+- My mentor suggested using a switch statement instead of the if else for check Score and drawing on the canvas. I was unable to get it to work and due to time constraints I reverted to using the if/else statements.
 
 [Back to table of contents](#table-of-contents)
 
