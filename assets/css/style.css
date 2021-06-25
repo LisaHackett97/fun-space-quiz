@@ -86,18 +86,21 @@ div.scaled {
 #landingContact {
   padding-right: 35px;
 }
+
 #homeContact {
-  margin-top:40px; 
-  padding-right:35px;
+  margin-top: 40px;
+  padding-right: 35px;
 }
-#homeContact a{   
-color: var(--decoration1);
-font-weight: 500;
-font-size: 12px;
-padding:10px;
-border: 2px solid var(--decoration1);
-border-radius:30%;
+
+#homeContact a {
+  color: var(--decoration1);
+  font-weight: 500;
+  font-size: 12px;
+  padding: 10px;
+  border: 2px solid var(--decoration1);
+  border-radius: 30%;
 }
+
 #homeContact a:hover {
   color: var(--heading-color);
 }
@@ -590,9 +593,10 @@ H1 hidden on sm screens affecting layout and for layout of footer
 
   img.scaled,
   .carousel-control-next,
-  .carousel-control-prev{
+  .carousel-control-prev {
     height: 45vh;
   }
+
   figcaption {
     height: 150px;
   }
@@ -611,18 +615,19 @@ H1 hidden on sm screens affecting layout and for layout of footer
 /* Media query applies to small and x-samll screens. Change display of carousel when H1 is hidden*/
 @media screen and (max-width: 768px) {
 
-  img.scaled{
+  img.scaled {
     height: 40vh;
   }
+
   /* to give carousel section more spacing under navbar when heading is hidden */
   .carousel-inner {
     margin-top: 10px;
-    width:100%;
+    width: 100%;
   }
 
   /* little more pading is needed so image and control are not overlapping on smaller screens */
   .carousel-item {
-    width: 100%;   
+    width: 100%;
     padding-left: 21px;
     padding-right: 20px;
   }
@@ -653,9 +658,9 @@ H1 hidden on sm screens affecting layout and for layout of footer
   #landingContact {
     padding-right: 15px;
   }
+
   #homeContact {
-    margin-top:20px; 
-    padding-right:8px;
+    margin-top: 20px;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -672,6 +677,11 @@ H1 hidden on sm screens affecting layout and for layout of footer
 
   #modalHeadContent {
     font-size: 15px;
+  }
+
+  /* for spacing of ask us button on xsmall screen */
+  #homeContact {
+    margin-bottom: 20px;
   }
 
   /* height on answer div and buttons needs to be set on small screens or elements move on page content changes */

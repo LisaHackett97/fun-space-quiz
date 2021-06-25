@@ -519,15 +519,13 @@ Once I implemented the function, I then got an issue in the console, where it wa
 - At one point the user was having to keep answering the same question, score continued to increment. Resolution was that the oder of the new question/shuffle functions needed to be changed. If the user gets a question correct, they will get a pop up module and options are to get next question or start a new game.
 As I wrote the javascript file, I checked the particular site area each time. When I change didn't work or caused issues like questions disappearing, I would review, including using dev tools to view the console and update javascript. Issues was usually the order of the functions ebing called.
 
-I tried to use a switch case for the draw function, as suggested by my mentor. This is the function that when a user has a score of 1, the first rocket icon is drawn on the game canvas,and will repeat until user has 5 questions answered. I was not able to implement it due to knowledge and time constraints. The if/else statements work with the game as it is.
+- I tried to use a switch case for the draw function, as suggested by my mentor. This is the function that when a user has a score of 1, the first rocket icon is drawn on the game canvas,and will repeat until user has 5 questions answered. I was not able to implement it due to knowledge and time constraints. The if/else statements work with the game as it is.
 
 - When I set up reset btns, (to start game over), d-hide modal triggers and opens the modal but if the user answerd incorrctly, the next question button wasn't working.I needed on click to be added to button with id of wrgAnsFocus.
 
 - I needed media queries for fig captions and carousel indictors on xs smal screens, also hide h1 heading on small screens and change layout of carousel when heading was hidden.
 
 - I had used a critical css file generator to try and enhnace css loading/above the fold but this did not improve performance and was showing all scc styles loading in head element so I removed it and reverted to usual css file link
-
-- My mentor suggested using a switch statement instead of the if else for check Score and drawing on the canvas. I was unable to get it to work and due to time constraints I reverted to using the if/else statements.
 
 [Back to table of contents](#table-of-contents)
 
@@ -541,9 +539,9 @@ I tried to use a switch case for the draw function, as suggested by my mentor. T
 
 - If first question was answered wrong, the game over message was displayed as score was still at 0. Resolved by adding another condition to the if else statement to run the show question function is 0. Display of success modal after 5 questions answered correctly stops user answering further questions
 
-- The footer was floating up on medium and large screens on the game page, as there wasn't enough content to push footer down. Resolution found (see credits section), adding a wrapper on the main body and a div with push slass. Css was then applied
+- The footer was floating up on medium and large screens on the game page, as there wasn't enough content to push footer down. Resolution found (see credits section), adding a wrapper on the main body and a div with push class. Css was then applied
 
-- Game canvas draw element were not showing on the live site. This was resolved as the file path needed to be updated>
+- Game canvas draw element were not showing on the live site. This was resolved as the file path needed to be updated.
 
 - When a new game was called, the first question was not refreshing. To resolve I needed to reoder function calls in the reset Javascript fn.
 
@@ -563,7 +561,7 @@ solution:- give js files type of module.
 - jshint gives me a msg that emailjs is not defined. However if I do define it, it causes a 501 error or 405 error on live site. Removed the declaration.
 
 - carousel/figures imgs on smaller screens were not taking up full width and looked strected vertically
-  - Media query applied to small and x-small screens. Change display of carousel. H1 hidden on sm/xs, therfore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and font size.
+  - Media query applied to small and x-small screens. Change display of carousel. H1 hidden on sm/xs, therefore imgs take up more of screen and layout is easier to show with small prev/next indicators. Update spacing around headers and font size.
 Reviewed again and decided to change width on carousel items all screen sizes, adjusted column set for large screens, some small adjs for media query sm and xs and reverted to the same colour for  contrls indicators on all screens. Also needed to decrease size of indicators to reduce space they were taking up on screen.
 
 - The game wasn't shuffling questions when new game btn clicked. run game needed to part of the query selector function for reset click event listener.
@@ -576,21 +574,24 @@ Reviewed again and decided to change width on carousel items all screen sizes, a
 
 #### Lighthouse testing
 
-Home Page
+- Home Page:
 Performance score is 92 for mobile and 99 for desktop
 
-Game Page:
+- Game Page:
 Score first run for mobile. Performace score of 78. Reoptimized background image and saved as .jpg instead of .png. Slighly improved score. No issue on desktop
 Final report: Performance is scoring 93 on mobile and 99 on desktop
 
-LearnMore page: 78 score on mobile performance. reoptimized carousel-earth image but only slightly improved score
+- LearnMore page: 
+78 score on mobile performance. reoptimized carousel-earth image but only slightly improved score
 Final report: Performance is 93 on mobile and 100 on desktop. Imroved best practice score by changing aspect ratio on one image
 
-404 page:
+- 404 page:
 Final report: Performance is scoring 98 on mobile and 98 on desktop
 
 These are the final lighthouse reports
-[Click here to open](readme-assets/final-lighthouse-reports.pdf)
+![Home and Game Pages](readme-assets/final-lighthouse-home-and-game-pgs.png)
+![Learn more Page](readme-assets/final-lighthouse-learnMorePg.png)
+![404 Page](readme-assets/final-404.png)
 
 #### Accessibility
 
